@@ -1,0 +1,116 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\12.0\modelsim_ase
+Ealu
+Z0 w1379490047
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\ArchOrd\Tutorial\Modelsim
+Z6 8Z:/ArchOrd/Tutorial/VHDL/alu.vhd
+Z7 FZ:/ArchOrd/Tutorial/VHDL/alu.vhd
+l0
+L7
+VmAT7^X^DU81]3[BPkoXQ:2
+Z8 OV;C;10.0d;49
+32
+Z9 !s108 1379492192.520000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/ArchOrd/Tutorial/VHDL/alu.vhd|
+Z11 !s107 Z:/ArchOrd/Tutorial/VHDL/alu.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 2FXK>aGl7[6mUHX[PENdB1
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 mAT7^X^DU81]3[BPkoXQ:2
+l19
+L18
+VokL7_blQ?gnM@>m4YFR4L2
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 90MzkFj?OWz2GET2Ea^OY2
+Ecounter
+Z14 w1379490136
+R1
+R2
+R3
+R4
+R5
+Z15 8Z:/ArchOrd/Tutorial/VHDL/counter.vhd
+Z16 FZ:/ArchOrd/Tutorial/VHDL/counter.vhd
+l0
+L7
+V@kohOQnHIEeH]S:47K=K73
+R8
+32
+Z17 !s108 1379492192.910000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/ArchOrd/Tutorial/VHDL/counter.vhd|
+Z19 !s107 Z:/ArchOrd/Tutorial/VHDL/counter.vhd|
+R12
+R13
+!s100 ZH^aimXhKGCGffk<OAhh]1
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 7 counter 0 22 @kohOQnHIEeH]S:47K=K73
+l18
+L16
+Va<h=TQ3jIa62CMj0EI4[^1
+R8
+32
+R17
+R18
+R19
+R12
+R13
+!s100 6L4nEX>H95F>iBmPb92<L0
+Emultiplexer
+Z20 w1379491568
+R1
+R2
+R3
+R4
+R5
+Z21 8Z:/ArchOrd/Tutorial/VHDL/multiplexer.vhd
+Z22 FZ:/ArchOrd/Tutorial/VHDL/multiplexer.vhd
+l0
+L7
+V24b=d?A;H8JIDL83EX7gN1
+!s100 Mo<g6<5:Ae0RebS>hYQeo0
+R8
+32
+Z23 !s108 1379492193.331000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/ArchOrd/Tutorial/VHDL/multiplexer.vhd|
+Z25 !s107 Z:/ArchOrd/Tutorial/VHDL/multiplexer.vhd|
+R12
+R13
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 11 multiplexer 0 22 24b=d?A;H8JIDL83EX7gN1
+l19
+L18
+VJ@l2C:H@fIm2ES?hQQP?^2
+!s100 gD:NG2W4UPL4:JC>7foSh1
+R8
+32
+R23
+R24
+R25
+R12
+R13

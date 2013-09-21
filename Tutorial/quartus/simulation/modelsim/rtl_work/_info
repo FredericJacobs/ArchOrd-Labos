@@ -1,0 +1,149 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\ArchOrd\Tutorial\Quartus\simulation\modelsim
+Ealu
+Z1 w1379490047
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z4 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dZ:\ArchOrd\Tutorial\Quartus\simulation\modelsim
+Z7 8Z:/ArchOrd/Tutorial/VHDL/alu.vhd
+Z8 FZ:/ArchOrd/Tutorial/VHDL/alu.vhd
+l0
+L7
+VhH:;4]iTke0f1TNF:[EX62
+Z9 OV;C;10.0d;49
+31
+Z10 !s108 1379493346.325000
+Z11 !s90 -reportprogress|300|-93|-work|work|Z:/ArchOrd/Tutorial/VHDL/alu.vhd|
+Z12 !s107 Z:/ArchOrd/Tutorial/VHDL/alu.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 2FXK>aGl7[6mUHX[PENdB1
+Asynth
+R2
+R3
+R4
+R5
+DEx4 work 3 alu 0 22 hH:;4]iTke0f1TNF:[EX62
+l19
+L18
+V5BF_PdI0GHm2gk<<I1RO]1
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 90MzkFj?OWz2GET2Ea^OY2
+Ecounter
+Z15 w1379490136
+R2
+R3
+R4
+R5
+R6
+Z16 8Z:/ArchOrd/Tutorial/VHDL/counter.vhd
+Z17 FZ:/ArchOrd/Tutorial/VHDL/counter.vhd
+l0
+L7
+V7nh@g_UbOQnLDSNm<RmH53
+R9
+31
+Z18 !s108 1379493346.028000
+Z19 !s90 -reportprogress|300|-93|-work|work|Z:/ArchOrd/Tutorial/VHDL/counter.vhd|
+Z20 !s107 Z:/ArchOrd/Tutorial/VHDL/counter.vhd|
+R13
+R14
+!s100 ZH^aimXhKGCGffk<OAhh]1
+Asynth
+R2
+R3
+R4
+R5
+DEx4 work 7 counter 0 22 7nh@g_UbOQnLDSNm<RmH53
+l18
+L16
+VMm2XZi`cHjfBNfoiQ[gmU1
+R9
+31
+R18
+R19
+R20
+R13
+R14
+!s100 6L4nEX>H95F>iBmPb92<L0
+Eextled
+Z21 w1379488342
+R4
+R5
+R6
+Z22 8Z:/ArchOrd/Tutorial/VHDL/ExtLED.vhd
+Z23 FZ:/ArchOrd/Tutorial/VHDL/ExtLED.vhd
+l0
+L14
+V7z;zjU=J?O3f?8F^fIa_V3
+!s100 ZSTQ:5ol9B[Fl_0H>6=0Q3
+R9
+31
+Z24 !s108 1379493346.762000
+Z25 !s90 -reportprogress|300|-93|-work|work|Z:/ArchOrd/Tutorial/VHDL/ExtLED.vhd|
+Z26 !s107 Z:/ArchOrd/Tutorial/VHDL/ExtLED.vhd|
+R13
+R14
+Abhv
+R4
+R5
+DEx4 work 6 extled 0 22 7z;zjU=J?O3f?8F^fIa_V3
+l46
+L30
+V0WDgFP]^4?kiV061<Gh4h0
+!s100 EJLLXCLTTkdI<^QY9CLhV2
+R9
+31
+R24
+R25
+R26
+R13
+R14
+Emultiplexer
+Z27 w1379491568
+R2
+R3
+R4
+R5
+R6
+Z28 8Z:/ArchOrd/Tutorial/VHDL/multiplexer.vhd
+Z29 FZ:/ArchOrd/Tutorial/VHDL/multiplexer.vhd
+l0
+L7
+VR`Q<@623`Mc6<6eRQDMQg0
+R9
+31
+Z30 !s108 1379493345.685000
+Z31 !s90 -reportprogress|300|-93|-work|work|Z:/ArchOrd/Tutorial/VHDL/multiplexer.vhd|
+Z32 !s107 Z:/ArchOrd/Tutorial/VHDL/multiplexer.vhd|
+R13
+R14
+!s100 Mo<g6<5:Ae0RebS>hYQeo0
+Asynth
+R2
+R3
+R4
+R5
+DEx4 work 11 multiplexer 0 22 R`Q<@623`Mc6<6eRQDMQg0
+l19
+L18
+VI;j;jX[0M5_M>i;M`b:3E3
+R9
+31
+R30
+R31
+R32
+R13
+R14
+!s100 gD:NG2W4UPL4:JC>7foSh1
