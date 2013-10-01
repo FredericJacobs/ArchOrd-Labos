@@ -1,0 +1,65 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 64 64 328 200)
+	(text "multiplier" (rect 0 0 43 12)(font "Arial" ))
+	(text "inst" (rect 0 120 17 132)(font "Arial" ))
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 -8 14 4)(font "Arial" ))
+		(text "clk" (rect 24 40 38 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "load" (rect -96 -8 -76 4)(font "Arial" ))
+		(text "load" (rect 24 56 44 68)(font "Arial" ))
+		(line (pt 16 64)(pt 0 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "shift_right" (rect -96 -8 -47 4)(font "Arial" ))
+		(text "shift_right" (rect 24 72 73 84)(font "Arial" ))
+		(line (pt 16 80)(pt 0 80)(line_width 1))
+	)
+	(port
+		(pt 136 0)
+		(input)
+		(text "datain[7..0]" (rect -32 0 23 12)(font "Arial" ))
+		(text "datain" (rect 120 0 132 29)(font "Arial" )(vertical))
+		(line (pt 136 0)(pt 136 32)(line_width 3))
+	)
+	(port
+		(pt 224 136)
+		(output)
+		(text "dataout" (rect 144 -24 180 -12)(font "Arial" ))
+		(text "dataout" (rect 208 96 220 132)(font "Arial" )(vertical))
+		(line (pt 224 136)(pt 224 96)(color 128 0 255)(line_width 1))
+	)
+	(drawing
+		(text "Multiplier" (rect 80 48 208 80)(font "Arial" (font_size 20)))
+		(rectangle (rect 16 32 248 96)(line_width 1))
+	)
+)
