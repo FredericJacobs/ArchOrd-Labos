@@ -41,22 +41,34 @@ begin
         -- A NOR B
         op <= "00";
         wait for 20 ns; -- wait for circuit to settle
-        -- insert an ASSERT statement here
+        
+        assert r(3 downto 0) = "0001"
+          report "Incorrect NOR behavior"
+          severity WARNING;
 
         -- A AND B
         op <= "01";
         wait for 20 ns; -- wait for circuit to settle
-        -- insert an ASSERT statement here
+        
+        assert r(3 downto 0) = "1000"
+          report "Incorrect AND behavior"
+          severity WARNING;
 
         -- A OR B
         op <= "10";
         wait for 20 ns; -- wait for circuit to settle
-        -- insert an ASSERT statement here
+        
+        assert r(3 downto 0) = "1110"
+          report "Incorrect OR behavior"
+          severity WARNING;
 
         -- A XOR B
         op <= "11";
         wait for 20 ns; -- wait for circuit to settle
-        -- insert an ASSERT statement here
+        
+       assert r(3 downto 0) = "0110"
+          report "Incorrect XOR behavior"
+          severity WARNING;
 
         wait; -- wait forever
     end process;

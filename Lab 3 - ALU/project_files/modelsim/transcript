@@ -1,0 +1,62 @@
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd failed with 2 errors.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# 8 compiles, 1 failed with 2 errors. 
+# Compile of logic_unit.vhd failed with 2 errors.
+# Compile of logic_unit.vhd was successful.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# 8 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_logic_unit
+# vsim -voptargs=+acc work.tb_logic_unit 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_logic_unit(testbench)
+# Loading work.logic_unit(synth)
+add wave sim:/tb_logic_unit/*
+ run -all
+vsim work.tb_logic_unit
+# vsim work.tb_logic_unit 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_logic_unit(testbench)
+# Loading work.logic_unit(synth)
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of tb_logic_unit.vhd was successful.
+# Compile of tb_ALU.vhd was successful.
+# 8 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_logic_unit
+# vsim -voptargs=+acc work.tb_logic_unit 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_logic_unit(testbench)
+# Loading work.logic_unit(synth)
+add wave sim:/tb_logic_unit/*
+run -all
+restart -f
+run -all

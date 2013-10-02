@@ -18,4 +18,6 @@ architecture synth of multiplexer is
 
 begin
 
+
+
 end synth;

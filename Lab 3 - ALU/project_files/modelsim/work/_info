@@ -1,3 +1,311 @@
 m255
+K3
 13
 cModel Technology
+Eadd_sub
+Z0 w1380697723
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dY:\BA3\ArchOrd\3_ALU\modelsim
+Z6 8Y:/BA3/ArchOrd/3_ALU/vhdl/add_sub.vhd
+Z7 FY:/BA3/ArchOrd/3_ALU/vhdl/add_sub.vhd
+l0
+L6
+V>fFT0PabV[aP0>8Jb?A]U1
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1380699645.349000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/3_ALU/vhdl/add_sub.vhd|
+Z11 !s107 Y:/BA3/ArchOrd/3_ALU/vhdl/add_sub.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 fXJAg2PIEEl1C3Re:^9A^1
+!i10b 1
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 7 add_sub 0 22 >fFT0PabV[aP0>8Jb?A]U1
+l19
+L17
+Ve[07ij6ZS9zKMGRMIYOF@3
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 A03jShY^IQ1F=mNBEmkT10
+!i10b 1
+Ealu
+Z14 w1380697723
+R3
+R4
+R5
+Z15 8Y:/BA3/ArchOrd/3_ALU/vhdl/ALU.vhd
+Z16 FY:/BA3/ArchOrd/3_ALU/vhdl/ALU.vhd
+l0
+L24
+VobQbD:3W`h:fjonzfXDZd2
+R8
+32
+Z17 !s108 1380699645.958000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/3_ALU/vhdl/ALU.vhd|
+Z19 !s107 Y:/BA3/ArchOrd/3_ALU/vhdl/ALU.vhd|
+R12
+R13
+!s100 ChQYe8>DA?bRYD^zCH4mS0
+!i10b 1
+Abdf_type
+R3
+R4
+Z20 DEx4 work 3 alu 0 22 obQbD:3W`h:fjonzfXDZd2
+l91
+L34
+Vm7<bhTXPk1K4QCFa>=UTE3
+R8
+32
+R17
+R18
+R19
+R12
+R13
+!s100 V;NeCF`:Zk>laHIAkEFe<0
+!i10b 1
+Ecomparator
+R14
+R1
+R2
+R3
+R4
+R5
+Z21 8Y:/BA3/ArchOrd/3_ALU/vhdl/comparator.vhd
+Z22 FY:/BA3/ArchOrd/3_ALU/vhdl/comparator.vhd
+l0
+L6
+VA;gcE`eGo<^aXE7g[GKi31
+R8
+32
+Z23 !s108 1380699646.457000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/3_ALU/vhdl/comparator.vhd|
+Z25 !s107 Y:/BA3/ArchOrd/3_ALU/vhdl/comparator.vhd|
+R12
+R13
+!s100 W^ZKOV3JiLBbgHeZLOASA0
+!i10b 1
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 10 comparator 0 22 A;gcE`eGo<^aXE7g[GKi31
+l20
+L18
+V@BQ4E<Xn7;g;`Y2M_L4>>0
+R8
+32
+R23
+R24
+R25
+R12
+R13
+!s100 D_BDS[BPLX49B5M6[nb6Q2
+!i10b 1
+Elogic_unit
+Z26 w1380699324
+R3
+R4
+R5
+Z27 8Y:/BA3/ArchOrd/3_ALU/vhdl/logic_unit.vhd
+Z28 FY:/BA3/ArchOrd/3_ALU/vhdl/logic_unit.vhd
+l0
+L4
+V_HQE`l=Mz16PL5[gzVUW?2
+R8
+32
+Z29 !s108 1380699646.878000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/3_ALU/vhdl/logic_unit.vhd|
+Z31 !s107 Y:/BA3/ArchOrd/3_ALU/vhdl/logic_unit.vhd|
+R12
+R13
+!s100 =2g@`Y9AieTh2c2EU@LHR0
+!i10b 1
+Asynth
+R3
+R4
+DEx4 work 10 logic_unit 0 22 _HQE`l=Mz16PL5[gzVUW?2
+l15
+L13
+VgQAioR=k`5jOQN>]dLWQ=1
+R8
+32
+R29
+R30
+R31
+R12
+R13
+!s100 M5=UA3EFC`@BLZADV<iFk2
+!i10b 1
+Emultiplexer
+R14
+R1
+R2
+R3
+R4
+R5
+Z32 8Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd
+Z33 FY:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd
+l0
+L6
+V=H5ANXWeSicoSj64d:I5;3
+R8
+32
+Z34 !s108 1380699647.346000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd|
+Z36 !s107 Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd|
+R12
+R13
+!s100 am6PN@aLIzGXz=LdVH1h01
+!i10b 1
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 11 multiplexer 0 22 =H5ANXWeSicoSj64d:I5;3
+l19
+L17
+VdMWZ;2kA299^J3UDmaZ:O0
+R8
+32
+R34
+R35
+R36
+R12
+R13
+!s100 UdhR1D=AnoaZ643>]6:4G0
+!i10b 1
+Eshift_unit
+R14
+R1
+R2
+R3
+R4
+R5
+Z37 8Y:/BA3/ArchOrd/3_ALU/vhdl/shift_unit.vhd
+Z38 FY:/BA3/ArchOrd/3_ALU/vhdl/shift_unit.vhd
+l0
+L6
+Vg^[GK44Q1H<Q]meoSD6D<3
+R8
+32
+Z39 !s108 1380699647.814000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/3_ALU/vhdl/shift_unit.vhd|
+Z41 !s107 Y:/BA3/ArchOrd/3_ALU/vhdl/shift_unit.vhd|
+R12
+R13
+!s100 hY6n8]5nL=P?E8OIHnYL>0
+!i10b 1
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 10 shift_unit 0 22 g^[GK44Q1H<Q]meoSD6D<3
+l17
+L15
+V6@S9E:^?Z3<]Ko[5S2`PT1
+R8
+32
+R39
+R40
+R41
+R12
+R13
+!s100 VOTCE`]3:hjbZ3]eK^YPl2
+!i10b 1
+Etb_alu
+R14
+R1
+R2
+R3
+R4
+R5
+Z42 8Y:/BA3/ArchOrd/3_ALU/testbench/tb_ALU.vhd
+Z43 FY:/BA3/ArchOrd/3_ALU/testbench/tb_ALU.vhd
+l0
+L6
+V4AT4RXA2B4k;MhRaWUz;U0
+!s100 XTenbW0;_n:6RHMY;YCEK0
+R8
+32
+!i10b 1
+Z44 !s108 1380699648.719000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-cover|s|Y:/BA3/ArchOrd/3_ALU/testbench/tb_ALU.vhd|
+Z46 !s107 Y:/BA3/ArchOrd/3_ALU/testbench/tb_ALU.vhd|
+Z47 !s102 -cover s
+Z48 o-work work -2002 -explicit -cover s -O0
+R13
+Abench
+R20
+R1
+R2
+R3
+R4
+Z49 DEx4 work 6 tb_alu 0 22 4AT4RXA2B4k;MhRaWUz;U0
+l13
+L8
+Z50 VJR@E`^XK3b;j]]ke>[2mR2
+Z51 !s100 <X<;CW1KM7>6BQln6ZTiU2
+R8
+32
+!i10b 1
+R44
+R45
+R46
+R47
+R48
+R13
+Etb_logic_unit
+Z52 w1380699639
+R1
+R2
+R3
+R4
+R5
+Z53 8Y:/BA3/ArchOrd/3_ALU/testbench/tb_logic_unit.vhd
+Z54 FY:/BA3/ArchOrd/3_ALU/testbench/tb_logic_unit.vhd
+l0
+L6
+VV;bI]c[ah0GIHl=?1WKVS3
+R8
+32
+Z55 !s108 1380699648.251000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/3_ALU/testbench/tb_logic_unit.vhd|
+Z57 !s107 Y:/BA3/ArchOrd/3_ALU/testbench/tb_logic_unit.vhd|
+R12
+R13
+!s100 RGn;4U2YZzlLQ0j5[cGDG1
+!i10b 1
+Atestbench
+R1
+R2
+R3
+R4
+DEx4 work 13 tb_logic_unit 0 22 V;bI]c[ah0GIHl=?1WKVS3
+l24
+L9
+VHE5]hRNmO<TYa=8l^gTVA2
+R8
+32
+R55
+R56
+R57
+R12
+R13
+!s100 bjd[=K<0OjjkN0;U_AGT_1
+!i10b 1

@@ -14,4 +14,17 @@ architecture synth of logic_unit is
 
 begin
 
+process(a, b, op)
+begin
+
+	case op is
+		when "00" => r <= a nor b;
+		when "01" => r <= a and b;
+		when "10" => r <= a or  b;
+		when "11" => r <= a xor b;
+		when others => 
+	end case;
+
+end process;
+
 end synth;
