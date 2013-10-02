@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK'
+Slack : -2.672
+TNS   : -195.032
+
+Type  : Slow 1200mV 85C Model Setup 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : -1.434
+TNS   : -42.300
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK'
+Slack : -0.148
+TNS   : -0.148
+
+Type  : Slow 1200mV 85C Model Hold 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -110.185
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : -1.000
+TNS   : -45.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK'
+Slack : -2.303
+TNS   : -164.441
+
+Type  : Slow 1200mV 0C Model Setup 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : -1.169
+TNS   : -33.329
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK'
+Slack : -0.097
+TNS   : -0.097
+
+Type  : Slow 1200mV 0C Model Hold 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -110.183
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : -1.000
+TNS   : -45.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK'
+Slack : -1.002
+TNS   : -63.118
+
+Type  : Fast 1200mV 0C Model Setup 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : -0.396
+TNS   : -7.339
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK'
+Slack : -0.112
+TNS   : -0.112
+
+Type  : Fast 1200mV 0C Model Hold 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -138.989
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Multiplier_8bits:inst|CLK_divider:clk_divider_0|tmp'
+Slack : -1.000
+TNS   : -45.000
+
+------------------------------------------------------------
