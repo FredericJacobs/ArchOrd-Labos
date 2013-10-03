@@ -18,10 +18,10 @@ architecture synth of add_sub is
 begin
 
 process(a, b, sub_mode)
-variable add_r  : std_logic_vector(32 downto 0);
-variable temp_a : std_logic_vector(32 downto 0);
-variable temp_b : std_logic_vector(32 downto 0);
-begin
+variable add_r  : std_logic_vector(32 downto 0) := (others => '0');
+variable temp_a : std_logic_vector(32 downto 0) := (others => '0');
+variable temp_b : std_logic_vector(32 downto 0) := (others => '0');
+begin 
 	temp_a := '0' & a;
 	
 	if(sub_mode = '1') then
