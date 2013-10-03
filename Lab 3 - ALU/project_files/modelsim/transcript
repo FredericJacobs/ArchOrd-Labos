@@ -1,14 +1,15 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile Y:/BA3/ArchOrd/3_ALU/modelsim/alu.mpf 
+# Loading project alu
 # Compile of add_sub.vhd was successful.
 # Compile of ALU.vhd was successful.
 # Compile of comparator.vhd was successful.
-# Compile of logic_unit.vhd failed with 2 errors.
-# Compile of multiplexer.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd failed with 2 errors.
 # Compile of shift_unit.vhd was successful.
 # Compile of tb_logic_unit.vhd was successful.
 # Compile of tb_ALU.vhd was successful.
 # 8 compiles, 1 failed with 2 errors. 
-# Compile of logic_unit.vhd failed with 2 errors.
-# Compile of logic_unit.vhd was successful.
 # Compile of add_sub.vhd was successful.
 # Compile of ALU.vhd was successful.
 # Compile of comparator.vhd was successful.
@@ -18,45 +19,132 @@
 # Compile of tb_logic_unit.vhd was successful.
 # Compile of tb_ALU.vhd was successful.
 # 8 compiles, 0 failed with no errors. 
-vsim -voptargs=+acc work.tb_logic_unit
-# vsim -voptargs=+acc work.tb_logic_unit 
+vsim -voptargs=+acc work.tb_alu
+# vsim -voptargs=+acc work.tb_alu 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_logic_unit(testbench)
+# Loading work.tb_alu(bench)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(synth)
+# Loading work.comparator(synth)
 # Loading work.logic_unit(synth)
-add wave sim:/tb_logic_unit/*
- run -all
-vsim work.tb_logic_unit
-# vsim work.tb_logic_unit 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_logic_unit(testbench)
-# Loading work.logic_unit(synth)
+# Loading work.multiplexer(synth)
+# Loading work.shift_unit(synth)
+# ** Warning: (vsim-8683) Uninitialized out port /tb_alu/alu_0/b2v_shift_unit_0/r(31 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# 
+add wave sim:/tb_alu/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: romac  Hostname: WINDAUBE  ProcessID: 2088
+# 
+#           Attempting to use alternate WLF file "./wlft2sjy6k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft2sjy6k
+# 
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 0  Instance: /tb_alu
+# ** Error: Incorrect Behavior
+#    Time: 80 ns  Iteration: 0  Instance: /tb_alu
+quit -sim
 # Compile of add_sub.vhd was successful.
-# Compile of ALU.vhd was successful.
-# Compile of comparator.vhd was successful.
-# Compile of logic_unit.vhd was successful.
 # Compile of multiplexer.vhd was successful.
-# Compile of shift_unit.vhd was successful.
-# Compile of tb_logic_unit.vhd was successful.
-# Compile of tb_ALU.vhd was successful.
-# 8 compiles, 0 failed with no errors. 
-vsim -voptargs=+acc work.tb_logic_unit
-# vsim -voptargs=+acc work.tb_logic_unit 
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_alu
+# vsim -voptargs=+acc work.tb_alu 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_logic_unit(testbench)
+# Loading work.tb_alu(bench)
+# Loading work.alu(bdf_type)
+# Loading work.add_sub(synth)
+# Loading work.comparator(synth)
 # Loading work.logic_unit(synth)
-add wave sim:/tb_logic_unit/*
+# Loading work.multiplexer(synth)
+# Loading work.shift_unit(synth)
+# ** Warning: (vsim-8683) Uninitialized out port /tb_alu/alu_0/b2v_shift_unit_0/r(31 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# 
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Logical unit test ==========================================================
+#    Time: 655400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Shift unit test ============================================================
+#    Time: 983080 ns  Iteration: 0  Instance: /tb_alu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 983120 ns  Iteration: 0  Instance: /tb_alu
+# ** Error: Incorrect Behavior
+#    Time: 983120 ns  Iteration: 0  Instance: /tb_alu
+add wave sim:/tb_alu/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: romac  Hostname: WINDAUBE  ProcessID: 2088
+# 
+#           Attempting to use alternate WLF file "./wlftscwftz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftscwftz
+# 
 run -all
 restart -f
+# ** Warning: (vsim-8683) Uninitialized out port /tb_alu/alu_0/b2v_shift_unit_0/r(31 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# 
 run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_alu/alu_0/b2v_add_sub_0
+# ** Note: = Add/Sub test ===============================================================
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Comparator test ============================================================
+#    Time: 327720 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Logical unit test ==========================================================
+#    Time: 655400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: = Shift unit test ============================================================
+#    Time: 983080 ns  Iteration: 0  Instance: /tb_alu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 983120 ns  Iteration: 0  Instance: /tb_alu
+# ** Error: Incorrect Behavior
+#    Time: 983120 ns  Iteration: 0  Instance: /tb_alu
