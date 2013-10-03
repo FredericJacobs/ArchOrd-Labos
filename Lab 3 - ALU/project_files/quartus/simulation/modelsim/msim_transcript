@@ -10,7 +10,7 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {//vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/add_sub.vhd}
+# vcom -93 -work work {Y:/BA3/ArchOrd/3_ALU/vhdl/add_sub.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,7 +19,7 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity add_sub
 # -- Compiling architecture synth of add_sub
-# vcom -93 -work work {//vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/comparator.vhd}
+# vcom -93 -work work {Y:/BA3/ArchOrd/3_ALU/vhdl/comparator.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -28,14 +28,14 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity comparator
 # -- Compiling architecture synth of comparator
-# vcom -93 -work work {//vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/logic_unit.vhd}
+# vcom -93 -work work {Y:/BA3/ArchOrd/3_ALU/vhdl/logic_unit.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity logic_unit
 # -- Compiling architecture synth of logic_unit
-# vcom -93 -work work {//vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/multiplexer.vhd}
+# vcom -93 -work work {Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -44,25 +44,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity multiplexer
 # -- Compiling architecture synth of multiplexer
-# vcom -93 -work work {//vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/shift_unit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity shift_unit
-# -- Compiling architecture synth of shift_unit
-# ** Warning: //vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/shift_unit.vhd(22): (vcom-1275) Arguments of overloaded "nor" operator are not the same length (32 vs. 5).
+# ** Error: Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd(24): (vcom-1339) Case statement choices cover only 4 out of 81 cases.
 # 
-# ** Warning: //vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/shift_unit.vhd(24): (vcom-1275) Arguments of overloaded "and" operator are not the same length (32 vs. 5).
-# 
-# ** Warning: //vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/shift_unit.vhd(26): (vcom-1275) Arguments of overloaded "or" operator are not the same length (32 vs. 5).
-# 
-# ** Warning: //vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/shift_unit.vhd(28): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (32 vs. 5).
-# 
-# ** Warning: //vmware-host/Shared Folders/Desktop/ArchOrd-Labos/Lab 3 - ALU/project_files/vhdl/shift_unit.vhd(30): (vcom-1275) Arguments of overloaded "xor" operator are not the same length (32 vs. 5).
-# 
-# 
-# reading C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini
-# Loading project alu
+# ** Error: Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd(33): VHDL Compiler exiting
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./ALU_run_msim_rtl_vhdl.do line 11
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd}"

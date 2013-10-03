@@ -1,0 +1,68 @@
+../vhdl/comparator.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/3_ALU/vhdl/comparator.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity comparator
+-- Compiling architecture synth of comparator
+
+} {} {}} ../testbench/tb_logic_unit.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/3_ALU/testbench/tb_logic_unit.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_logic_unit
+-- Compiling architecture testbench of tb_logic_unit
+
+} {} {}} ../vhdl/logic_unit.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/3_ALU/vhdl/logic_unit.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity logic_unit
+-- Compiling architecture synth of logic_unit
+
+} {} {}} ../vhdl/shift_unit.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/3_ALU/vhdl/shift_unit.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity shift_unit
+-- Compiling architecture synth of shift_unit
+
+} {} {}} ../testbench/tb_ALU.vhd {1 {vcom -work work -2002 -explicit -cover s Y:/BA3/ArchOrd/3_ALU/testbench/tb_ALU.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_ALU
+-- Compiling architecture bench of tb_ALU
+-- Loading entity ALU
+
+} {} {}} ../vhdl/ALU.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/3_ALU/vhdl/ALU.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture bdf_type of ALU
+
+} {} {}} ../vhdl/multiplexer.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/3_ALU/vhdl/multiplexer.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity multiplexer
+-- Compiling architecture synth of multiplexer
+
+} {} {}}
