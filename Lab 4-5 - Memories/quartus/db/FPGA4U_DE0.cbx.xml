@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="FPGA4U_DE0">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA4U_DE0|FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_rna1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA4U_DE0|rgb_led96:inst4|altsyncram:gamma_table_rtl_0" CBX_FILE_NAME="altsyncram_nt61.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
