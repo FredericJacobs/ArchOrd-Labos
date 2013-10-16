@@ -39,7 +39,7 @@ begin
         if (reg_read = '1') then
             rddata <= memory(to_integer(unsigned(saved_address)));
         elsif (reg_write = '1') then
-            memory(to_integer(unsigned(saved_address)))) <= wrdata;
+            memory(to_integer(unsigned(saved_address))) <= wrdata;
         end if;
     end process;
 
