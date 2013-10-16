@@ -1,0 +1,414 @@
+quit -si
+# unknown switch: -si
+quit -sim
+# Compile of register_file.vhd was successful.
+# Compile of tb_register_file.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_register_file
+# vsim -voptargs=+acc work.tb_register_file 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tb_register_file(bench)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.register_file(synth)
+add wave sim:/tb_register_file/*
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Error: Assertion violation.
+#    Time: 1325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1565 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1645 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1725 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1805 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1885 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1965 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2045 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2125 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2205 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2525 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2605 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2685 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2765 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2845 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2925 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3005 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3085 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3165 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3245 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3565 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3645 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3725 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 3805 ns  Iteration: 0  Instance: /tb_register_file
+quit -sim
+# Compile of tb_register_file.vhd was successful.
+vsim -voptargs=+acc work.tb_register_file
+# vsim -voptargs=+acc work.tb_register_file 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tb_register_file(bench)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.register_file(synth)
+add wave sim:/tb_register_file/*
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Error: Assertion violation.
+#    Time: 1285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1525 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1525 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1565 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1565 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1605 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1605 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1645 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1645 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1685 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1685 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1725 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1725 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1765 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1765 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1805 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1805 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1845 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1845 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1885 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1885 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1925 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1925 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1965 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1965 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2005 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2005 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2045 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2045 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2085 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2085 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2125 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2125 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2165 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2165 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2205 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2205 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2245 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2245 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2525 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2525 ns  Iteration: 0  Instance: /tb_register_file
+vsim -voptargs=+acc work.tb_register_file
+# vsim -voptargs=+acc work.tb_register_file 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tb_register_file(bench)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.register_file(synth)
+quit -sim
+# Compile of tb_register_file.vhd was successful.
+vsim -voptargs=+acc work.tb_register_file
+# vsim -voptargs=+acc work.tb_register_file 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tb_register_file(bench)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.register_file(synth)
+add wave sim:/tb_register_file/*
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_register_file/register_file_0
+# ** Error: Assertion violation.
+#    Time: 1285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1525 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1525 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1565 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1565 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1605 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1605 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1645 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1645 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1685 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1685 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1725 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1725 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1765 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1765 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1805 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1805 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1845 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1845 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1885 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1885 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1925 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1925 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 1965 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 1965 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2005 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2005 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2045 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2045 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2085 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2085 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2125 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2125 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2165 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2165 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2205 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2205 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2245 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2245 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2285 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2325 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2365 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2405 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2445 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2485 ns  Iteration: 0  Instance: /tb_register_file
+# ** Error: Assertion violation.
+#    Time: 2525 ns  Iteration: 0  Instance: /tb_register_file
+# ** Warning: Incorrect behavior
+#    Time: 2525 ns  Iteration: 0  Instance: /tb_register_file
+quit -sim
+# Compile of tb_register_file.vhd failed with 3 errors.
+# Compile of tb_register_file.vhd failed with 2 errors.
+quit -sim

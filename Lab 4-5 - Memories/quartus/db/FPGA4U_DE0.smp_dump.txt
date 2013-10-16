@@ -1,4 +1,13 @@
 
+State Machine - |FPGA4U_DE0|FPGA4U:inst1|controller:inst|state
+Name state.S5 state.S4 state.S3 state.S2 state.S1 state.S0 
+state.S0 0 0 0 0 0 0 
+state.S1 0 0 0 0 1 1 
+state.S2 0 0 0 1 0 1 
+state.S3 0 0 1 0 0 1 
+state.S4 0 1 0 0 0 1 
+state.S5 1 0 0 0 0 1 
+
 State Machine - |FPGA4U_DE0|rgb_led96:inst4|state
 Name state.DISPLAY state.TRANS2 state.RST state.TRANS1 
 state.TRANS1 0 0 0 0 

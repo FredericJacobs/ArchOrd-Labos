@@ -2,3 +2,79 @@ m255
 K3
 13
 cModel Technology
+Eregister_file
+Z0 w1381306143
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dY:\BA3\ArchOrd\4_Memories\modelsim
+Z6 8Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
+Z7 FY:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
+l0
+L7
+VB;@3VMkOoCMES`GDzLjOd2
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1381306584.148000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd|
+Z11 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 PTIW@1k^1zAYS=NI>hCQ`1
+!i10b 1
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 13 register_file 0 22 B;@3VMkOoCMES`GDzLjOd2
+l23
+L20
+V4B4R27X^K^5UeGml_d9gn0
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 EHV;EoJSZ@2VWc_DVP0jV2
+!i10b 1
+Etb_register_file
+Z14 w1381307551
+R2
+R3
+R4
+R5
+Z15 8Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd
+Z16 FY:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd
+l0
+L5
+V2dJ@5o>O9iE217XP^Y>HN2
+!s100 jWOVD<^mgB2A6l@AlZ<TL0
+R8
+32
+!i10b 1
+Z17 !s108 1381309016.307000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd|
+Z19 !s107 Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd|
+R12
+R13
+Abench
+R2
+R3
+R4
+Z20 DEx4 work 16 tb_register_file 0 22 2dJ@5o>O9iE217XP^Y>HN2
+l31
+L7
+VgXT>WlOB@BEUM3FzUKmza1
+!s100 FUd_6@NGdK[d69YUIQNYW3
+R8
+32
+!i10b 1
+R17
+R18
+R19
+R12
+R13
