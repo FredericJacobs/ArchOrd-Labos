@@ -34,6 +34,9 @@ begin
 				read <= '0';
 				write <= '0';
 				address <= (others => '0');
+                length <= (others => '0');
+                rdaddr <= (others => '0');
+                wraddr <= (others => '0');
         elsif(rising_edge(clk)) then
             case state is
 
