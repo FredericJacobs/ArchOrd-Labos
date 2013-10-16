@@ -39,7 +39,7 @@ begin
 
                 when S0 =>
                     read <= '1';
-						  write <= '0';
+				    write <= '0';
                     address <= ROMaddr;
 
                     ROMaddr <= std_logic_vector(unsigned(ROMaddr) + 4);
@@ -62,11 +62,11 @@ begin
                     state <= S3;
                     rdaddr <= rddata(31 downto 16);
                     wraddr <= rddata(15 downto 0);
-						  address <= (others => '0');
+					address <= (others => '0');
 
                 when S3 =>
                     read <= '1';
-						  write <= '0';
+					write <= '0';
                     address <= rdaddr;
 
                     if(length = (15 downto 0 => '0')) then
@@ -78,7 +78,7 @@ begin
                     end if;
 
                 when S4 =>
-						  read <= '0';
+					read <= '0';
                     write <= '1';
                     wrdata <= rddata;
                     address <= wraddr;
@@ -88,9 +88,9 @@ begin
 
                 when S5 =>
                     state <= S5;
-						  read <= '0';
-						  write <= '0';
-						  address <= (others => '0');
+					read <= '0';
+					write <= '0';
+					address <= (others => '0');
 
             end case;
         end if;

@@ -1,0 +1,311 @@
+m255
+K3
+13
+cModel Technology
+Z0 dY:\BA3\ArchOrd\4_Memories\quartus\simulation\modelsim
+Econtroller
+Z1 w1381952983
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dY:\BA3\ArchOrd\4_Memories\quartus\simulation\modelsim
+Z6 8Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd
+Z7 FY:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd
+l0
+L7
+Vo;@0IGl1lk?Wc@J4S<fQ]1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1381953456.455000
+Z10 !s90 -reportprogress|300|-93|-work|work|Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd|
+Z11 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 f@XdQa87[G4=>>93zG7_b1
+!i10b 1
+Asynth
+R2
+R3
+R4
+DEx4 work 10 controller 0 22 o;@0IGl1lk?Wc@J4S<fQ]1
+l26
+L19
+Vd594cK]Tm5LA9HlH2ge?^2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 UFWlMloGlVMfI?8KJAUXO3
+!i10b 1
+Edecoder
+Z14 w1381952918
+R2
+R3
+R4
+R5
+Z15 8Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd
+Z16 FY:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd
+l0
+L7
+V5bNlGK1fV3kTP]K[R8J>00
+R8
+31
+Z17 !s108 1381953459.841000
+Z18 !s90 -reportprogress|300|-93|-work|work|Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd|
+Z19 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd|
+R12
+R13
+!s100 AV@Lk3IHM3f>M1bofVM`J1
+!i10b 1
+Asynth
+R2
+R3
+R4
+DEx4 work 7 decoder 0 22 5bNlGK1fV3kTP]K[R8J>00
+l19
+L16
+V5f`1lK=Ucd>7EA``OZL=F0
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 CaF[>_1LK`G7YmMO21OVH3
+!i10b 1
+Eleds
+Z20 w1381303550
+Z21 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z22 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+R3
+R4
+R5
+Z23 8Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd
+Z24 FY:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd
+l0
+L6
+VD=>HGiH>fdNZo4jHgjmX20
+R8
+31
+Z25 !s108 1381953462.259000
+Z26 !s90 -reportprogress|300|-93|-work|work|Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd|
+Z27 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd|
+R12
+R13
+!s100 P6[D3=V>N<S;W38:QI;n40
+!i10b 1
+Asynth
+R21
+R22
+R3
+R4
+DEx4 work 4 leds 0 22 D=>HGiH>fdNZo4jHgjmX20
+l36
+L23
+VgZ2J:i3VHYzV]YUdzaLTZ0
+R8
+31
+R25
+R26
+R27
+R12
+R13
+!s100 hZ0>C[coE:1o@=D3Ee==l1
+!i10b 1
+Ppack
+R21
+R22
+R3
+R4
+Z28 w1381303549
+R5
+Z29 8Y:/BA3/ArchOrd/4_Memories/quartus/rgb_led96.vhd
+Z30 FY:/BA3/ArchOrd/4_Memories/quartus/rgb_led96.vhd
+l0
+L12
+VCdH^V;88L1dBl2AdaH4Td2
+R8
+31
+b1
+Z31 !s108 1381953451.229000
+Z32 !s90 -reportprogress|300|-93|-work|work|Y:/BA3/ArchOrd/4_Memories/quartus/rgb_led96.vhd|
+Z33 !s107 Y:/BA3/ArchOrd/4_Memories/quartus/rgb_led96.vhd|
+R12
+R13
+!s100 0;U4BbHoJKf^kc;Ml?=lV2
+!i10b 1
+Bbody
+Z34 DPx4 work 4 pack 0 22 CdH^V;88L1dBl2AdaH4Td2
+R21
+R22
+R3
+R4
+l0
+L17
+V?I:DE`k7K>V8Xd][9US>b1
+R8
+31
+R31
+R32
+R33
+R12
+R13
+nbody
+!s100 TWzfRmVm6OKY4YWXG^WPN3
+!i10b 1
+Eram
+Z35 w1381953248
+R2
+R3
+R4
+R5
+Z36 8Y:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd
+Z37 FY:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd
+l0
+L5
+VF?Kz_`RAECZll?lgOgWM72
+R8
+31
+Z38 !s108 1381953465.083000
+Z39 !s90 -reportprogress|300|-93|-work|work|Y:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd|
+Z40 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd|
+R12
+R13
+!s100 nz`7KElL22Fjb<k@bQiVZ2
+!i10b 1
+Asynth
+R2
+R3
+R4
+DEx4 work 3 ram 0 22 F?Kz_`RAECZll?lgOgWM72
+l24
+L20
+V2RV9ERfg23LnJZo0L0leY0
+R8
+31
+R38
+R39
+R40
+R12
+R13
+!s100 A8]_G;WVj;Q3]87JeefZ30
+!i10b 1
+Ergb_led96
+R28
+R34
+R22
+R21
+R3
+R4
+R5
+R29
+R30
+l0
+L46
+VbC>;`1Oe^?``MVg?ileKz0
+R8
+31
+R31
+R32
+R33
+R12
+R13
+!s100 oFg3=V>OL?8>`cPdzFIjQ0
+!i10b 1
+Aarch
+R34
+R22
+R21
+R3
+R4
+DEx4 work 9 rgb_led96 0 22 bC>;`1Oe^?``MVg?ileKz0
+l144
+L80
+VRi[34j[UhQXd:aoVz__Y52
+R8
+31
+R31
+R32
+R33
+R12
+R13
+!s100 A_^hUfkaGPo3z`cz@JNRa3
+!i10b 1
+Erom
+Z41 w1381917513
+R22
+R21
+R3
+R4
+R5
+Z42 8Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd
+Z43 FY:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd
+l0
+L5
+VMU3IHKW^oIhaZ^73BH<m=3
+R8
+31
+Z44 !s108 1381953467.891000
+Z45 !s90 -reportprogress|300|-93|-work|work|Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd|
+Z46 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd|
+R12
+R13
+!s100 i>16PIS?eRX7X^D^a<kkm0
+!i10b 1
+Asynth
+R22
+R21
+R3
+R4
+DEx4 work 3 rom 0 22 MU3IHKW^oIhaZ^73BH<m=3
+l29
+L15
+VjkFZ[58VVm6jY=l_6B3FX1
+R8
+31
+R44
+R45
+R46
+R12
+R13
+!s100 GWA@52LzZ_]Ri35hAK`UC1
+!i10b 1
+Erom_block
+Z47 w1381303551
+R3
+R4
+R5
+Z48 8Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd
+Z49 FY:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd
+l0
+L42
+V]<H9@fiZMBG65?ETPWnSB1
+!s100 ?hV[j4f]VOPA4i_JAO[d51
+R8
+31
+!i10b 1
+Z50 !s108 1381953470.699000
+Z51 !s90 -reportprogress|300|-93|-work|work|Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd|
+Z52 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd|
+R12
+R13
+Asyn
+R3
+R4
+DEx4 work 9 rom_block 0 22 ]<H9@fiZMBG65?ETPWnSB1
+l82
+L52
+V9RRA^GVINlaXFEN0oOEaU0
+!s100 48_?H=E[f_SI[@oRdO61^2
+R8
+31
+!i10b 1
+R50
+R51
+R52
+R12
+R13

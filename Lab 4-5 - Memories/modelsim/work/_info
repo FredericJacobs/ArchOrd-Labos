@@ -2,79 +2,453 @@ m255
 K3
 13
 cModel Technology
-Eregister_file
-Z0 w1381306143
-Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
-Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dY:\BA3\ArchOrd\4_Memories\modelsim
-Z6 8Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
-Z7 FY:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
+Econtroller
+Z0 w1381952983
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dY:\BA3\ArchOrd\4_Memories\modelsim
+Z5 8Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd
+Z6 FY:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd
 l0
 L7
-VB;@3VMkOoCMES`GDzLjOd2
-Z8 OV;C;10.1d;51
+V@YiRZCSYnWKl>ClQC@UnM1
+Z7 OV;C;10.1d;51
 32
-Z9 !s108 1381306584.148000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd|
-Z11 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd|
-Z12 o-work work -2002 -explicit -O0
-Z13 tExplicit 1
-!s100 PTIW@1k^1zAYS=NI>hCQ`1
+Z8 !s108 1381953777.849000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd|
+Z10 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 f@XdQa87[G4=>>93zG7_b1
 !i10b 1
 Asynth
 R1
 R2
 R3
-R4
-DEx4 work 13 register_file 0 22 B;@3VMkOoCMES`GDzLjOd2
-l23
-L20
-V4B4R27X^K^5UeGml_d9gn0
-R8
+DEx4 work 10 controller 0 22 @YiRZCSYnWKl>ClQC@UnM1
+l26
+L19
+V9`>0;n0UU^cPJ=;lZdP9G0
+R7
 32
+R8
 R9
 R10
 R11
 R12
-R13
-!s100 EHV;EoJSZ@2VWc_DVP0jV2
+!s100 UFWlMloGlVMfI?8KJAUXO3
 !i10b 1
-Etb_register_file
-Z14 w1381307551
+Edecoder
+Z13 w1381952918
+R1
 R2
 R3
 R4
-R5
-Z15 8Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd
-Z16 FY:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd
+Z14 8Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd
+Z15 FY:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd
+l0
+L7
+VCKW2Z9d<_?<;9mQA_lkeJ3
+R7
+32
+Z16 !s108 1381953780.579000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd|
+Z18 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd|
+R11
+R12
+!s100 AV@Lk3IHM3f>M1bofVM`J1
+!i10b 1
+Asynth
+R1
+R2
+R3
+DEx4 work 7 decoder 0 22 CKW2Z9d<_?<;9mQA_lkeJ3
+l19
+L16
+Vj56_0fRz`n?bZSO8kALlZ1
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 CaF[>_1LK`G7YmMO21OVH3
+!i10b 1
+Efpga4u_with_controller
+Z19 w1381303550
+R2
+R3
+R4
+Z20 8Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_with_controller.vhd
+Z21 FY:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_with_controller.vhd
+l0
+L24
+V7cc]BIbh_HYMJaoh=dH;>1
+R7
+32
+Z22 !s108 1381953783.169000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_with_controller.vhd|
+Z24 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_with_controller.vhd|
+R11
+R12
+!s100 aJ2zNE1__WYZI`cWG;XnZ2
+!i10b 1
+Abdf_type
+R2
+R3
+Z25 DEx4 work 22 fpga4u_with_controller 0 22 7cc]BIbh_HYMJaoh=dH;>1
+l97
+L33
+V65EKWFEEZMK`j901PMGf03
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 aIb`QB71W`2PfI8gmgIN71
+!i10b 1
+Efpga4u_without_controller
+R19
+R2
+R3
+R4
+Z26 8Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_without_controller.vhd
+Z27 FY:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_without_controller.vhd
+l0
+L24
+V3T@XiH>9i16:NKNG]^42U2
+R7
+32
+Z28 !s108 1381953785.571000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_without_controller.vhd|
+Z30 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_without_controller.vhd|
+R11
+R12
+!s100 ;F51h8NkXEX;cldTK9^5R1
+!i10b 1
+Abdf_type
+R2
+R3
+Z31 DEx4 work 25 fpga4u_without_controller 0 22 3T@XiH>9i16:NKNG]^42U2
+l86
+L38
+VW9bEaPfi@0VcNc77z;0:d1
+R7
+32
+R28
+R29
+R30
+R11
+R12
+!s100 CIGU[4DEZ`C=ECianRGAi0
+!i10b 1
+Eleds
+R19
+Z32 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z33 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+R2
+R3
+R4
+Z34 8Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd
+Z35 FY:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd
+l0
+L6
+V<6?0MV0kI1XAzVSo0VkzZ0
+R7
+32
+Z36 !s108 1381953788.551000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd|
+Z38 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd|
+R11
+R12
+!s100 P6[D3=V>N<S;W38:QI;n40
+!i10b 1
+Asynth
+R32
+R33
+R2
+R3
+DEx4 work 4 leds 0 22 <6?0MV0kI1XAzVSo0VkzZ0
+l36
+L23
+V]:X1Ba0hAd3>6SkNKRlmN2
+R7
+32
+R36
+R37
+R38
+R11
+R12
+!s100 hZ0>C[coE:1o@=D3Ee==l1
+!i10b 1
+Eram
+Z39 w1381954024
+R1
+R2
+R3
+R4
+Z40 8Y:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd
+Z41 FY:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd
+l0
+L5
+V7c:77SZQ;RY6KW5dhGUJ=3
+!s100 nz`7KElL22Fjb<k@bQiVZ2
+R7
+32
+!i10b 1
+Z42 !s108 1381954051.309000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd|
+Z44 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd|
+R11
+R12
+Asynth
+R1
+R2
+R3
+Z45 DEx4 work 3 ram 0 22 7c:77SZQ;RY6KW5dhGUJ=3
+l24
+L20
+Va_ge`OkPZX:fZRhLJ0>>i2
+!s100 8h[R<=RH`F[A9Dk_zQ0NO3
+R7
+32
+!i10b 1
+R42
+R43
+R44
+R11
+R12
+Eregister_file
+Z46 w1381306143
+R32
+R33
+R2
+R3
+R4
+Z47 8Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
+Z48 FY:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
+l0
+L7
+VB;@3VMkOoCMES`GDzLjOd2
+R7
+32
+Z49 !s108 1381953793.855000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd|
+Z51 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd|
+R11
+R12
+!s100 PTIW@1k^1zAYS=NI>hCQ`1
+!i10b 1
+Asynth
+R32
+R33
+R2
+R3
+DEx4 work 13 register_file 0 22 B;@3VMkOoCMES`GDzLjOd2
+l23
+L20
+V4B4R27X^K^5UeGml_d9gn0
+R7
+32
+R49
+R50
+R51
+R11
+R12
+!s100 EHV;EoJSZ@2VWc_DVP0jV2
+!i10b 1
+Erom
+Z52 w1381917513
+R33
+R32
+R2
+R3
+R4
+Z53 8Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd
+Z54 FY:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd
+l0
+L5
+VIZK8WIBb6W5=hliE;WY7z3
+R7
+32
+Z55 !s108 1381953796.414000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd|
+Z57 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd|
+R11
+R12
+!s100 i>16PIS?eRX7X^D^a<kkm0
+!i10b 1
+Asynth
+R33
+R32
+R2
+R3
+DEx4 work 3 rom 0 22 IZK8WIBb6W5=hliE;WY7z3
+l29
+L15
+VNYHUkVcidbFzN;fA<USk;2
+R7
+32
+R55
+R56
+R57
+R11
+R12
+!s100 GWA@52LzZ_]Ri35hAK`UC1
+!i10b 1
+Erom_block
+Z58 w1381303551
+R2
+R3
+R4
+Z59 8Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd
+Z60 FY:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd
+l0
+L42
+VYVYZmzO`FGR9e7IYG>cfX2
+R7
+32
+Z61 !s108 1381953799.456000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd|
+Z63 !s107 Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd|
+R11
+R12
+!s100 ?hV[j4f]VOPA4i_JAO[d51
+!i10b 1
+Asyn
+R2
+R3
+DEx4 work 9 rom_block 0 22 YVYZmzO`FGR9e7IYG>cfX2
+l82
+L52
+VG^A1]Eb@@^bjBeNTWAPhV0
+R7
+32
+R61
+R62
+R63
+R11
+R12
+!s100 48_?H=E[f_SI[@oRdO61^2
+!i10b 1
+Etb_controller
+R19
+R32
+R33
+R2
+R3
+R4
+Z64 8Y:/BA3/ArchOrd/4_Memories/testbench/tb_controller.vhd
+Z65 FY:/BA3/ArchOrd/4_Memories/testbench/tb_controller.vhd
+l0
+L6
+V`fBP>MKHe07^73`3dK6=J2
+R7
+32
+Z66 !s108 1381953802.092000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/testbench/tb_controller.vhd|
+Z68 !s107 Y:/BA3/ArchOrd/4_Memories/testbench/tb_controller.vhd|
+R11
+R12
+!s100 k2`T78eQZGlfhK__hcogY2
+!i10b 1
+Atestbench
+R25
+R32
+R33
+R2
+R3
+DEx4 work 13 tb_controller 0 22 `fBP>MKHe07^73`3dK6=J2
+l15
+L8
+VX]]>8cFT]RlE5Q=kSTg@01
+R7
+32
+R66
+R67
+R68
+R11
+R12
+!s100 ^];7f`1fBdzgl6:5CC9?_1
+!i10b 1
+Etb_memories
+R19
+R32
+R33
+R2
+R3
+R4
+Z69 8Y:/BA3/ArchOrd/4_Memories/testbench/tb_memories.vhd
+Z70 FY:/BA3/ArchOrd/4_Memories/testbench/tb_memories.vhd
+l0
+L6
+V:RJ12fJYBPQ7HnB0EdO0i3
+R7
+32
+Z71 !s108 1381953804.526000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/testbench/tb_memories.vhd|
+Z73 !s107 Y:/BA3/ArchOrd/4_Memories/testbench/tb_memories.vhd|
+R11
+R12
+!s100 Q35L:3jFA]l1mMQ?CIG6e2
+!i10b 1
+Atestbench
+R31
+R32
+R33
+R2
+R3
+DEx4 work 11 tb_memories 0 22 :RJ12fJYBPQ7HnB0EdO0i3
+l20
+L8
+VoVdMAf13<8HfT=K_D^HhT2
+R7
+32
+R71
+R72
+R73
+R11
+R12
+!s100 ^:NFWZPULKijPMhObDcnZ3
+!i10b 1
+Etb_register_file
+Z74 w1381307551
+R33
+R2
+R3
+R4
+Z75 8Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd
+Z76 FY:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd
 l0
 L5
 V2dJ@5o>O9iE217XP^Y>HN2
-!s100 jWOVD<^mgB2A6l@AlZ<TL0
-R8
+R7
 32
-!i10b 1
-Z17 !s108 1381309016.307000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd|
-Z19 !s107 Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd|
+Z77 !s108 1381953807.085000
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd|
+Z79 !s107 Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd|
+R11
 R12
-R13
+!s100 jWOVD<^mgB2A6l@AlZ<TL0
+!i10b 1
 Abench
+R33
 R2
 R3
-R4
-Z20 DEx4 work 16 tb_register_file 0 22 2dJ@5o>O9iE217XP^Y>HN2
+DEx4 work 16 tb_register_file 0 22 2dJ@5o>O9iE217XP^Y>HN2
 l31
 L7
 VgXT>WlOB@BEUM3FzUKmza1
 !s100 FUd_6@NGdK[d69YUIQNYW3
-R8
+R7
 32
-!i10b 1
-R17
-R18
-R19
+R77
+R78
+R79
+R11
 R12
-R13
+!i10b 1

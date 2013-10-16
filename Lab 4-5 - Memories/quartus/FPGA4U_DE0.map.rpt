@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA4U_DE0
-Wed Oct 16 13:33:06 2013
+Wed Oct 16 21:55:48 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,20 +17,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |FPGA4U_DE0|FPGA4U:inst1|controller:inst|state
  11. State Machine - |FPGA4U_DE0|rgb_led96:inst4|state
- 12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Registers Packed Into Inferred Megafunctions
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated
- 19. Source assignments for rgb_led96:inst4|altsyncram:gamma_table_rtl_0|altsyncram_8871:auto_generated
- 20. Parameter Settings for User Entity Instance: rgb_led96:inst4
- 21. Parameter Settings for User Entity Instance: FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component
- 22. Parameter Settings for Inferred Entity Instance: rgb_led96:inst4|altsyncram:gamma_table_rtl_0
- 23. altsyncram Parameter Settings by Entity Instance
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 12. User-Specified and Inferred Latches
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Registers Packed Into Inferred Megafunctions
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated
+ 20. Source assignments for rgb_led96:inst4|altsyncram:gamma_table_rtl_0|altsyncram_8871:auto_generated
+ 21. Parameter Settings for User Entity Instance: rgb_led96:inst4
+ 22. Parameter Settings for User Entity Instance: FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component
+ 23. Parameter Settings for Inferred Entity Instance: rgb_led96:inst4|altsyncram:gamma_table_rtl_0
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -56,15 +57,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 16 13:33:04 2013           ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 16 21:55:45 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; FPGA4U_DE0                                      ;
 ; Top-level Entity Name              ; FPGA4U_DE0                                      ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 635                                             ;
-;     Total combinational functions  ; 493                                             ;
-;     Dedicated logic registers      ; 308                                             ;
-; Total registers                    ; 308                                             ;
+; Total logic elements               ; 14,577                                          ;
+;     Total combinational functions  ; 14,435                                          ;
+;     Dedicated logic registers      ; 309                                             ;
+; Total registers                    ; 309                                             ;
 ; Total pins                         ; 47                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 36,608                                          ;
@@ -197,39 +198,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altdpram.inc                                  ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
 ; db/altsyncram_rna1.tdf                        ; yes             ; Auto-Generated Megafunction                           ; Y:/BA3/ArchOrd/4_Memories/quartus/db/altsyncram_rna1.tdf                        ;         ;
 ; db/altsyncram_8871.tdf                        ; yes             ; Auto-Generated Megafunction                           ; Y:/BA3/ArchOrd/4_Memories/quartus/db/altsyncram_8871.tdf                        ;         ;
-; db/FPGA4U_DE0.ram0_rgb_led96_6e55db65.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; Y:/BA3/ArchOrd/4_Memories/quartus/db/FPGA4U_DE0.ram0_rgb_led96_6e55db65.hdl.mif ;         ;
+; db/fpga4u_de0.ram0_rgb_led96_6e55db65.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; Y:/BA3/ArchOrd/4_Memories/quartus/db/fpga4u_de0.ram0_rgb_led96_6e55db65.hdl.mif ;         ;
 +-----------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 635         ;
-;                                             ;             ;
-; Total combinational functions               ; 493         ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 206         ;
-;     -- 3 input functions                    ; 142         ;
-;     -- <=2 input functions                  ; 145         ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 369         ;
-;     -- arithmetic mode                      ; 124         ;
-;                                             ;             ;
-; Total registers                             ; 308         ;
-;     -- Dedicated logic registers            ; 308         ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 47          ;
-; Total memory bits                           ; 36608       ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; CLOCK~input ;
-; Maximum fan-out                             ; 355         ;
-; Total fan-out                               ; 3162        ;
-; Average fan-out                             ; 3.36        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                           ;
++---------------------------------------------+-----------------------------------------+
+; Resource                                    ; Usage                                   ;
++---------------------------------------------+-----------------------------------------+
+; Estimated Total logic elements              ; 14,577                                  ;
+;                                             ;                                         ;
+; Total combinational functions               ; 14435                                   ;
+; Logic element usage by number of LUT inputs ;                                         ;
+;     -- 4 input functions                    ; 5946                                    ;
+;     -- 3 input functions                    ; 8343                                    ;
+;     -- <=2 input functions                  ; 146                                     ;
+;                                             ;                                         ;
+; Logic elements by mode                      ;                                         ;
+;     -- normal mode                          ; 14311                                   ;
+;     -- arithmetic mode                      ; 124                                     ;
+;                                             ;                                         ;
+; Total registers                             ; 309                                     ;
+;     -- Dedicated logic registers            ; 309                                     ;
+;     -- I/O registers                        ; 0                                       ;
+;                                             ;                                         ;
+; I/O pins                                    ; 47                                      ;
+; Total memory bits                           ; 36608                                   ;
+; Embedded Multiplier 9-bit elements          ; 0                                       ;
+; Maximum fan-out node                        ; FPGA4U:inst1|controller:inst|address[7] ;
+; Maximum fan-out                             ; 1080                                    ;
+; Total fan-out                               ; 50729                                   ;
+; Average fan-out                             ; 3.41                                    ;
++---------------------------------------------+-----------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -237,15 +238,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
-; |FPGA4U_DE0                                     ; 493 (0)           ; 308 (0)      ; 36608       ; 0            ; 0       ; 0         ; 47   ; 0            ; |FPGA4U_DE0                                                                                                             ; work         ;
-;    |FPGA4U:inst1|                               ; 249 (98)          ; 228 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1                                                                                                ; work         ;
+; |FPGA4U_DE0                                     ; 14435 (256)       ; 309 (0)      ; 36608       ; 0            ; 0       ; 0         ; 47   ; 0            ; |FPGA4U_DE0                                                                                                             ; work         ;
+;    |FPGA4U:inst1|                               ; 13935 (107)       ; 229 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1                                                                                                ; work         ;
 ;       |LEDs:LEDs_0|                             ; 29 (29)           ; 114 (114)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|LEDs:LEDs_0                                                                                    ; work         ;
-;       |RAM:RAM_0|                               ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|RAM:RAM_0                                                                                      ; work         ;
+;       |RAM:RAM_0|                               ; 13667 (13667)     ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|RAM:RAM_0                                                                                      ; work         ;
 ;       |ROM:ROM_0|                               ; 2 (2)             ; 1 (1)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|ROM:ROM_0                                                                                      ; work         ;
 ;          |ROM_Block:rom_block_0|                ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0                                                                ; work         ;
 ;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component                                ; work         ;
 ;                |altsyncram_rna1:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated ; work         ;
-;       |controller:inst|                         ; 119 (119)         ; 112 (112)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst                                                                                ; work         ;
+;       |controller:inst|                         ; 130 (130)         ; 112 (112)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst                                                                                ; work         ;
 ;    |rgb_led96:inst4|                            ; 244 (244)         ; 80 (80)      ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|rgb_led96:inst4                                                                                             ; work         ;
 ;       |altsyncram:gamma_table_rtl_0|            ; 0 (0)             ; 0 (0)        ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|rgb_led96:inst4|altsyncram:gamma_table_rtl_0                                                                ; work         ;
 ;          |altsyncram_8871:auto_generated|       ; 0 (0)             ; 0 (0)        ; 3840        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|rgb_led96:inst4|altsyncram:gamma_table_rtl_0|altsyncram_8871:auto_generated                                 ; work         ;
@@ -300,6 +301,116 @@ Encoding Type:  One-Hot
 +---------------+---------------+--------------+-----------+--------------+
 
 
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++-------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                            ; Latch Enable Signal ; Free of Timing Hazards ;
++-------------------------------------------------------+---------------------+------------------------+
+; FPGA4U:inst1|RAM:RAM_0|memory~4952                    ; rtl~0               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5464                    ; rtl~1               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4440                    ; rtl~2               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5976                    ; rtl~3               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5432                    ; rtl~4               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4920                    ; rtl~5               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4408                    ; rtl~6               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5944                    ; rtl~7               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4888                    ; rtl~8               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5400                    ; rtl~9               ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4376                    ; rtl~10              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5912                    ; rtl~11              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5496                    ; rtl~12              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4984                    ; rtl~13              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4472                    ; rtl~14              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~6008                    ; rtl~15              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5336                    ; rtl~16              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5304                    ; rtl~17              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5272                    ; rtl~18              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5368                    ; rtl~19              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4792                    ; rtl~20              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4824                    ; rtl~21              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4760                    ; rtl~22              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4856                    ; rtl~23              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4312                    ; rtl~24              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4280                    ; rtl~25              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4248                    ; rtl~26              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4344                    ; rtl~27              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5816                    ; rtl~28              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5848                    ; rtl~29              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5784                    ; rtl~30              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5880                    ; rtl~31              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4664                    ; rtl~32              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5176                    ; rtl~33              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4152                    ; rtl~34              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5688                    ; rtl~35              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5208                    ; rtl~36              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4696                    ; rtl~37              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4184                    ; rtl~38              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5720                    ; rtl~39              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5144                    ; rtl~40              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4632                    ; rtl~41              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4120                    ; rtl~42              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5656                    ; rtl~43              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4728                    ; rtl~44              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5240                    ; rtl~45              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4216                    ; rtl~46              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5752                    ; rtl~47              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5080                    ; rtl~48              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5048                    ; rtl~49              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5016                    ; rtl~50              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5112                    ; rtl~51              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5560                    ; rtl~52              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5592                    ; rtl~53              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5528                    ; rtl~54              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~5624                    ; rtl~55              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4536                    ; rtl~56              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4568                    ; rtl~57              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4504                    ; rtl~58              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4600                    ; rtl~59              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~6104                    ; rtl~60              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~6072                    ; rtl~61              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~6040                    ; rtl~62              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~6136                    ; rtl~63              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3416                    ; rtl~64              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2904                    ; rtl~65              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2392                    ; rtl~66              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3928                    ; rtl~67              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2776                    ; rtl~68              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3288                    ; rtl~69              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2264                    ; rtl~70              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3800                    ; rtl~71              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3160                    ; rtl~72              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2648                    ; rtl~73              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2136                    ; rtl~74              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3672                    ; rtl~75              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3032                    ; rtl~76              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3544                    ; rtl~77              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2520                    ; rtl~78              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4056                    ; rtl~79              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2744                    ; rtl~80              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3256                    ; rtl~81              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2232                    ; rtl~82              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3768                    ; rtl~83              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3384                    ; rtl~84              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2872                    ; rtl~85              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2360                    ; rtl~86              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3896                    ; rtl~87              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3128                    ; rtl~88              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2616                    ; rtl~89              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2104                    ; rtl~90              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3640                    ; rtl~91              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3000                    ; rtl~92              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3512                    ; rtl~93              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2488                    ; rtl~94              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~4024                    ; rtl~95              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3352                    ; rtl~96              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2840                    ; rtl~97              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~2328                    ; rtl~98              ; yes                    ;
+; FPGA4U:inst1|RAM:RAM_0|memory~3864                    ; rtl~99              ; yes                    ;
+; Number of user-specified and inferred latches = 8192  ;                     ;                        ;
++-------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +--------------------------------------------------------------+
 ; Registers Removed During Synthesis                           ;
 +-----------------------------------------+--------------------+
@@ -332,7 +443,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 308   ;
+; Total registers                              ; 309   ;
 ; Number of registers using Synchronous Clear  ; 23    ;
 ; Number of registers using Synchronous Load   ; 44    ;
 ; Number of registers using Asynchronous Clear ; 185   ;
@@ -370,17 +481,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|wraddr[4]   ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|address[5]  ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|rdaddr[5]   ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|wraddr[11]  ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|address[15] ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|rdaddr[13]  ;
 ; 4:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|ROMaddr[12] ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|length[9]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_B[1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_G[7]             ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst1|controller:inst|length[13]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_B[0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_G[5]             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_R[0]             ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst1|rddata[16]                  ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |FPGA4U_DE0|FPGA4U:inst1|rddata[16]                  ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst1|rddata[0]                   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|Selector1                ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|Selector3                ;
 ; 24:1               ; 8 bits    ; 128 LEs       ; 112 LEs              ; 16 LEs                 ; No         ; |FPGA4U_DE0|rgb_led96:inst4|Mux7                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
@@ -573,7 +684,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:38     ;
 +----------------+--------------+
 
 
@@ -583,7 +694,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Oct 16 13:32:32 2013
+    Info: Processing started: Wed Oct 16 21:54:33 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA4U_DE0 -c FPGA4U_DE0
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file fpga4u_de0.bdf
@@ -650,6 +761,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_rna1
 Info (12128): Elaborating entity "altsyncram_rna1" for hierarchy "FPGA4U:inst1|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated"
 Info (12128): Elaborating entity "RAM" for hierarchy "FPGA4U:inst1|RAM:RAM_0"
+Warning (10492): VHDL Process Statement warning at RAM.vhd(38): signal "memory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RAM.vhd(38): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RAM.vhd(40): signal "wrdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RAM.vhd(40): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "FPGA4U:inst1|rddata[31]" into a selector
     Warning (13048): Converted tri-state node "FPGA4U:inst1|rddata[30]" into a selector
@@ -718,15 +833,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 763 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 14704 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 41 output pins
-    Info (21061): Implemented 669 logic cells
+    Info (21061): Implemented 14610 logic cells
     Info (21064): Implemented 47 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 524 megabytes
-    Info: Processing ended: Wed Oct 16 13:33:07 2013
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 513 megabytes
+    Info: Processing ended: Wed Oct 16 21:55:50 2013
+    Info: Elapsed time: 00:01:17
+    Info: Total CPU time (on all processors): 00:00:41
 
 

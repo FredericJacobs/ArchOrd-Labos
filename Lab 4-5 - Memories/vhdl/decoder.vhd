@@ -14,6 +14,7 @@ entity decoder is
 end decoder;
 
 architecture synth of decoder is
+    -- 0x2010 == "0010000000010000"
 	constant END_ADDR : std_logic_vector(15 downto 0) := "0010000000010000";
 begin
     process(address)
@@ -26,14 +27,12 @@ begin
             cs_LEDS <= '0';
             cs_RAM  <= '1';
             cs_ROM  <= '0';
-
-			-- "0010000000010000" == 0x2010
         elsif (unsigned(address) < unsigned(END_ADDR)) then
             cs_LEDS <= '1';
             cs_ROM  <= '0';
             cs_RAM  <= '0';
 			else
-				cs_LEDS <= '0';
+			cs_LEDS <= '0';
             cs_ROM  <= '0';
             cs_RAM  <= '0';
         end if;

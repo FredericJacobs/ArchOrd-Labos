@@ -1,12 +1,21 @@
-../vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
+../testbench/tb_memories.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/testbench/tb_memories.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity register_file
--- Compiling architecture synth of register_file
+-- Compiling entity tb_memories
+-- Compiling architecture testbench of tb_memories
+-- Loading entity FPGA4U_WITHOUT_CONTROLLER
+
+} {} {}} ../vhdl/ROM_Block.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ROM_Block
+-- Compiling architecture SYN of rom_block
 
 } {} {}} ../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/testbench/tb_register_file.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -16,5 +25,80 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_arith
 -- Compiling entity tb_register_file
 -- Compiling architecture bench of tb_register_file
+
+} {} {}} ../vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/register_file.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity register_file
+-- Compiling architecture synth of register_file
+
+} {} {}} ../vhdl/Controller.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity controller
+-- Compiling architecture synth of controller
+
+} {} {}} ../vhdl/ROM.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ROM
+-- Compiling architecture synth of ROM
+
+} {} {}} ../vhdl/LEDs.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity LEDs
+-- Compiling architecture synth of LEDs
+
+} {} {}} ../testbench/tb_controller.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/testbench/tb_controller.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_controller
+-- Compiling architecture testbench of tb_controller
+-- Loading entity FPGA4U_WITH_CONTROLLER
+
+} {} {}} ../vhdl/FPGA4U_with_controller.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_with_controller.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FPGA4U_WITH_CONTROLLER
+-- Compiling architecture bdf_type of FPGA4U_WITH_CONTROLLER
+
+} {} {}} ../vhdl/FPGA4U_without_controller.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/FPGA4U_without_controller.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FPGA4U_WITHOUT_CONTROLLER
+-- Compiling architecture bdf_type of FPGA4U_WITHOUT_CONTROLLER
+
+} {} {}} ../vhdl/decoder.vhd {1 {vcom -work work -2002 -explicit Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity decoder
+-- Compiling architecture synth of decoder
 
 } {} {}}

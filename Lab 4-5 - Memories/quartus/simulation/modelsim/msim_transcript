@@ -1,0 +1,107 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do FPGA4U_DE0_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {Y:/BA3/ArchOrd/4_Memories/quartus/rgb_led96.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package pack
+# -- Compiling package body pack
+# -- Loading package pack
+# -- Loading package pack
+# -- Compiling entity rgb_led96
+# -- Compiling architecture arch of rgb_led96
+# vcom -93 -work work {Y:/BA3/ArchOrd/4_Memories/vhdl/Controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# vcom -93 -work work {Y:/BA3/ArchOrd/4_Memories/vhdl/decoder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decoder
+# -- Compiling architecture synth of decoder
+# vcom -93 -work work {Y:/BA3/ArchOrd/4_Memories/vhdl/LEDs.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity LEDs
+# -- Compiling architecture synth of LEDs
+# vcom -93 -work work {Y:/BA3/ArchOrd/4_Memories/vhdl/RAM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RAM
+# -- Compiling architecture synth of RAM
+# vcom -93 -work work {Y:/BA3/ArchOrd/4_Memories/vhdl/ROM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ROM
+# -- Compiling architecture synth of ROM
+# vcom -93 -work work {Y:/BA3/ArchOrd/4_Memories/vhdl/ROM_Block.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ROM_Block
+# -- Compiling architecture SYN of rom_block
+# 
+ls
+# FPGA4U_DE0_run_msim_rtl_vhdl.do  ROM.hex  fpga4u_de0.ram0_rgb_led96_6e55db65.hdl.mif  modelsim.ini  msim_transcript  rtl_work                
+cd ..
+# reading C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini
+l
+# ambiguous command name "l": lappend lattice_edition layout left lindex linsert linux_edition list llength load log lrange lreplace ls lsearch lset lshift lsort lsublist ltTime lteTime
+ls
+# modelsim                                                                                                                                                                
+cd ..
+ls
+# FPGA4U.bdf           FPGA4U_DE0.map.summary                ROM.hex         
+# FPGA4U.bsf           FPGA4U_DE0.qpf                        controller.bsf  
+# FPGA4U.qpf           FPGA4U_DE0.qsf                        db              
+# FPGA4U.qsf           FPGA4U_DE0_assignment_defaults.qdf    decoder.bsf     
+# FPGA4U_DE0.bdf       FPGA4U_DE0_nativelink_simulation.rpt  incremental_db  
+# FPGA4U_DE0.done      LEDs.bsf                              rgb_led96.bsf   
+# FPGA4U_DE0.flow.rpt  RAM.bsf                               rgb_led96.vhd   
+# FPGA4U_DE0.map.rpt   ROM.bsf                               simulation      
+cd ..
+ls
+# modelsim  quartus  testbench  vhdl                                  
+cd vhdl
+vcom *.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: Library work not found.
+# ** Error: VHDL Compiler exiting
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+vcom Controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: Library work not found.
+# ** Error: VHDL Compiler exiting
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
