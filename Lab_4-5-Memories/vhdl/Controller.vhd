@@ -1,8 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
--- use ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
-
 
 entity controller is
     port(
@@ -18,87 +16,91 @@ end controller;
 
 architecture synth of controller is
     type ControllerState is (S0, S1, S2, S3, S4, S5);
-    signal state : ControllerState;
-    signal ROMaddr : std_logic_vector(15 downto 0);
-    signal length : std_logic_vector(15 downto 0);
-    signal rdaddr : std_logic_vector(15 downto 0);
-    signal wraddr : std_logic_vector(15 downto 0);
+    signal state, nextState : ControllerState;
+    signal ROMaddr, nextROMaddr : std_logic_vector(15 downto 0);
+    signal length, nextLength : std_logic_vector(15 downto 0);
+    signal rdaddr, nextRdaddr : std_logic_vector(15 downto 0);
+    signal wraddr, nextWraddr : std_logic_vector(15 downto 0);
 begin
-
-    process(clk, reset_n)
-	 begin
-
-        if(reset_n = '1') then
-            state <= S0;
-            ROMaddr <= (others => '0');
-				read <= '0';
-				write <= '0';
-				address <= (others => '0');
-                length <= (others => '0');
-                rdaddr <= (others => '0');
-                wraddr <= (others => '0');
-        elsif(rising_edge(clk)) then
-            case state is
-
-                when S0 =>
-                    read <= '1';
-				    write <= '0';
-                    address <= ROMaddr;
-
-                    ROMaddr <= std_logic_vector(unsigned(ROMaddr) + 4);
-                    state <= S1;
-
-                when S1 =>
-                    read <= '1';
-					write <= '0';
-                    address <= ROMaddr;
-
-                    if(rddata = (31 downto 0 => '0')) then
-                        state <= S5;
-                    else
-                        state <= S2;
-                        ROMaddr <= std_logic_vector(unsigned(ROMaddr) + 4);
-                        length <= rddata(15 downto 0);
-                    end if;
-
-                when S2 =>
-                    state <= S3;
-                    rdaddr <= rddata(31 downto 16);
-                    wraddr <= rddata(15 downto 0);
-					address <= (others => '0');
-
-                when S3 =>
-                    read <= '1';
-					write <= '0';
-                    address <= rdaddr;
-
-                    if(length = (15 downto 0 => '0')) then
-                        state <= S0;
-                    else
-                        state <= S4;
-                        rdaddr <= std_logic_vector(unsigned(rdaddr) + 4);
-                        length <= std_logic_vector(unsigned(length) - 1);
-                    end if;
-
-                when S4 =>
-					read <= '0';
-                    write <= '1';
-                    wrdata <= rddata;
-                    address <= wraddr;
-
-                    state <= S3;
-                    wraddr <= std_logic_vector(unsigned(wraddr) + 4);
-
-                when S5 =>
-                    state <= S5;
-					read <= '0';
-					write <= '0';
-					address <= (others => '0');
-
-                when others => null;
-
-            end case;
+-- we need to make the reset and clock process the same because state can't be assigned in 2 separate processes.
+	process(clk, reset_n)
+		begin 
+			if(reset_n='1')then
+				state <= S0;
+				ROMaddr <= (others =>'0');
+			elsif(rising_edge(clk))then
+			state <= nextState;
+			ROMaddr <= nextROMaddr;
+			rdaddr <= nextRdaddr;
+			wraddr <= nextWraddr;
+			length <= nextlength;
+		end if;
+	end process;
+	
+	process(state, rdaddr, wraddr, ROMaddr)
+	begin 
+		-- let's write default values otherwise we'll have to fill all these values in each case.
+		read <= '0';
+		write <= '0';
+		address <= ROMaddr;
+		wrdata <= rddata;
+	
+		nextState <= state;
+		nextROMaddr <= ROMaddr;
+		nextLength <= length;
+		nextRdaddr <= rdaddr;
+		nextWraddr <= wraddr;
+		
+		case state is
+			when S0 =>
+				read <= '1';
+            	address <= ROMaddr;
+				nextROMaddr <= std_logic_vector(unsigned(ROMaddr) + 4);
+            	nextState <= S1;
+				
+			when S1 =>
+				read <= '1';
+        address <= ROMaddr;
+                
+				if(rddata = (31 downto 0 => '0')) then
+     	    nextState <= S5;
+        else
+       	  nextState<= S2;
+          nextROMaddr <= std_logic_vector(unsigned(ROMaddr) + 4);
+          nextLength <= rddata(15 downto 0);
         end if;
+					
+				when S2 =>
+          nextState <= S3;
+          nextRdaddr <= rddata(31 downto 16);
+          nextWraddr <= rddata(15 downto 0);
+					address <= (others => '0');
+        
+        when S3 =>
+          read <= '1';
+          address <= rdaddr;
+          if(length = (15 downto 0 => '0')) then
+            nextState <= S0;
+          else
+            nextState <= S4;
+            nextRdaddr <= std_logic_vector(unsigned(rdaddr) + 4);
+            length <= std_logic_vector(unsigned(length) - 1);
+          end if;
+          
+          when S4 =>
+            write <= '1';
+            address <= wraddr;
+            nextState <= S3;
+            nextWraddr <= std_logic_vector(unsigned(wraddr) + 4);
+          
+           when S5 =>
+            nextState <= S5;
+            read <= '0';
+            write <= '0';
+					  address <= (others => '0');
+            
+           when others => null;
+            end case;
     end process;
 
 end synth;
