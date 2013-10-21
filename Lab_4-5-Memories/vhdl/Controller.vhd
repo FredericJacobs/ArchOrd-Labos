@@ -50,7 +50,7 @@ begin
 
                 when S1 =>
                     read <= '1';
-						  write <= '0';
+					write <= '0';
                     address <= ROMaddr;
 
                     if(rddata = (31 downto 0 => '0')) then
@@ -64,7 +64,7 @@ begin
                 when S2 =>
                     state <= S3;
                     rdaddr <= rddata(31 downto 16);
-                    wraddr <= (others => '0') & rddata(15 downto 0);
+                    wraddr <= rddata(15 downto 0);
 					address <= (others => '0');
 
                 when S3 =>
