@@ -11,36 +11,37 @@ entity RAM is
         address : in  std_logic_vector(9 downto 0);
         wrdata  : in  std_logic_vector(31 downto 0);
         rddata  : out std_logic_vector(31 downto 0));
-
-        subtype memory_word is std_logic_vector(31 downto 0);
-        constant words_num : integer := 2 ** 7;
-        type ram_array is array(0 to words_num - 1) of memory_word;
+        
+        type ram_array is array(0 to 1023) of std_logic_vector(31 downto 0);
 end RAM;
 
 architecture synth of RAM is
     signal reg_read  : std_logic;
     signal memory    : ram_array;
+	signal reg_address : std_logic_vector(9 downto 0);
 begin
-    process(clk, read, cs)
+    process(clk)
     begin
         if (rising_edge(clk)) then
             reg_read <= read and cs;
+			reg_address <= address;
         end if;
     end process;
 
-    process(reg_read, address)
+    process(reg_read, reg_address)
     begin
         rddata <= (others => 'Z');
         if (reg_read = '1') then
-            rddata <= memory(to_integer(unsigned(address(9 downto 2))));
+            rddata <= memory(to_integer(unsigned(reg_address)));
         end if;
     end process;
 
-    process(write, wrdata, address)
+    process(clk, reg_address)
     begin
-        if (rising_edge(clk) and write = '1')
-            memory(to_integer(unsigned(address(9 downto 2)))) <= wrdata;
+        if (rising_edge(clk) and write = '1' and cs = '1') then
+            memory(to_integer(unsigned(address))) <= wrdata;
         end if;
     end process;
 
 end synth;
+
