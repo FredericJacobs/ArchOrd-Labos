@@ -1,0 +1,175 @@
+# Copyright (C) 1991-2007 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		system_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C8
+set_global_assignment -name TOP_LEVEL_ENTITY FPGA4U
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 7.2
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:32:34  FEBRUARY 08, 2008"
+set_global_assignment -name LAST_QUARTUS_VERSION 12.1
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE ANY
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name SMART_RECOMPILE ON
+set_location_assignment PIN_L1 -to clk
+set_location_assignment PIN_B3 -to reset_n
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_Y18 -to out_LEDs[0]
+set_location_assignment PIN_Y20 -to out_LEDs[1]
+set_location_assignment PIN_Y22 -to out_LEDs[2]
+set_location_assignment PIN_W22 -to out_LEDs[3]
+set_location_assignment PIN_V20 -to out_LEDs[4]
+set_location_assignment PIN_V22 -to out_LEDs[5]
+set_location_assignment PIN_U20 -to out_LEDs[6]
+set_location_assignment PIN_U22 -to out_LEDs[7]
+set_location_assignment PIN_Y19 -to out_LEDs[8]
+set_location_assignment PIN_Y21 -to out_LEDs[9]
+set_location_assignment PIN_W21 -to out_LEDs[10]
+set_location_assignment PIN_V19 -to out_LEDs[11]
+set_location_assignment PIN_V21 -to out_LEDs[12]
+set_location_assignment PIN_U19 -to out_LEDs[13]
+set_location_assignment PIN_U21 -to out_LEDs[14]
+set_location_assignment PIN_T21 -to out_LEDs[15]
+set_location_assignment PIN_T22 -to out_LEDs[16]
+set_location_assignment PIN_R18 -to out_LEDs[17]
+set_location_assignment PIN_R20 -to out_LEDs[18]
+set_location_assignment PIN_R22 -to out_LEDs[19]
+set_location_assignment PIN_P17 -to out_LEDs[20]
+set_location_assignment PIN_N15 -to out_LEDs[21]
+set_location_assignment PIN_N22 -to out_LEDs[22]
+set_location_assignment PIN_M19 -to out_LEDs[23]
+set_location_assignment PIN_R17 -to out_LEDs[24]
+set_location_assignment PIN_R19 -to out_LEDs[25]
+set_location_assignment PIN_R21 -to out_LEDs[26]
+set_location_assignment PIN_P15 -to out_LEDs[27]
+set_location_assignment PIN_P18 -to out_LEDs[28]
+set_location_assignment PIN_N21 -to out_LEDs[29]
+set_location_assignment PIN_M18 -to out_LEDs[30]
+set_location_assignment PIN_L18 -to out_LEDs[31]
+set_location_assignment PIN_T6 -to out_LEDs[32]
+set_location_assignment PIN_R7 -to out_LEDs[33]
+set_location_assignment PIN_P3 -to out_LEDs[34]
+set_location_assignment PIN_J2 -to out_LEDs[35]
+set_location_assignment PIN_H6 -to out_LEDs[36]
+set_location_assignment PIN_H4 -to out_LEDs[37]
+set_location_assignment PIN_H2 -to out_LEDs[38]
+set_location_assignment PIN_G6 -to out_LEDs[39]
+set_location_assignment PIN_U3 -to out_LEDs[40]
+set_location_assignment PIN_R8 -to out_LEDs[41]
+set_location_assignment PIN_R6 -to out_LEDs[42]
+set_location_assignment PIN_J4 -to out_LEDs[43]
+set_location_assignment PIN_J1 -to out_LEDs[44]
+set_location_assignment PIN_H5 -to out_LEDs[45]
+set_location_assignment PIN_H3 -to out_LEDs[46]
+set_location_assignment PIN_H1 -to out_LEDs[47]
+set_location_assignment PIN_G3 -to out_LEDs[48]
+set_location_assignment PIN_F3 -to out_LEDs[49]
+set_location_assignment PIN_F1 -to out_LEDs[50]
+set_location_assignment PIN_E3 -to out_LEDs[51]
+set_location_assignment PIN_E1 -to out_LEDs[52]
+set_location_assignment PIN_D3 -to out_LEDs[53]
+set_location_assignment PIN_D1 -to out_LEDs[54]
+set_location_assignment PIN_C1 -to out_LEDs[55]
+set_location_assignment PIN_G5 -to out_LEDs[56]
+set_location_assignment PIN_F4 -to out_LEDs[57]
+set_location_assignment PIN_F2 -to out_LEDs[58]
+set_location_assignment PIN_E4 -to out_LEDs[59]
+set_location_assignment PIN_E2 -to out_LEDs[60]
+set_location_assignment PIN_D4 -to out_LEDs[61]
+set_location_assignment PIN_D2 -to out_LEDs[62]
+set_location_assignment PIN_C2 -to out_LEDs[63]
+set_location_assignment PIN_K20 -to out_LEDs[64]
+set_location_assignment PIN_K22 -to out_LEDs[65]
+set_location_assignment PIN_J17 -to out_LEDs[66]
+set_location_assignment PIN_J19 -to out_LEDs[67]
+set_location_assignment PIN_J21 -to out_LEDs[68]
+set_location_assignment PIN_H16 -to out_LEDs[69]
+set_location_assignment PIN_H18 -to out_LEDs[70]
+set_location_assignment PIN_G17 -to out_LEDs[71]
+set_location_assignment PIN_K21 -to out_LEDs[72]
+set_location_assignment PIN_J15 -to out_LEDs[73]
+set_location_assignment PIN_J18 -to out_LEDs[74]
+set_location_assignment PIN_J20 -to out_LEDs[75]
+set_location_assignment PIN_J22 -to out_LEDs[76]
+set_location_assignment PIN_H17 -to out_LEDs[77]
+set_location_assignment PIN_H19 -to out_LEDs[78]
+set_location_assignment PIN_G18 -to out_LEDs[79]
+set_location_assignment PIN_G21 -to out_LEDs[80]
+set_location_assignment PIN_F20 -to out_LEDs[81]
+set_location_assignment PIN_F22 -to out_LEDs[82]
+set_location_assignment PIN_E21 -to out_LEDs[83]
+set_location_assignment PIN_D19 -to out_LEDs[84]
+set_location_assignment PIN_D21 -to out_LEDs[85]
+set_location_assignment PIN_C19 -to out_LEDs[86]
+set_location_assignment PIN_C21 -to out_LEDs[87]
+set_location_assignment PIN_G22 -to out_LEDs[88]
+set_location_assignment PIN_F21 -to out_LEDs[89]
+set_location_assignment PIN_E20 -to out_LEDs[90]
+set_location_assignment PIN_E22 -to out_LEDs[91]
+set_location_assignment PIN_D20 -to out_LEDs[92]
+set_location_assignment PIN_D22 -to out_LEDs[93]
+set_location_assignment PIN_C20 -to out_LEDs[94]
+set_location_assignment PIN_C22 -to out_LEDs[95]
+set_location_assignment PIN_U11 -to in_buttons[0]
+set_location_assignment PIN_U12 -to in_buttons[1]
+set_location_assignment PIN_V12 -to in_buttons[2]
+set_location_assignment PIN_AB4 -to in_buttons[3]
+set_global_assignment -name BDF_FILE ALU.bdf
+set_global_assignment -name BDF_FILE CPU.bdf
+set_global_assignment -name BDF_FILE FPGA4U.bdf
+set_global_assignment -name VHDL_FILE ../vhdl/add_sub.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/buttons.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/comparator.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/controller.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/decoder.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/extend.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/IR.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/LEDs.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/logic_unit.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/multiplexer.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/mux2x5.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/mux2x16.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/mux2x32.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/PC.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/RAM.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/register_file.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/ROM.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/ROM_Block.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/shift_unit.vhd
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+
+
+
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
