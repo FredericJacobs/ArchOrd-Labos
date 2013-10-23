@@ -14,5 +14,12 @@ end mux2x32;
 
 architecture synth of mux2x32 is
 begin
-
+    process (io, i1, sel)
+    begin
+        case sel is
+            when '0' => o <= i0;
+            when '1' => o <= i1;
+            when others =>
+        end case;
+    end process;
 end synth;
