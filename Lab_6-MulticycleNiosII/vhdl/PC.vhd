@@ -19,5 +19,14 @@ end PC;
 architecture synth of PC is
 
 begin
-
+    process(clk, reset_n, en)
+    begin
+        if(rising_edge(clk)) then
+            if(reset_n = '0') then
+                addr <= (others => '0');
+            elsif(en = '1') then
+                addr <= addr + 4;
+            end if;
+        end if;
+    end process;
 end synth;
