@@ -45,7 +45,7 @@ begin
     process(clk, reset_n)
         begin
             if(reset_n = '1') then
-                state <= FETCH1;
+                currentState <= FETCH1;
             elsif(rising_edge(clk))then
                 currentState <= nextState;
             end if;
@@ -101,11 +101,11 @@ begin
             -- to identify the current instruction, and determines the next state.
             when DECODE =>
 
-                case(op) is
+                case("00" & op) is
 
                     when x"3A" =>
 
-                        case(opx) is
+                        case("00" & opx) is
 
                             -- and rC, rA, rB
                             -- rC <= rA & rB
@@ -147,10 +147,6 @@ begin
             -- that is embedded in the instruction word, and saves the result in a second register.
             when I_OP =>
 
-                -- Select registers A and B
-                sel_a <= '1';
-                sel_b <= '1';
-
                 -- Use signed immediate value
                 imm_signed <= '1';
 
@@ -160,15 +156,17 @@ begin
                 -- Enable writes on the register file
                 -- to save the result of the ALU
                 rf_wren <= '1';
+					 
+					 -- Go back to the initial state.
+					 nextState <= FETCH1;
 
             -- This state executes operations between two registers,
             -- and saves the result in a third register.
             when R_OP =>
 
                 -- Select registers A, B and C
-                sel_a <= '1';
                 sel_b <= '1';
-                sel_c <= '1';
+                sel_RC <= '1';
 
                 -- opx contains the actual ALU opcode.
                 op_alu <= opx;
@@ -176,6 +174,9 @@ begin
                 -- Enable writes on the register file
                 -- to save the result of the ALU
                 rf_wren <= '1';
+					 
+					 -- Go back to the initial state.
+					 nextState <= FETCH1;
 
             -- During the state LOAD1, the address to read is computed by the ALU
             -- (adding the signed immediate value to a) and the signal read is set to
@@ -212,6 +213,9 @@ begin
                 -- Select the data to write to the Register File from
                 -- either the result of the ALU or the rddata input.
                 sel_mem <= '1';
+					 
+					 -- Go back to the initial state.
+					 nextState <= FETCH1;
 
             -- During this state, the ALU computes the memory address as for a ldw instruction,
             -- and the Controller activates the write output signal to start a write process.
@@ -229,6 +233,9 @@ begin
 
                 -- Start a write process to the memory.
                 write <= '1';
+					 
+					 -- Go back to the initial state.
+					 nextState <= FETCH1;
 
             -- This instruction will be used to stop the CPU execution.
             when BREAK =>
