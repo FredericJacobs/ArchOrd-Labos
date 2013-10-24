@@ -16,8 +16,8 @@ begin
     process(imm16, signed)
     begin
         case(signed) is
-            when '0' => (31 downto 16 => '0') & imm16;
-            when '1' => imm16(15) & (30 downto 15 => '0') & imm16(14 downto 0)
+            when '0' => imm32 <= (31 downto 16 => '0') & imm16;
+            when '1' => imm32 <= imm16(15) & (30 downto 15 => '0') & imm16(14 downto 0);
         end case;
     end process;
 end synth;
