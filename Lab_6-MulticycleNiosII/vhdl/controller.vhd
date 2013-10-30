@@ -1,4 +1,4 @@
-library ieee;
+    library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
@@ -156,7 +156,7 @@ begin
                 -- Enable writes on the register file
                 -- to save the result of the ALU
                 rf_wren <= '1';
-					 
+
 					 -- Go back to the initial state.
 					 nextState <= FETCH1;
 
@@ -174,7 +174,7 @@ begin
                 -- Enable writes on the register file
                 -- to save the result of the ALU
                 rf_wren <= '1';
-					 
+
 					 -- Go back to the initial state.
 					 nextState <= FETCH1;
 
@@ -213,9 +213,9 @@ begin
                 -- Select the data to write to the Register File from
                 -- either the result of the ALU or the rddata input.
                 sel_mem <= '1';
-					 
-					 -- Go back to the initial state.
-					 nextState <= FETCH1;
+
+				-- Go back to the initial state.
+				nextState <= FETCH1;
 
             -- During this state, the ALU computes the memory address as for a ldw instruction,
             -- and the Controller activates the write output signal to start a write process.
@@ -233,7 +233,7 @@ begin
 
                 -- Start a write process to the memory.
                 write <= '1';
-					 
+
 					 -- Go back to the initial state.
 					 nextState <= FETCH1;
 
