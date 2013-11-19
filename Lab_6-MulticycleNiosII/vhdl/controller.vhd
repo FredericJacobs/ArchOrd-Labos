@@ -39,7 +39,7 @@ entity controller is
 end controller;
 
 architecture synth of controller is
-	type State is (FETCH1, FETCH2, DECODE, R_OP, STORE, BREAK, LOAD1, LOAD2, I_OP);
+	type State is (FETCH1, FETCH2, DECODE, R_OP, STORE, BREAK, LOAD1, LOAD2, I_OP, BRANCH);
 	signal currentState, nextState : State;
 begin
   
@@ -81,6 +81,8 @@ begin
 
 				-- Read input from rddata
 				read <= '1';
+				
+				branch_op <= '0';
 
 				nextState <= FETCH2;
 
@@ -107,23 +109,11 @@ begin
 
 						case("00" & opx) is
 
-							-- and rC, rA, rB
-							-- rC <= rA & rB
-							when x"0E" =>
-								nextState <= R_OP;
-
-							-- srl rC, rA, rB
-							-- rC <= (unsigned)rA >> rB[4..0]
-							when x"1B" =>
-								nextState <= R_OP;
-
-							-- break
-							-- Stops the program execution
 							when x"34" =>
 								nextState <= BREAK;
 
 							when others =>
-								nextState <= BREAK;
+								nextState <= R_OP;
 
 						end case;
 
@@ -141,7 +131,15 @@ begin
 					-- Mem[rA + (signed)imm] <= rB
 					when x"15" =>
 						nextState <= STORE;
-
+						
+					when x"06" => nextState <= BRANCH;
+					when x"0E" => nextState <= BRANCH;
+					when x"16" => nextState <= BRANCH;
+					when x"1E" => nextState <= BRANCH;
+					when x"26" => nextState <= BRANCH;
+					when x"2E" => nextState <= BRANCH;
+					when x"36" => nextState <= BRANCH;
+					
 					when others =>
 						nextState <= BREAK;
 				end case;
@@ -166,7 +164,7 @@ begin
 
 				-- Select registers A, B and C
 				sel_b <= '1';
-				sel_RC <= '1';
+				sel_rC <= '1';
 				
 				-- Enable writes on the register file
 				-- to save the result of the ALU
@@ -174,7 +172,7 @@ begin
 
 				-- Go back to the initial state.
 				nextState <= FETCH1;
-
+			
 			-- During the state LOAD1, the address to read is computed by the ALU
 			-- (adding the signed immediate value to a) and the signal read is set to
 			-- start a read process. The read value will be available during LOAD2.
@@ -230,6 +228,32 @@ begin
 			-- This instruction will be used to stop the CPU execution.
 			when BREAK =>
 				nextState <= BREAK;
+				
+			when BRANCH =>
+				
+				nextState <= FETCH1;
+				
+				branch_op <= '1';
+				sel_b <= '1';
+				
+				-- Tell the PC to add IMM to the current PC
+				-- which it will do only if either pc_en = '1'
+				-- or if (branch_op & alu_res(0)) = '1'1 
+				pc_add_imm <= '1';
+				
+				case ("00" & op) is
+					-- br label (no condition)
+					when x"06" =>
+						-- unconditional jump, enable the PC
+						-- to jump to the given address.
+						pc_en <= '1';
+						
+					-- conditional jumps
+					-- let the ALU do the corresponding operations
+					-- and if the rightmost bit of alu_res is '1'
+					-- then the PC will be enabled.
+					when others =>
+				end case;
 
 			when others =>
 		end case;
@@ -263,8 +287,32 @@ begin
 			when x"04" =>
 				op_alu <= "000000";
 			
+			-- rA >= rB
+			when x"0E" =>
+				op_alu <= "011001";
+			
+			-- rA < rB
+			when x"16" =>
+				op_alu <= "011010";
+				
+			-- rA != rB
+			when x"1E" =>
+				op_alu <= "011011";
+				
+			-- ra == rB
+			when x"26" =>
+				op_alu <= "011100";
+				
+			-- (unsigned)rA >= (unsigned)rB
+			when x"2E" =>
+				op_alu <= "011101";
+				
+			-- (unsigned)rA < (unsigned)rB
+			when x"36" =>
+				op_alu <= "011110";
+			
 			when others => 
-				-- Default to addition
+				-- Default to rA + rB
 				op_alu <= "000000";
 		end case;
 	end process;

@@ -1,0 +1,52 @@
+Time: 22.5 ns Input File Line: 14
+* Error: op_alu = '000000' instead of '100000'.
+ Verify the op_alu generation.
+
+Time: 42.5 ns Input File Line: 18
+* Error: op_alu = '000000' instead of '011001'.
+ Verify the op_alu generation.
+
+Time: 82.5 ns Input File Line: 30
+* Error: op_alu = '000000' instead of '011010'.
+ Verify the op_alu generation.
+
+Time: 102.5 ns Input File Line: 34
+* Error: op_alu = '000000' instead of '110010'.
+ Verify the op_alu generation.
+
+Time: 122.5 ns Input File Line: 38
+* Error: op_alu = '000000' instead of '100010'.
+ Verify the op_alu generation.
+
+Time: 162.5 ns Input File Line: 50
+* Error: op_alu = '000000' instead of '100011'.
+ Verify the op_alu generation.
+
+Time: 202.5 ns Input File Line: 70
+* Error: op_alu = '000000' instead of '001000'.
+ Verify the op_alu generation.
+
+Time: 222.5 ns Input File Line: 74
+* Error: op_alu = '000000' instead of '110111'.
+ Verify the op_alu generation.
+
+Time: 447.5 ns Input File Line: 147
+* Error: pc_sel_imm = '0' instead of '1'.
+ During CALL, pc_sel_imm has to be 1.
+
+Time: 447.5 ns Input File Line: 147
+* Error: rf_wren = '0' instead of '1'.
+ During CALL, rf_wren has to be 1.
+
+Time: 447.5 ns Input File Line: 147
+* Error: pc_en = '0' instead of '1'.
+ During CALL, pc_en has to be 1.
+
+Time: 447.5 ns Input File Line: 147
+* Error: sel_pc = '0' instead of '1'.
+ During CALL, sel_pc has to be 1.
+
+Time: 447.5 ns Input File Line: 147
+* Error: sel_ra = '0' instead of '1'.
+ During CALL, sel_ra has to be 1.
+

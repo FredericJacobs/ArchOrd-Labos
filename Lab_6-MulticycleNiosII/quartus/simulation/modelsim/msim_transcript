@@ -63,9 +63,11 @@
 # 
 # ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
 # 
-# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(240): (vcom-1186) Array type case expression must be of a locally static subtype.
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
 # 
-# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(244): (vcom-1186) Array type case expression must be of a locally static subtype.
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(267): (vcom-1186) Array type case expression must be of a locally static subtype.
 # 
 # vcom -93 -work work {C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/decoder.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -151,8 +153,7 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
 # -- Compiling entity PC
 # -- Compiling architecture synth of PC
 # vcom -93 -work work {C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd}
@@ -199,21 +200,13 @@
 # -- Compiling entity shift_unit
 # -- Compiling architecture synth of shift_unit
 # 
-cd ..
-# reading C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini
-cd ..
-cd ..
-cd ..
-pwd
-# C:/Users/romac/Documents/GitHub/ArchOrd-Labos
-cd Lab_6-MulticycleNiosII
-cd modelsim
+cd ../../../modelsim
 # reading modelsim.ini
 ls
 # Controller  PC                        multicycle_niosII.mpf  test_Extend.do  transcript  
 # Extend      modelsim.ini              test_Controller.do     test_IR.do      vsim.wlf    
 # IR          multicycle_niosII.cr.mti  test_Controller0.do    test_PC.do      work        
-do test_PC.do
+do test_Controller.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Modifying modelsim.ini
@@ -223,8 +216,18 @@ do test_PC.do
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(267): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -283,13 +286,13 @@ do test_PC.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Loading package std_logic_textio
 # -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 # 
-# ** Warning: ../testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 # 
-# vsim tb_PC 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -297,41 +300,22 @@ do test_PC.do
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading work.pc(synth)
-# - Program Counter test:
-# - reset_n test...
-# ** Error: Unexpected output value for addr
-#    Time: 17500 ps  Iteration: 1  Instance: /tb_pc
-# - sel_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 37500 ps  Iteration: 1  Instance: /tb_pc
-# - sel_a test...
-# - add_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
-# - enable test...
-# ** Error: Unexpected output value for addr
-#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
-# - pc+4 test...
-# ** Error: Unexpected output value for addr
-#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
 # ===================================================================
-# Errors encountered during simulation. Refer to the report.txt file.
+# IR has not been activated... Simulation aborted.
 # ===================================================================
-vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-do test_PC.do
+do test_Controller0.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Modifying modelsim.ini
@@ -339,9 +323,20 @@ do test_PC.do
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(267): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -400,13 +395,13 @@ do test_PC.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Loading package std_logic_textio
 # -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 # 
-# ** Warning: ../testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 # 
-# vsim tb_PC 
+# vsim -Gtext_in=Controller/in0.txt tb_Controller 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -414,356 +409,1160 @@ do test_PC.do
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading ieee.numeric_std(body)
-# Loading work.pc(synth)
-# - Program Counter test:
-# - reset_n test...
-# ** Error: Unexpected output value for addr
-#    Time: 17500 ps  Iteration: 1  Instance: /tb_pc
-# - sel_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 37500 ps  Iteration: 1  Instance: /tb_pc
-# - sel_a test...
-# - add_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
-# - enable test...
-# ** Error: Unexpected output value for addr
-#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
-# - pc+4 test...
-# ** Error: Unexpected output value for addr
-#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
-# ===================================================================
-# Errors encountered during simulation. Refer to the report.txt file.
-# ===================================================================
-vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-do test_PC.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Modifying modelsim.ini
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# vsim tb_PC 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading ieee.numeric_std(body)
-# Loading work.pc(synth)
-# - Program Counter test:
-# - reset_n test...
-# - sel_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 37500 ps  Iteration: 1  Instance: /tb_pc
-# - sel_a test...
-# - add_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
-# - enable test...
-# ** Error: Unexpected output value for addr
-#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
-# - pc+4 test...
-# ** Error: Unexpected output value for addr
-#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
-# ** Error: Unexpected output value for addr
-#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
-# ===================================================================
-# Errors encountered during simulation. Refer to the report.txt file.
-# ===================================================================
-vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-do test_PC.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Modifying modelsim.ini
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# vsim tb_PC 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading ieee.numeric_std(body)
-# Loading work.pc(synth)
-# - Program Counter test:
-# - reset_n test...
-# - sel_imm test...
-# ** Error: Unexpected output value for addr
-#    Time: 37500 ps  Iteration: 1  Instance: /tb_pc
-# - sel_a test...
-# - add_imm test...
-# - enable test...
-# - pc+4 test...
-# ===================================================================
-# Errors encountered during simulation. Refer to the report.txt file.
-# ===================================================================
-vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-do test_PC.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Modifying modelsim.ini
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity PC
-# -- Compiling architecture synth of PC
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Compiling package check_functions
-# -- Compiling package body check_functions
-# -- Loading package check_functions
-# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
-# 
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Loading package check_functions
-# -- Compiling entity tb_PC
-# -- Compiling architecture testbench of tb_PC
-# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# ** Warning: ../testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
-# vsim tb_PC 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.std_logic_textio(body)
-# Loading work.check_functions(body)
-# Loading work.tb_pc(testbench)
-# Loading ieee.numeric_std(body)
-# Loading work.pc(synth)
-# - Program Counter test:
-# - reset_n test...
-# - sel_imm test...
-# - sel_a test...
-# - add_imm test...
-# - enable test...
-# - pc+4 test...
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# -=Testing the first version of the CPU==================================
+# --and
+# --srl
+# --addi
+# --ldw
+# --stw
+# --break
+# --and
 # ===================================================================
 # Simulation is successful
+# ===================================================================
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(267): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(251): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(271): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(275): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(251): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(271): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(275): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(251): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(271): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(275): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(251): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(271): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(275): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(267): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(267): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(239): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(259): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(239): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(259): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 162500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 202500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 222500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 242500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 242500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 262500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 262500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 282500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 282500 ps  Iteration: 1  Instance: /tb_controller
+# --I_OP test:------------------------------------------------------------
+# --UI_OP test:-----------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 322500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 322500 ps  Iteration: 1  Instance: /tb_controller
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(104): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(108): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(239): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(259): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(263): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 162500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 202500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 222500 ps  Iteration: 1  Instance: /tb_controller
+# --I_OP test:------------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# ** Error: Unexpected output value for sel_b
+#    Time: 307500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 312500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 317500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 322500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 327500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 332500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 337500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 342500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 347500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 352500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 357500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 362500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 367500 ps  Iteration: 1  Instance: /tb_controller
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(106): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(110): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(264): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(268): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(106): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(110): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(243): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(264): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(268): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 162500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 202500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 222500 ps  Iteration: 1  Instance: /tb_controller
+# --I_OP test:------------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# ** Error: Unexpected output value for sel_b
+#    Time: 307500 ps  Iteration: 1  Instance: /tb_controller
+# --CALL test:------------------------------------------------------------
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# --JMP test:-------------------------------------------------------------
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(106): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(110): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(244): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(264): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(268): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 162500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 202500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 222500 ps  Iteration: 1  Instance: /tb_controller
+# --I_OP test:------------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# --JMP test:-------------------------------------------------------------
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(106): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(110): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(244): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(264): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd(268): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+do test_Controller.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(106): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(110): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(244): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(264): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(268): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ** Error: Unexpected output value for op_alu
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 162500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 202500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 222500 ps  Iteration: 1  Instance: /tb_controller
+# --I_OP test:------------------------------------------------------------
+# --LOAD test:------------------------------------------------------------
+# --STORE test:-----------------------------------------------------------
+# --BRANCH test:----------------------------------------------------------
+# --CALL test:------------------------------------------------------------
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 447500 ps  Iteration: 1  Instance: /tb_controller
+# --JMP test:-------------------------------------------------------------
+# ===================================================================
+# IR has not been activated... Simulation aborted.
 # ===================================================================

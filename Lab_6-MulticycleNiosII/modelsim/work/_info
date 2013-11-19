@@ -131,7 +131,7 @@ VD^e=0]0ZiP3`3Z1jBVcjS3
 R8
 31
 b1
-Z28 !s108 1384871570.272000
+Z28 !s108 1384876783.049000
 Z29 !s90 -reportprogress|300|-93|../testbench/check_functions.vhd|
 Z30 !s107 ../testbench/check_functions.vhd|
 Z31 o-93 -O0
@@ -198,7 +198,7 @@ R13
 !s100 Qnj?m3HGWN95SjP18VI4J2
 !i10b 1
 Econtroller
-Z38 w1384869322
+Z38 w1384876771
 R1
 R2
 R3
@@ -211,7 +211,7 @@ L6
 VA;1ie:M`BaBmNRV6nghn73
 R8
 31
-Z41 !s108 1384869370.923000
+Z41 !s108 1384876782.940000
 Z42 !s90 -reportprogress|300|-93|../vhdl/controller.vhd|
 Z43 !s107 ../vhdl/controller.vhd|
 R31
@@ -226,7 +226,7 @@ R4
 DEx4 work 10 controller 0 22 A;1ie:M`BaBmNRV6nghn73
 l44
 L41
-VST=KbSnj7TM`QLk@F3XmW1
+V=XCVShb;:A>Q9>A0k2V5:2
 R8
 31
 R41
@@ -234,7 +234,7 @@ R42
 R43
 R31
 R13
-!s100 <AT37f9DSLlZPfFbbk9d?1
+!s100 eG8WX0nJ5@?DGT]W@^;ML3
 !i10b 1
 Ecpu
 R14
@@ -895,15 +895,15 @@ Z134 F../testbench/tb_Controller.vhd
 l0
 L9
 Vc]<8K_CL]h:@e9BFM>mkC0
+!s100 _e8HjUL0m@eG_1TAZDnJ80
 R8
 31
-Z135 !s108 1384869371.204000
+!i10b 1
+Z135 !s108 1384876783.205000
 Z136 !s90 -reportprogress|300|-93|../testbench/tb_Controller.vhd|
 Z137 !s107 ../testbench/tb_Controller.vhd|
 R31
 R13
-!s100 _e8HjUL0m@eG_1TAZDnJ80
-!i10b 1
 Atestbench
 R32
 R25
@@ -911,19 +911,19 @@ R1
 R2
 R3
 R4
-DEx4 work 13 tb_controller 0 22 c]<8K_CL]h:@e9BFM>mkC0
+Z138 DEx4 work 13 tb_controller 0 22 c]<8K_CL]h:@e9BFM>mkC0
 l95
 L15
-VFXNg]n`DP`g4jH?LPQcDE0
+Z139 VFXNg]n`DP`g4jH?LPQcDE0
+Z140 !s100 c0YJ`4_<Q5n?5DhTS`Ho>3
 R8
 31
+!i10b 1
 R135
 R136
 R137
 R31
 R13
-!s100 c0YJ`4_<Q5n?5DhTS`Ho>3
-!i10b 1
 Etb_extend
 R14
 R32
@@ -933,16 +933,16 @@ R2
 R3
 R4
 R5
-Z138 8../testbench/tb_Extend.vhd
-Z139 F../testbench/tb_Extend.vhd
+Z141 8../testbench/tb_Extend.vhd
+Z142 F../testbench/tb_Extend.vhd
 l0
 L10
 Vze7Ng`WSR4nI2Ib:g6FK<0
 R8
 31
-Z140 !s108 1384868271.732000
-Z141 !s90 -reportprogress|300|-93|../testbench/tb_Extend.vhd|
-Z142 !s107 ../testbench/tb_Extend.vhd|
+Z143 !s108 1384868271.732000
+Z144 !s90 -reportprogress|300|-93|../testbench/tb_Extend.vhd|
+Z145 !s107 ../testbench/tb_Extend.vhd|
 R31
 R13
 !s100 W;0eg325k9?3[<zH=e9QM2
@@ -960,9 +960,9 @@ L12
 VkUWF_A6g0ceKIhNneX]nQ3
 R8
 31
-R140
-R141
-R142
+R143
+R144
+R145
 R31
 R13
 !s100 BBV?GXQild6LZH65lQLc80
@@ -974,16 +974,16 @@ R2
 R3
 R4
 R5
-Z143 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
-Z144 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
+Z146 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
+Z147 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
 l0
 L6
 VUoeiHbOTV=fUeBoKDc>Ul3
 R8
 32
-Z145 !s108 1384867303.633000
-Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
-Z147 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
+Z148 !s108 1384867303.633000
+Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
+Z150 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
 R12
 R13
 !s100 OR`@3Efl3j57F=dz>ObUf3
@@ -1000,9 +1000,9 @@ L8
 Vd>ejQla<zJ9Ak`NIM5DN82
 R8
 32
-R145
-R146
-R147
+R148
+R149
+R150
 R12
 R13
 !s100 ^DL:@?fRUzTgVJXLEUV=P1
@@ -1016,16 +1016,16 @@ R2
 R3
 R4
 R5
-Z148 8../testbench/tb_IR.vhd
-Z149 F../testbench/tb_IR.vhd
+Z151 8../testbench/tb_IR.vhd
+Z152 F../testbench/tb_IR.vhd
 l0
 L10
 VUl@^B`BPIa?z3fjEmnTC@3
 R8
 31
-Z150 !s108 1384868219.096000
-Z151 !s90 -reportprogress|300|-93|../testbench/tb_IR.vhd|
-Z152 !s107 ../testbench/tb_IR.vhd|
+Z153 !s108 1384868219.096000
+Z154 !s90 -reportprogress|300|-93|../testbench/tb_IR.vhd|
+Z155 !s107 ../testbench/tb_IR.vhd|
 R31
 R13
 !s100 E@ZGAW6]SPY<C^T7<2@E21
@@ -1043,9 +1043,9 @@ L12
 V^Y3RO7Y5E=Znz4j;_jKON1
 R8
 31
-R150
-R151
-R152
+R153
+R154
+R155
 R31
 R13
 !s100 ^77<]Ra@lRYHUm=`;1KFY0
@@ -1059,20 +1059,20 @@ R2
 R3
 R4
 R5
-Z153 8../testbench/tb_PC.vhd
-Z154 F../testbench/tb_PC.vhd
+Z156 8../testbench/tb_PC.vhd
+Z157 F../testbench/tb_PC.vhd
 l0
 L10
 V]JzXJHPAJDMl1kJbHn=WA2
-!s100 d1e^N7XPXUI=18L6AC2N`2
 R8
 31
-!i10b 1
-Z155 !s108 1384871570.428000
-Z156 !s90 -reportprogress|300|-93|../testbench/tb_PC.vhd|
-Z157 !s107 ../testbench/tb_PC.vhd|
+Z158 !s108 1384871570.428000
+Z159 !s90 -reportprogress|300|-93|../testbench/tb_PC.vhd|
+Z160 !s107 ../testbench/tb_PC.vhd|
 R31
 R13
+!s100 d1e^N7XPXUI=18L6AC2N`2
+!i10b 1
 Atestbench
 R32
 R25
@@ -1080,16 +1080,16 @@ R1
 R2
 R3
 R4
-Z158 DEx4 work 5 tb_pc 0 22 ]JzXJHPAJDMl1kJbHn=WA2
+DEx4 work 5 tb_pc 0 22 ]JzXJHPAJDMl1kJbHn=WA2
 l43
 L12
-Z159 VMXV[JjnG^>IJj4FjLDS]W3
-Z160 !s100 iJ9hH>mXHKf2Yh@lOHKa22
+VMXV[JjnG^>IJj4FjLDS]W3
 R8
 31
-!i10b 1
-R155
-R156
-R157
+R158
+R159
+R160
 R31
 R13
+!s100 iJ9hH>mXHKf2Yh@lOHKa22
+!i10b 1

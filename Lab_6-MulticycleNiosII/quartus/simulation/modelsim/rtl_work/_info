@@ -17,7 +17,7 @@ L6
 V`]XhLUOnYa?<AhONNEVOG1
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1384870263.299000
+Z10 !s108 1384874989.805000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/add_sub.vhd|
 Z12 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/add_sub.vhd|
 Z13 o-93 -work work -O0
@@ -56,7 +56,7 @@ L6
 V_kU3hAi^FZ;KEa??<i[RS1
 R9
 31
-Z17 !s108 1384870263.393000
+Z17 !s108 1384874989.914000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/buttons.vhd|
 Z19 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/buttons.vhd|
 R13
@@ -95,7 +95,7 @@ L6
 VmafdTKgI@]S9<KE^bbkQg1
 R9
 31
-Z22 !s108 1384870263.486000
+Z22 !s108 1384874990.039000
 Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/comparator.vhd|
 Z24 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/comparator.vhd|
 R13
@@ -121,7 +121,7 @@ R14
 !s100 Qnj?m3HGWN95SjP18VI4J2
 !i10b 1
 Econtroller
-Z25 w1384869717
+Z25 w1384874956
 R2
 R3
 R4
@@ -134,7 +134,7 @@ L6
 VSXmnQg4>3;90f?7f8]59g3
 R9
 31
-Z28 !s108 1384870263.580000
+Z28 !s108 1384874990.148000
 Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd|
 Z30 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/controller.vhd|
 R13
@@ -149,7 +149,7 @@ R5
 DEx4 work 10 controller 0 22 SXmnQg4>3;90f?7f8]59g3
 l44
 L41
-VZ5@<8GCM6PkX7eaN4h5dA3
+VkITB@fJa^lOZFL]6_iZ<82
 R9
 31
 R28
@@ -157,7 +157,7 @@ R29
 R30
 R13
 R14
-!s100 <AT37f9DSLlZPfFbbk9d?1
+!s100 8;GZRX`=az?IG`UJ@X[WY3
 !i10b 1
 Edecoder
 R1
@@ -173,7 +173,7 @@ L5
 VaGAdRA5FDhnRhWVnVX6Hi1
 R9
 31
-Z33 !s108 1384870263.674000
+Z33 !s108 1384874990.273000
 Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/decoder.vhd|
 Z35 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/decoder.vhd|
 R13
@@ -212,7 +212,7 @@ L6
 VMYJ6EoeJQ0jcmSm=Sm:bZ2
 R9
 31
-Z39 !s108 1384870263.767000
+Z39 !s108 1384874990.382000
 Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/extend.vhd|
 Z41 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/extend.vhd|
 R13
@@ -251,7 +251,7 @@ L5
 VlD>Q=CnA`Hf9MO>cO>6ge0
 R9
 31
-Z44 !s108 1384870263.845000
+Z44 !s108 1384874990.491000
 Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/IR.vhd|
 Z46 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/IR.vhd|
 R13
@@ -290,7 +290,7 @@ L6
 VD=>HGiH>fdNZo4jHgjmX20
 R9
 31
-Z49 !s108 1384870263.923000
+Z49 !s108 1384874990.585000
 Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/LEDs.vhd|
 Z51 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/LEDs.vhd|
 R13
@@ -327,7 +327,7 @@ L4
 VmRf1UWDm^SDR^VL^CX7_D1
 R9
 31
-Z54 !s108 1384870264.017000
+Z54 !s108 1384874990.694000
 Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/logic_unit.vhd|
 Z56 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/logic_unit.vhd|
 R13
@@ -364,7 +364,7 @@ L6
 VmRn62a52SzUW2jPZfCje_2
 R9
 31
-Z59 !s108 1384870264.079000
+Z59 !s108 1384874990.772000
 Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/multiplexer.vhd|
 Z61 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/multiplexer.vhd|
 R13
@@ -403,7 +403,7 @@ L6
 VC;YkMmoVDWBXEIjn_4PSe3
 R9
 31
-Z64 !s108 1384870264.235000
+Z64 !s108 1384874990.991000
 Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/mux2x16.vhd|
 Z66 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/mux2x16.vhd|
 R13
@@ -442,7 +442,7 @@ L6
 V1nQW7[Gb`k10VM?=Q6gn82
 R9
 31
-Z69 !s108 1384870264.313000
+Z69 !s108 1384874991.100000
 Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/mux2x32.vhd|
 Z71 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/mux2x32.vhd|
 R13
@@ -481,7 +481,7 @@ L6
 Vn?jONR0HfU4c8Qb[VI[Y_1
 R9
 31
-Z74 !s108 1384870264.173000
+Z74 !s108 1384874990.866000
 Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/mux2x5.vhd|
 Z76 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/mux2x5.vhd|
 R13
@@ -521,7 +521,7 @@ VCdH^V;88L1dBl2AdaH4Td2
 R9
 31
 b1
-Z79 !s108 1384870263.159000
+Z79 !s108 1384874989.649000
 Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/quartus/rgb_led96.vhd|
 Z81 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/quartus/rgb_led96.vhd|
 R13
@@ -548,43 +548,41 @@ nbody
 !s100 TWzfRmVm6OKY4YWXG^WPN3
 !i10b 1
 Epc
-Z83 w1384870238
-R3
-R2
+Z83 w1384871548
+Z84 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R4
 R5
 R6
-Z84 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
-Z85 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
+Z85 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
+Z86 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
 l0
-L5
-V3jG57Kl:IIT[h=II^If_=3
+L6
+V9nja@:;]@z4i@F^1QAGbC3
 R9
 31
-Z86 !s108 1384870264.423000
-Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd|
-Z88 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd|
+Z87 !s108 1384874991.193000
+Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd|
+Z89 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd|
 R13
 R14
-!s100 TAGBENj?g3CMP?S8mZKWm3
+!s100 0Dg@I_aWD_EO7Ze2dj:XO0
 !i10b 1
 Asynth
-R3
-R2
+R84
 R4
 R5
-DEx4 work 2 pc 0 22 3jG57Kl:IIT[h=II^If_=3
-l21
-L19
-VdW67EVh3L8C99=]c3@j9E1
+DEx4 work 2 pc 0 22 9nja@:;]@z4i@F^1QAGbC3
+l22
+L20
+VChdlTPOGHQSZjge46dJhf0
 R9
 31
-R86
 R87
 R88
+R89
 R13
 R14
-!s100 DglM4G>iIbQo8GY]n=5kW2
+!s100 5QXKXmJPo6z[ezcDJ;l1b1
 !i10b 1
 Eram
 R1
@@ -593,16 +591,16 @@ R2
 R4
 R5
 R6
-Z89 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
-Z90 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
+Z90 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
+Z91 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
 l0
 L5
 VjzTDFdPQYQ9Z<TKJQCEB_1
 R9
 31
-Z91 !s108 1384870264.532000
-Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
-Z93 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
+Z92 !s108 1384874991.287000
+Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
+Z94 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
 R13
 R14
 !s100 EXkfmkY`c3:oKnMDi`ngR2
@@ -618,9 +616,9 @@ L16
 VX1bO;lRQZbZOPjCR2M9a70
 R9
 31
-R91
 R92
 R93
+R94
 R13
 R14
 !s100 W:a7oB[DgDj?30^R4UB;K0
@@ -632,16 +630,16 @@ R2
 R4
 R5
 R6
-Z94 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
-Z95 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
+Z95 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
+Z96 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
 l0
 L5
 Vn<DQ8BZjXh]C[JJL7l?8e3
 R9
 31
-Z96 !s108 1384870264.625000
-Z97 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
-Z98 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
+Z97 !s108 1384874991.381000
+Z98 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
+Z99 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
 R13
 R14
 !s100 4lgA6kaMRKJz6T9beKn<o0
@@ -657,9 +655,9 @@ L18
 Vjkdbf8S_CVPdf7MEHK<Hn3
 R9
 31
-R96
 R97
 R98
+R99
 R13
 R14
 !s100 NlH6h8<jjPFF`g[Hf3X2A3
@@ -712,16 +710,16 @@ R2
 R4
 R5
 R6
-Z99 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
-Z100 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
+Z100 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
+Z101 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
 l0
 L5
 VMU3IHKW^oIhaZ^73BH<m=3
 R9
 31
-Z101 !s108 1384870264.703000
-Z102 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
-Z103 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
+Z102 !s108 1384874991.474000
+Z103 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
+Z104 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
 R13
 R14
 !s100 V8YPZeA;YcDh0VH`n]QoJ2
@@ -737,9 +735,9 @@ L14
 Vmn<GDaSeg<a7A=zViIch`3
 R9
 31
-R101
 R102
 R103
+R104
 R13
 R14
 !s100 fWnmmaK_JR^S;>`5JD85@1
@@ -749,16 +747,16 @@ R1
 R4
 R5
 R6
-Z104 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
-Z105 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
+Z105 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
+Z106 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
 l0
 L42
 V]<H9@fiZMBG65?ETPWnSB1
 R9
 31
-Z106 !s108 1384870264.766000
-Z107 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
-Z108 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
+Z107 !s108 1384874991.583000
+Z108 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
+Z109 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
 R13
 R14
 !s100 ?hV[j4f]VOPA4i_JAO[d51
@@ -772,9 +770,9 @@ L52
 V9RRA^GVINlaXFEN0oOEaU0
 R9
 31
-R106
 R107
 R108
+R109
 R13
 R14
 !s100 48_?H=E[f_SI[@oRdO61^2
@@ -786,8 +784,8 @@ R3
 R4
 R5
 R6
-Z109 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
-Z110 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
+Z110 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
+Z111 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
 l0
 L6
 VdDN:?YiS<SY4h>iNiO=Ja3
@@ -795,9 +793,9 @@ VdDN:?YiS<SY4h>iNiO=Ja3
 R9
 31
 !i10b 1
-Z111 !s108 1384870264.844000
-Z112 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
-Z113 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
+Z112 !s108 1384874991.662000
+Z113 !s90 -reportprogress|300|-93|-work|work|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
+Z114 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
 R13
 R14
 Asynth
@@ -813,8 +811,8 @@ V^Z<4<fVD@U3m>C]4`;cd:0
 R9
 31
 !i10b 1
-R111
 R112
 R113
+R114
 R13
 R14
