@@ -1,18 +1,20 @@
 
 State Machine - |FPGA4U_DE0|FPGA4U:inst|CPU:inst|controller:controller_0|currentState
-Name currentState.JMP currentState.CALL currentState.BRANCH currentState.I_OP currentState.LOAD2 currentState.LOAD1 currentState.BREAK currentState.STORE currentState.R_OP currentState.DECODE currentState.FETCH2 currentState.FETCH1 
-currentState.FETCH1 0 0 0 0 0 0 0 0 0 0 0 0 
-currentState.FETCH2 0 0 0 0 0 0 0 0 0 0 1 1 
-currentState.DECODE 0 0 0 0 0 0 0 0 0 1 0 1 
-currentState.R_OP 0 0 0 0 0 0 0 0 1 0 0 1 
-currentState.STORE 0 0 0 0 0 0 0 1 0 0 0 1 
-currentState.BREAK 0 0 0 0 0 0 1 0 0 0 0 1 
-currentState.LOAD1 0 0 0 0 0 1 0 0 0 0 0 1 
-currentState.LOAD2 0 0 0 0 1 0 0 0 0 0 0 1 
-currentState.I_OP 0 0 0 1 0 0 0 0 0 0 0 1 
-currentState.BRANCH 0 0 1 0 0 0 0 0 0 0 0 1 
-currentState.CALL 0 1 0 0 0 0 0 0 0 0 0 1 
-currentState.JMP 1 0 0 0 0 0 0 0 0 0 0 1 
+Name currentState.JMP currentState.CALL currentState.BRANCH currentState.UI_OP currentState.I_OP currentState.LOAD2 currentState.LOAD1 currentState.BREAK currentState.STORE currentState.RI_OP currentState.R_OP currentState.DECODE currentState.FETCH2 currentState.FETCH1 
+currentState.FETCH1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentState.FETCH2 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+currentState.DECODE 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+currentState.R_OP 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+currentState.RI_OP 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+currentState.STORE 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+currentState.BREAK 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+currentState.LOAD1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+currentState.LOAD2 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+currentState.I_OP 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+currentState.UI_OP 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+currentState.BRANCH 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+currentState.CALL 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+currentState.JMP 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |FPGA4U_DE0|rgb_led96:inst4|state
 Name state.DISPLAY state.TRANS2 state.RST state.TRANS1 

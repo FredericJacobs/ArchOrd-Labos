@@ -39,7 +39,7 @@ entity controller is
 end controller;
 
 architecture synth of controller is
-	type State is (FETCH1, FETCH2, DECODE, R_OP, STORE, BREAK, LOAD1, LOAD2, I_OP, BRANCH, CALL, JMP);
+	type State is (FETCH1, FETCH2, DECODE, R_OP, RI_OP, STORE, BREAK, LOAD1, LOAD2, I_OP, UI_OP, BRANCH, CALL, JMP);
 	signal currentState, nextState : State;
 begin
 
@@ -117,6 +117,10 @@ begin
 							-- ret
 							when x"05" => nextState <= JMP;
 
+							when x"12" => nextState <= RI_OP;
+							when x"1A" => nextState <= RI_OP;
+							when x"3A" => nextState <= RI_OP;
+
 							-- other R_OP
 							when others => nextState <= R_OP;
 						end case;
@@ -124,6 +128,10 @@ begin
 					-- addi rB, rA, imm
 					-- rB <= rA + (signed)imm
 					when x"04" => nextState <= I_OP;
+
+					when x"0C" => nextState <= UI_OP;
+					when x"14" => nextState <= UI_OP;
+					when x"1C" => nextState <= UI_OP;
 
 					-- ldw rB, imm(rA)
 					-- rB <= Mem[rA + (signed)imm]
@@ -161,12 +169,33 @@ begin
 				-- Go back to the initial state.
 				nextState <= FETCH1;
 
+			when UI_OP =>
+
+				imm_signed <= '0';
+				rf_wren <= '1';
+
+				nextState <= FETCH1;
+
 			-- This state executes operations between two registers,
 			-- and saves the result in a third register.
 			when R_OP =>
 
 				-- Select registers A, B and C
 				sel_b <= '1';
+				sel_rC <= '1';
+
+				-- Enable writes on the register file
+				-- to save the result of the ALU
+				rf_wren <= '1';
+
+				-- Go back to the initial state.
+				nextState <= FETCH1;
+
+			-- This state executes operations between two registers,
+			-- and saves the result in a third register.
+			when RI_OP =>
+
+				-- Select registers A, and C
 				sel_rC <= '1';
 
 				-- Enable writes on the register file
@@ -259,16 +288,16 @@ begin
 				end case;
 
 			when CALL =>
-				
+
 				-- Save the current PC into rA
 				rf_wren <= '1';
 				sel_pc <= '1';
 				sel_ra <= '1';
-				
+
 				-- Tell the PC to set itself to the address holded by IMM
 				pc_sel_imm <= '1';
 				pc_en <= '1';
-				
+
 				nextState <= FETCH1;
 
 			when JMP =>
@@ -290,55 +319,62 @@ begin
 
 			-- R_OP
 			when x"3A" =>
-				case("00" & opx) is
-
-					-- and rC, rA, rB
-					-- rC <= rA & rB
-					when x"0E" =>
-						op_alu <= "100001";
-
-					-- srl rC, rA, rB
-					-- rC <= (unsigned)rA >> rB[4..0]
-					when x"1B" =>
-						op_alu <= "110011";
-
-					when others =>
-						-- Default to addition
-						op_alu <= "000000";
-
+			   case ("00" & opx) is
+					 when x"31" => op_alu <= "000000";
+					 when x"39" => op_alu <= "001000";
+					 when x"08" => op_alu <= "011001";
+					 when x"10" => op_alu <= "011010";
+					 when x"06" => op_alu <= "100000";
+					 when x"0E" => op_alu <= "100001";
+					 when x"16" => op_alu <= "100010";
+					 when x"1E" => op_alu <= "100011";
+					 when x"13" => op_alu <= "110010";
+					 when x"1B" => op_alu <= "110011";
+					 when x"3B" => op_alu <= "110111";
+					 when x"12" => op_alu <= "110010";
+					 when x"1A" => op_alu <= "110011";
+					 when x"3A" => op_alu <= "110111";
+					 when others => op_alu <= "000000";
 				end case;
 
-			-- I_OP
-			when x"04" =>
-				op_alu <= "000000";
-
 			-- rA >= rB
-			when x"0E" =>
-				op_alu <= "011001";
+			when x"0E" => op_alu <= "011001";
 
 			-- rA < rB
-			when x"16" =>
-				op_alu <= "011010";
+			when x"16" => op_alu <= "011010";
 
 			-- rA != rB
-			when x"1E" =>
-				op_alu <= "011011";
+			when x"1E" => op_alu <= "011011";
 
 			-- ra == rB
-			when x"26" =>
-				op_alu <= "011100";
+			when x"26" => op_alu <= "011100";
 
 			-- (unsigned)rA >= (unsigned)rB
-			when x"2E" =>
-				op_alu <= "011101";
+			when x"2E" => op_alu <= "011101";
 
 			-- (unsigned)rA < (unsigned)rB
-			when x"36" =>
-				op_alu <= "011110";
+			when x"36" => op_alu <= "011110";
 
-			when others =>
-				-- Default to rA + rB
-				op_alu <= "000000";
+			-- rA + (signed)imm
+			when x"17" => op_alu <= "000000";
+
+			-- rA + (signed)imm
+			when x"15" => op_alu <= "000000";
+
+			-- rA + (signed)imm
+			when x"04" => op_alu <= "000000";
+
+			-- rA and (unsigned)imm
+			when x"0C" => op_alu <= "100001";
+
+			-- rA or (unsigned)imm
+			when x"14" => op_alu <= "100010";
+
+			-- rA xor (unsigned)imm
+			when x"1C" => op_alu <= "100011";
+			
+			when others => op_alu <= "000000";
+
 		end case;
 	end process;
 end synth;

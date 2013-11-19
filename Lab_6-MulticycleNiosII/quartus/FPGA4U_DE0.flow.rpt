@@ -1,5 +1,5 @@
 Flow report for FPGA4U_DE0
-Tue Nov 19 17:23:47 2013
+Tue Nov 19 18:35:12 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 19 17:23:47 2013           ;
+; Flow Status                        ; Successful - Tue Nov 19 18:35:12 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; FPGA4U_DE0                                      ;
 ; Top-level Entity Name              ; FPGA4U_DE0                                      ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE22F17C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,594                                           ;
-;     Total combinational functions  ; 1,377                                           ;
-;     Dedicated logic registers      ; 426                                             ;
-; Total registers                    ; 426                                             ;
+; Total logic elements               ; 1,640                                           ;
+;     Total combinational functions  ; 1,423                                           ;
+;     Dedicated logic registers      ; 428                                             ;
+; Total registers                    ; 428                                             ;
 ; Total pins                         ; 47                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 71,424                                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/19/2013 17:23:36 ;
+; Start date & time ; 11/19/2013 18:35:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA4U_DE0          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                            ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                      ; 220713148477058.138487821603080       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                      ; 220713148477058.138488250103720       ; --            ; --          ; --             ;
 ; EDA_INCLUDE_VHDL_CONFIGURATION_DECLARATION ; On                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT                     ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                        ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
@@ -102,8 +102,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 503 MB              ; 00:00:11                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 504 MB              ; 00:00:11                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
