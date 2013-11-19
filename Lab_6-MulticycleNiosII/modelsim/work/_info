@@ -131,7 +131,7 @@ VD^e=0]0ZiP3`3Z1jBVcjS3
 R8
 31
 b1
-Z28 !s108 1384869371.016000
+Z28 !s108 1384871570.272000
 Z29 !s90 -reportprogress|300|-93|../testbench/check_functions.vhd|
 Z30 !s107 ../testbench/check_functions.vhd|
 Z31 o-93 -O0
@@ -654,43 +654,41 @@ R13
 !s100 S]mJeinV1iTMjWOXXC83?0
 !i10b 1
 Epc
-Z101 w1384868091
-R2
-R1
+Z101 w1384871548
+Z102 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R3
 R4
 R5
-Z102 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
-Z103 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd
+Z103 8../vhdl/PC.vhd
+Z104 F../vhdl/PC.vhd
 l0
-L5
-VH573oGdB5eP=zUQ`VN0`G2
+L6
+VkP^I9hC_5;RjdiOE0Y2AL1
 R8
 31
-Z104 !s108 1384868578.603000
-Z105 !s90 -reportprogress|300|-93|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd|
-Z106 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/PC.vhd|
+Z105 !s108 1384871570.194000
+Z106 !s90 -reportprogress|300|-93|../vhdl/PC.vhd|
+Z107 !s107 ../vhdl/PC.vhd|
 R31
 R13
-!s100 TAGBENj?g3CMP?S8mZKWm3
+!s100 0Dg@I_aWD_EO7Ze2dj:XO0
 !i10b 1
 Asynth
-R2
-R1
+R102
 R3
 R4
-DEx4 work 2 pc 0 22 H573oGdB5eP=zUQ`VN0`G2
-l21
-L19
-V1[dJ1kiocCC20AQF8Zml93
+DEx4 work 2 pc 0 22 kP^I9hC_5;RjdiOE0Y2AL1
+l22
+L20
+VEYOhV^NWC]Ii^UFn^MT6l2
 R8
 31
-R104
 R105
 R106
+R107
 R31
 R13
-!s100 ENeO>THQiXiA>DMfMk`FQ0
+!s100 5QXKXmJPo6z[ezcDJ;l1b1
 !i10b 1
 Eram
 R14
@@ -699,16 +697,16 @@ R1
 R3
 R4
 R5
-Z107 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
-Z108 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
+Z108 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
+Z109 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd
 l0
 L5
 V4?9YAD>L3mJIc=Lm0C5P20
 R8
 32
-Z109 !s108 1384867304.366000
-Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
-Z111 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
+Z110 !s108 1384867304.366000
+Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
+Z112 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/RAM.vhd|
 R12
 R13
 !s100 EXkfmkY`c3:oKnMDi`ngR2
@@ -724,9 +722,9 @@ L16
 VAle[kCGjQ[fN9GTBJic@21
 R8
 32
-R109
 R110
 R111
+R112
 R12
 R13
 !s100 W:a7oB[DgDj?30^R4UB;K0
@@ -738,16 +736,16 @@ R1
 R3
 R4
 R5
-Z112 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
-Z113 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
+Z113 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
+Z114 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd
 l0
 L5
 VKC<JZhD=0BE;zZfn<R_=g2
 R8
 32
-Z114 !s108 1384867304.257000
-Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
-Z116 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
+Z115 !s108 1384867304.257000
+Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
+Z117 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/register_file.vhd|
 R12
 R13
 !s100 4lgA6kaMRKJz6T9beKn<o0
@@ -763,9 +761,9 @@ L18
 VY6^>QZM_<^:8ZD`_MQk;O0
 R8
 32
-R114
 R115
 R116
+R117
 R12
 R13
 !s100 NlH6h8<jjPFF`g[Hf3X2A3
@@ -777,16 +775,16 @@ R1
 R3
 R4
 R5
-Z117 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
-Z118 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
+Z118 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
+Z119 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd
 l0
 L5
 VIZK8WIBb6W5=hliE;WY7z3
 R8
 32
-Z119 !s108 1384867304.163000
-Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
-Z121 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
+Z120 !s108 1384867304.163000
+Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
+Z122 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM.vhd|
 R12
 R13
 !s100 V8YPZeA;YcDh0VH`n]QoJ2
@@ -802,9 +800,9 @@ L14
 VlHbALj]@UNfgBCI5=Y>Qi2
 R8
 32
-R119
 R120
 R121
+R122
 R12
 R13
 !s100 fWnmmaK_JR^S;>`5JD85@1
@@ -814,16 +812,16 @@ R14
 R3
 R4
 R5
-Z122 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
-Z123 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
+Z123 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
+Z124 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd
 l0
 L42
 VYVYZmzO`FGR9e7IYG>cfX2
 R8
 32
-Z124 !s108 1384867304.070000
-Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
-Z126 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
+Z125 !s108 1384867304.070000
+Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
+Z127 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/ROM_Block.vhd|
 R12
 R13
 !s100 ?hV[j4f]VOPA4i_JAO[d51
@@ -837,9 +835,9 @@ L52
 VG^A1]Eb@@^bjBeNTWAPhV0
 R8
 32
-R124
 R125
 R126
+R127
 R12
 R13
 !s100 48_?H=E[f_SI[@oRdO61^2
@@ -851,16 +849,16 @@ R2
 R3
 R4
 R5
-Z127 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
-Z128 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
+Z128 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
+Z129 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd
 l0
 L6
 Vg^[GK44Q1H<Q]meoSD6D<3
 R8
 32
-Z129 !s108 1384867303.976000
-Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
-Z131 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
+Z130 !s108 1384867303.976000
+Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
+Z132 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/vhdl/shift_unit.vhd|
 R12
 R13
 !s100 hY6n8]5nL=P?E8OIHnYL>0
@@ -876,9 +874,9 @@ L15
 V8AI`c[M4KG_KKghhWV5fB0
 R8
 32
-R129
 R130
 R131
+R132
 R12
 R13
 !s100 ^kl:4NYiPVzQ?QhOk:5fH3
@@ -892,20 +890,20 @@ R2
 R3
 R4
 R5
-Z132 8../testbench/tb_Controller.vhd
-Z133 F../testbench/tb_Controller.vhd
+Z133 8../testbench/tb_Controller.vhd
+Z134 F../testbench/tb_Controller.vhd
 l0
 L9
 Vc]<8K_CL]h:@e9BFM>mkC0
-!s100 _e8HjUL0m@eG_1TAZDnJ80
 R8
 31
-!i10b 1
-Z134 !s108 1384869371.204000
-Z135 !s90 -reportprogress|300|-93|../testbench/tb_Controller.vhd|
-Z136 !s107 ../testbench/tb_Controller.vhd|
+Z135 !s108 1384869371.204000
+Z136 !s90 -reportprogress|300|-93|../testbench/tb_Controller.vhd|
+Z137 !s107 ../testbench/tb_Controller.vhd|
 R31
 R13
+!s100 _e8HjUL0m@eG_1TAZDnJ80
+!i10b 1
 Atestbench
 R32
 R25
@@ -913,19 +911,19 @@ R1
 R2
 R3
 R4
-Z137 DEx4 work 13 tb_controller 0 22 c]<8K_CL]h:@e9BFM>mkC0
+DEx4 work 13 tb_controller 0 22 c]<8K_CL]h:@e9BFM>mkC0
 l95
 L15
-Z138 VFXNg]n`DP`g4jH?LPQcDE0
-Z139 !s100 c0YJ`4_<Q5n?5DhTS`Ho>3
+VFXNg]n`DP`g4jH?LPQcDE0
 R8
 31
-!i10b 1
-R134
 R135
 R136
+R137
 R31
 R13
+!s100 c0YJ`4_<Q5n?5DhTS`Ho>3
+!i10b 1
 Etb_extend
 R14
 R32
@@ -935,16 +933,16 @@ R2
 R3
 R4
 R5
-Z140 8../testbench/tb_Extend.vhd
-Z141 F../testbench/tb_Extend.vhd
+Z138 8../testbench/tb_Extend.vhd
+Z139 F../testbench/tb_Extend.vhd
 l0
 L10
 Vze7Ng`WSR4nI2Ib:g6FK<0
 R8
 31
-Z142 !s108 1384868271.732000
-Z143 !s90 -reportprogress|300|-93|../testbench/tb_Extend.vhd|
-Z144 !s107 ../testbench/tb_Extend.vhd|
+Z140 !s108 1384868271.732000
+Z141 !s90 -reportprogress|300|-93|../testbench/tb_Extend.vhd|
+Z142 !s107 ../testbench/tb_Extend.vhd|
 R31
 R13
 !s100 W;0eg325k9?3[<zH=e9QM2
@@ -962,9 +960,9 @@ L12
 VkUWF_A6g0ceKIhNneX]nQ3
 R8
 31
+R140
+R141
 R142
-R143
-R144
 R31
 R13
 !s100 BBV?GXQild6LZH65lQLc80
@@ -976,16 +974,16 @@ R2
 R3
 R4
 R5
-Z145 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
-Z146 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
+Z143 8C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
+Z144 FC:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd
 l0
 L6
 VUoeiHbOTV=fUeBoKDc>Ul3
 R8
 32
-Z147 !s108 1384867303.633000
-Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
-Z149 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
+Z145 !s108 1384867303.633000
+Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
+Z147 !s107 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/tb_FPGA4U.vhd|
 R12
 R13
 !s100 OR`@3Efl3j57F=dz>ObUf3
@@ -1002,9 +1000,9 @@ L8
 Vd>ejQla<zJ9Ak`NIM5DN82
 R8
 32
+R145
+R146
 R147
-R148
-R149
 R12
 R13
 !s100 ^DL:@?fRUzTgVJXLEUV=P1
@@ -1018,16 +1016,16 @@ R2
 R3
 R4
 R5
-Z150 8../testbench/tb_IR.vhd
-Z151 F../testbench/tb_IR.vhd
+Z148 8../testbench/tb_IR.vhd
+Z149 F../testbench/tb_IR.vhd
 l0
 L10
 VUl@^B`BPIa?z3fjEmnTC@3
 R8
 31
-Z152 !s108 1384868219.096000
-Z153 !s90 -reportprogress|300|-93|../testbench/tb_IR.vhd|
-Z154 !s107 ../testbench/tb_IR.vhd|
+Z150 !s108 1384868219.096000
+Z151 !s90 -reportprogress|300|-93|../testbench/tb_IR.vhd|
+Z152 !s107 ../testbench/tb_IR.vhd|
 R31
 R13
 !s100 E@ZGAW6]SPY<C^T7<2@E21
@@ -1045,9 +1043,9 @@ L12
 V^Y3RO7Y5E=Znz4j;_jKON1
 R8
 31
+R150
+R151
 R152
-R153
-R154
 R31
 R13
 !s100 ^77<]Ra@lRYHUm=`;1KFY0
@@ -1061,20 +1059,20 @@ R2
 R3
 R4
 R5
-Z155 8../testbench/tb_PC.vhd
-Z156 F../testbench/tb_PC.vhd
+Z153 8../testbench/tb_PC.vhd
+Z154 F../testbench/tb_PC.vhd
 l0
 L10
 V]JzXJHPAJDMl1kJbHn=WA2
+!s100 d1e^N7XPXUI=18L6AC2N`2
 R8
 31
-Z157 !s108 1384868119.430000
-Z158 !s90 -reportprogress|300|-93|../testbench/tb_PC.vhd|
-Z159 !s107 ../testbench/tb_PC.vhd|
+!i10b 1
+Z155 !s108 1384871570.428000
+Z156 !s90 -reportprogress|300|-93|../testbench/tb_PC.vhd|
+Z157 !s107 ../testbench/tb_PC.vhd|
 R31
 R13
-!s100 d1e^N7XPXUI=18L6AC2N`2
-!i10b 1
 Atestbench
 R32
 R25
@@ -1082,16 +1080,16 @@ R1
 R2
 R3
 R4
-DEx4 work 5 tb_pc 0 22 ]JzXJHPAJDMl1kJbHn=WA2
+Z158 DEx4 work 5 tb_pc 0 22 ]JzXJHPAJDMl1kJbHn=WA2
 l43
 L12
-VMXV[JjnG^>IJj4FjLDS]W3
+Z159 VMXV[JjnG^>IJj4FjLDS]W3
+Z160 !s100 iJ9hH>mXHKf2Yh@lOHKa22
 R8
 31
+!i10b 1
+R155
+R156
 R157
-R158
-R159
 R31
 R13
-!s100 iJ9hH>mXHKf2Yh@lOHKa22
-!i10b 1

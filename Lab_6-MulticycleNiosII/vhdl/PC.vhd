@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
+-- use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 entity PC is
     port(
@@ -21,12 +22,22 @@ architecture synth of PC is
 begin
     process(clk, reset_n, en)
     begin
-        if(rising_edge(clk)) then
-            if(reset_n = '0') then
-					 reg_addr <= (others => '0');
-            elsif(en = '1') then
-               reg_addr <= reg_addr + 4;
-            end if;
+			if(reset_n = '0') then
+				reg_addr <= (others => '0');
+        elsif(rising_edge(clk) and en = '1') then  
+				if(add_imm = '1') then
+					-- PC <- PC + IMM
+					reg_addr <= std_logic_vector(signed(reg_addr) + signed(imm));
+				elsif(sel_imm = '1') then
+					-- PC <- IMM << 2
+					reg_addr <= (15 downto 0 => '0') & std_logic_vector(signed(imm) sll 2);
+				elsif(sel_a = '1') then
+					-- PC <- A
+					reg_addr <= (31 downto 16 => '0') & a;
+				else
+					-- PC <- PC + 4
+					reg_addr <= std_logic_vector(unsigned(reg_addr) + 4);
+				end if;
         end if;
     end process;
 	 

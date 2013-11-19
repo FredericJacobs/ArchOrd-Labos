@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA4U_DE0
-Tue Nov 19 14:55:36 2013
+Tue Nov 19 15:32:43 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,13 +62,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 19 14:55:36 2013           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 19 15:32:43 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; FPGA4U_DE0                                      ;
 ; Top-level Entity Name              ; FPGA4U_DE0                                      ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 1,341                                           ;
-;     Total combinational functions  ; 1,124                                           ;
+; Total logic elements               ; 1,340                                           ;
+;     Total combinational functions  ; 1,123                                           ;
 ;     Dedicated logic registers      ; 404                                             ;
 ; Total registers                    ; 404                                             ;
 ; Total pins                         ; 47                                              ;
@@ -230,17 +230,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 1,341       ;
+; Estimated Total logic elements              ; 1,340       ;
 ;                                             ;             ;
-; Total combinational functions               ; 1124        ;
+; Total combinational functions               ; 1123        ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 559         ;
-;     -- 3 input functions                    ; 460         ;
-;     -- <=2 input functions                  ; 105         ;
+;     -- 3 input functions                    ; 461         ;
+;     -- <=2 input functions                  ; 103         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
 ;     -- normal mode                          ; 1011        ;
-;     -- arithmetic mode                      ; 113         ;
+;     -- arithmetic mode                      ; 112         ;
 ;                                             ;             ;
 ; Total registers                             ; 404         ;
 ;     -- Dedicated logic registers            ; 404         ;
@@ -251,7 +251,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; CLOCK~input ;
 ; Maximum fan-out                             ; 547         ;
-; Total fan-out                               ; 6746        ;
+; Total fan-out                               ; 6744        ;
 ; Average fan-out                             ; 3.82        ;
 +---------------------------------------------+-------------+
 
@@ -261,16 +261,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |FPGA4U_DE0                                     ; 1124 (0)          ; 404 (0)      ; 71424       ; 0            ; 0       ; 0         ; 47   ; 0            ; |FPGA4U_DE0                                                                                                              ; work         ;
-;    |FPGA4U:inst|                                ; 880 (113)         ; 324 (0)      ; 67584       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst                                                                                                  ; work         ;
-;       |CPU:inst|                                ; 716 (0)           ; 199 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst                                                                                         ; work         ;
+; |FPGA4U_DE0                                     ; 1123 (0)          ; 404 (0)      ; 71424       ; 0            ; 0       ; 0         ; 47   ; 0            ; |FPGA4U_DE0                                                                                                              ; work         ;
+;    |FPGA4U:inst|                                ; 879 (113)         ; 324 (0)      ; 67584       ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst                                                                                                  ; work         ;
+;       |CPU:inst|                                ; 715 (0)           ; 199 (0)      ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst                                                                                         ; work         ;
 ;          |ALU:alu_0|                            ; 431 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0                                                                               ; work         ;
 ;             |add_sub:add_sub_0|                 ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                             ; work         ;
 ;             |logic_unit:logic_unit_0|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|logic_unit:logic_unit_0                                                       ; work         ;
 ;             |multiplexer:multiplexer_0|         ; 86 (86)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                     ; work         ;
 ;             |shift_unit:shift_unit_0|           ; 312 (312)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                       ; work         ;
 ;          |IR:IR_0|                              ; 0 (0)             ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|IR:IR_0                                                                                 ; work         ;
-;          |PC:PC_0|                              ; 15 (15)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|PC:PC_0                                                                                 ; work         ;
+;          |PC:PC_0|                              ; 14 (14)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|PC:PC_0                                                                                 ; work         ;
 ;          |controller:controller_0|              ; 14 (14)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|controller:controller_0                                                                 ; work         ;
 ;          |mux2x16:mux_addr|                     ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x16:mux_addr                                                                        ; work         ;
 ;          |mux2x32:mux_b|                        ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x32:mux_b                                                                           ; work         ;
@@ -355,8 +355,9 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------+-------------------------------------------------------+
 ; Register name                                                   ; Reason for Removal                                    ;
 +-----------------------------------------------------------------+-------------------------------------------------------+
-; FPGA4U:inst|CPU:inst|PC:PC_0|reg_addr[0,1]                      ; Stuck at GND due to stuck port data_in                ;
 ; FPGA4U:inst|LEDs:LEDs_0|reg_address[0]                          ; Merged with FPGA4U:inst|buttons:buttons_0|address_reg ;
+; FPGA4U:inst|CPU:inst|PC:PC_0|reg_addr[1]                        ; Merged with FPGA4U:inst|CPU:inst|PC:PC_0|reg_addr[0]  ;
+; FPGA4U:inst|CPU:inst|PC:PC_0|reg_addr[0]                        ; Stuck at GND due to stuck port data_in                ;
 ; FPGA4U:inst|buttons:buttons_0|read_reg                          ; Lost fanout                                           ;
 ; FPGA4U:inst|CPU:inst|controller:controller_0|currentState.BREAK ; Lost fanout                                           ;
 ; FPGA4U:inst|CPU:inst|PC:PC_0|reg_addr[16..31]                   ; Lost fanout                                           ;
@@ -370,9 +371,9 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 404   ;
-; Number of registers using Synchronous Clear  ; 29    ;
+; Number of registers using Synchronous Clear  ; 15    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 166   ;
+; Number of registers using Asynchronous Clear ; 180   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 215   ;
 ; Number of registers using Preset             ; 0     ;
@@ -635,23 +636,22 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|PC:PC_0|reg_addr[24]                      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA4U_DE0|FPGA4U:inst|buttons:buttons_0|edges[1]                         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_B[2]                                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_G[1]                                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_R[5]                                   ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|Selector3                                      ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |FPGA4U_DE0|FPGA4U:inst|rddata[17]                                         ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|rddata[4]                                          ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|rddata[2]                                          ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux18 ;
-; 14:1               ; 8 bits    ; 72 LEs        ; 64 LEs               ; 8 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x32:mux_data|o[16]                    ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux27 ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x32:mux_data|o[24]                    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA4U_DE0|FPGA4U:inst|buttons:buttons_0|edges[0]                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_B[0]                                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_G[7]                                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|LED_Sel_R[7]                                   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |FPGA4U_DE0|rgb_led96:inst4|Selector1                                      ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; No         ; |FPGA4U_DE0|FPGA4U:inst|rddata[19]                                         ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|rddata[7]                                          ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|rddata[1]                                          ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux23 ;
+; 14:1               ; 8 bits    ; 72 LEs        ; 64 LEs               ; 8 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x32:mux_data|o[23]                    ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux24 ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x32:mux_data|o[26]                    ;
 ; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux28 ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 18 LEs               ; 2 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x32:mux_data|o[29]                    ;
 ; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |FPGA4U_DE0|FPGA4U:inst|CPU:inst|mux2x32:mux_data|o[30]                    ;
-; 24:1               ; 8 bits    ; 128 LEs       ; 112 LEs              ; 16 LEs                 ; No         ; |FPGA4U_DE0|rgb_led96:inst4|Mux0                                           ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 112 LEs              ; 16 LEs                 ; No         ; |FPGA4U_DE0|rgb_led96:inst4|Mux2                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
@@ -1096,7 +1096,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 19 14:55:26 2013
+    Info: Processing started: Tue Nov 19 15:32:33 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA4U_DE0 -c FPGA4U_DE0
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
@@ -1359,15 +1359,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 18 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1636 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1635 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 41 output pins
-    Info (21061): Implemented 1446 logic cells
+    Info (21061): Implemented 1445 logic cells
     Info (21064): Implemented 143 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 504 megabytes
-    Info: Processing ended: Tue Nov 19 14:55:36 2013
+    Info: Peak virtual memory: 499 megabytes
+    Info: Processing ended: Tue Nov 19 15:32:43 2013
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 
