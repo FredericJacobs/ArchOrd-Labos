@@ -39,11 +39,11 @@ entity controller is
 end controller;
 
 architecture synth of controller is
-	type State is (FETCH1, FETCH2, DECODE, R_OP, STORE, BREAK, LOAD1, LOAD2, I_OP, BRANCH);
+	type State is (FETCH1, FETCH2, DECODE, R_OP, STORE, BREAK, LOAD1, LOAD2, I_OP, BRANCH, CALL, JMP);
 	signal currentState, nextState : State;
 begin
-  
-  
+
+
 	process(clk, reset_n)
 		begin
 			if(reset_n = '0') then
@@ -81,7 +81,7 @@ begin
 
 				-- Read input from rddata
 				read <= '1';
-				
+
 				branch_op <= '0';
 
 				nextState <= FETCH2;
@@ -108,30 +108,31 @@ begin
 					when x"3A" =>
 
 						case("00" & opx) is
+							-- break
+							when x"34" => nextState <= BREAK;
 
-							when x"34" =>
-								nextState <= BREAK;
+							-- jmp label
+							when x"0D" => nextState <= JMP;
 
-							when others =>
-								nextState <= R_OP;
+							-- ret
+							when x"05" => nextState <= JMP;
 
+							-- other R_OP
+							when others => nextState <= R_OP;
 						end case;
 
 					-- addi rB, rA, imm
 					-- rB <= rA + (signed)imm
-					when x"04" =>
-						nextState <= I_OP;
+					when x"04" => nextState <= I_OP;
 
 					-- ldw rB, imm(rA)
 					-- rB <= Mem[rA + (signed)imm]
-					when x"17" =>
-						nextState <= LOAD1;
+					when x"17" => nextState <= LOAD1;
 
 					-- stw rB, imm(rA)
 					-- Mem[rA + (signed)imm] <= rB
-					when x"15" =>
-						nextState <= STORE;
-						
+					when x"15" => nextState <= STORE;
+
 					when x"06" => nextState <= BRANCH;
 					when x"0E" => nextState <= BRANCH;
 					when x"16" => nextState <= BRANCH;
@@ -139,9 +140,11 @@ begin
 					when x"26" => nextState <= BRANCH;
 					when x"2E" => nextState <= BRANCH;
 					when x"36" => nextState <= BRANCH;
-					
-					when others =>
-						nextState <= BREAK;
+
+					-- call label
+					when x"00" => nextState <= CALL;
+
+					when others => nextState <= BREAK;
 				end case;
 
 			-- This state executes operations between a register and an immediate value
@@ -165,14 +168,14 @@ begin
 				-- Select registers A, B and C
 				sel_b <= '1';
 				sel_rC <= '1';
-				
+
 				-- Enable writes on the register file
 				-- to save the result of the ALU
 				rf_wren <= '1';
 
 				-- Go back to the initial state.
 				nextState <= FETCH1;
-			
+
 			-- During the state LOAD1, the address to read is computed by the ALU
 			-- (adding the signed immediate value to a) and the signal read is set to
 			-- start a read process. The read value will be available during LOAD2.
@@ -182,8 +185,8 @@ begin
 				sel_addr <= '1';
 
 				sel_b <= '0';
-				
-				imm_signed <= '1';	
+
+				imm_signed <= '1';
 
 				-- Read from the memory at the previously computed address
 				read <= '1';
@@ -216,7 +219,7 @@ begin
 				sel_addr <= '1';
 
 				sel_b <= '0';
-				
+
 				imm_signed <= '1';
 
 				-- Start a write process to the memory.
@@ -228,26 +231,26 @@ begin
 			-- This instruction will be used to stop the CPU execution.
 			when BREAK =>
 				nextState <= BREAK;
-				
+
 			when BRANCH =>
-				
+
 				nextState <= FETCH1;
-				
+
 				branch_op <= '1';
 				sel_b <= '1';
-				
+
 				-- Tell the PC to add IMM to the current PC
 				-- which it will do only if either pc_en = '1'
-				-- or if (branch_op & alu_res(0)) = '1'1 
+				-- or if (branch_op & alu_res(0)) = '1'1
 				pc_add_imm <= '1';
-				
+
 				case ("00" & op) is
 					-- br label (no condition)
 					when x"06" =>
 						-- unconditional jump, enable the PC
 						-- to jump to the given address.
 						pc_en <= '1';
-						
+
 					-- conditional jumps
 					-- let the ALU do the corresponding operations
 					-- and if the rightmost bit of alu_res is '1'
@@ -255,18 +258,40 @@ begin
 					when others =>
 				end case;
 
+			when CALL =>
+				
+				-- Save the current PC into rA
+				rf_wren <= '1';
+				sel_pc <= '1';
+				sel_ra <= '1';
+				
+				-- Tell the PC to set itself to the address holded by IMM
+				pc_sel_imm <= '1';
+				pc_en <= '1';
+				
+				nextState <= FETCH1;
+
+			when JMP =>
+
+				-- Tell the PC to set itself at the address
+				-- holded in rA.
+				pc_sel_a <= '1';
+				pc_en <= '1';
+
+				nextState <= FETCH1;
+
 			when others =>
 		end case;
 	end process;
-	
+
 	process(op, opx)
 	begin
 		case("00" & op) is
-		
+
 			-- R_OP
 			when x"3A" =>
 				case("00" & opx) is
-				
+
 					-- and rC, rA, rB
 					-- rC <= rA & rB
 					when x"0E" =>
@@ -276,42 +301,42 @@ begin
 					-- rC <= (unsigned)rA >> rB[4..0]
 					when x"1B" =>
 						op_alu <= "110011";
-						
+
 					when others =>
 						-- Default to addition
 						op_alu <= "000000";
-						
+
 				end case;
-			
+
 			-- I_OP
 			when x"04" =>
 				op_alu <= "000000";
-			
+
 			-- rA >= rB
 			when x"0E" =>
 				op_alu <= "011001";
-			
+
 			-- rA < rB
 			when x"16" =>
 				op_alu <= "011010";
-				
+
 			-- rA != rB
 			when x"1E" =>
 				op_alu <= "011011";
-				
+
 			-- ra == rB
 			when x"26" =>
 				op_alu <= "011100";
-				
+
 			-- (unsigned)rA >= (unsigned)rB
 			when x"2E" =>
 				op_alu <= "011101";
-				
+
 			-- (unsigned)rA < (unsigned)rB
 			when x"36" =>
 				op_alu <= "011110";
-			
-			when others => 
+
+			when others =>
 				-- Default to rA + rB
 				op_alu <= "000000";
 		end case;
