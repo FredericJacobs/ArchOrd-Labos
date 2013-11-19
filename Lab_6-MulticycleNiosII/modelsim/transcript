@@ -1,0 +1,1895 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf 
+# Loading project multicycle_niosII
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of tb_FPGA4U.vhd failed with 3 errors.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buttons.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of controller.vhd was successful with warnings.
+# Compile of CPU.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of FPGA4U.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 28 compiles, 1 failed with 3 errors. 
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buttons.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of controller.vhd was successful with warnings.
+# Compile of CPU.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of FPGA4U.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 27 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_controller
+# vsim -voptargs=+acc work.tb_controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+run -all
+# -=Controller test:======================================================
+# --R_OP test:------------------------------------------------------------
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+do test_Controller0.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(105): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(109): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in0.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# -=Testing the first version of the CPU==================================
+# --and
+# ===================================================================
+# IR has not been activated... Simulation aborted.
+# ===================================================================
+
+quit -sim
+# Compile of controller.vhd failed with 2 errors.
+# Compile of controller.vhd failed with 2 errors.
+# Compile of controller.vhd was successful with warnings.
+vsim -voptargs=+acc work.tb_controller
+# vsim -voptargs=+acc work.tb_controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/branch_op has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/pc_add_imm has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/pc_sel_a has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/pc_sel_imm has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/sel_pc has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/sel_ra has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+add wave sim:/tb_controller/*
+do test_Controller0.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(88): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(92): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in0.txt tb_Controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/branch_op has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/pc_add_imm has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/pc_sel_a has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/pc_sel_imm has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/sel_pc has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controller/controller_0/sel_ra has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# -=Controller test:======================================================
+# -=Testing the first version of the CPU==================================
+# ** Error: Unexpected output value for write
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# --and
+# ** Error: Unexpected output value for write
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# --srl
+# ** Error: Unexpected output value for write
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# --addi
+# ** Error: Unexpected output value for write
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# --ldw
+# ** Error: Unexpected output value for write
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_addr
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# --stw
+# ** Error: Unexpected output value for write
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_addr
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# --break
+# ** Error: Unexpected output value for write
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# --and
+# ** Error: Unexpected output value for write
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_add_imm
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_a
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_sel_imm
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_pc
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_ra
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+
+quit -sim
+# Compile of controller.vhd failed with 2 errors.
+# Compile of controller.vhd was successful with warnings.
+vsim -voptargs=+acc work.tb_controller
+# vsim -voptargs=+acc work.tb_controller 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+add wave sim:/tb_controller/*
+do test_Controller0.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture synth of controller
+# ** Warning: ../vhdl/controller.vhd(105): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: ../vhdl/controller.vhd(109): (vcom-1186) Array type case expression must be of a locally static subtype.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Controller
+# -- Compiling architecture testbench of tb_Controller
+# ** Warning: ../testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim -Gtext_in=Controller/in0.txt tb_Controller 
+# ** Warning: (vish-7) Failed to open lock file "C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_controller(testbench)
+# Loading work.controller(synth)
+# -=Controller test:======================================================
+# -=Testing the first version of the CPU==================================
+# ** Error: Unexpected output value for write
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for branch_op
+#    Time: 2500 ps  Iteration: 1  Instance: /tb_controller
+# --and
+# ** Error: Unexpected output value for write
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_controller
+# --srl
+# ** Error: Unexpected output value for write
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_controller
+# --addi
+# ** Error: Unexpected output value for write
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_controller
+# --ldw
+# ** Error: Unexpected output value for write
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_addr
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_controller
+# --stw
+# ** Error: Unexpected output value for write
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 77500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_addr
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for imm_signed
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 82500 ps  Iteration: 1  Instance: /tb_controller
+# --break
+# ** Error: Unexpected output value for write
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 87500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 92500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 97500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 102500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 107500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 112500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 117500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 122500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 127500 ps  Iteration: 1  Instance: /tb_controller
+# --and
+# ** Error: Unexpected output value for write
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for read
+#    Time: 132500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for PC enable count
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 137500 ps  Iteration: 1  Instance: /tb_controller
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for op_alu
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for write
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for pc_en
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for ir_en
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_mem
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for rf_wren
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_rC
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ** Error: Unexpected output value for sel_b
+#    Time: 142500 ps  Iteration: 1  Instance: /tb_controller
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+
+quit -sim
+vsim -voptargs=+acc work.tb_extend
+# vsim -voptargs=+acc work.tb_extend 
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.tb_extend because work.check_functions has changed.
+# 
+# ** Error: (vsim-13) Recompile work.tb_extend(testbench) because work.check_functions has changed.
+# 
+# Error loading design
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buttons.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of controller.vhd was successful with warnings.
+# Compile of CPU.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of FPGA4U.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 27 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_extend
+# vsim -voptargs=+acc work.tb_extend 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_extend(testbench)
+# Loading work.extend(synth)
+add wave sim:/tb_extend/*
+do test_Extend.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity extend
+# -- Compiling architecture synth of extend
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Extend
+# -- Compiling architecture testbench of tb_Extend
+# ** Warning: ../testbench/tb_Extend.vhd(43): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Extend.vhd(45): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim tb_Extend 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_extend(testbench)
+# Loading work.extend(synth)
+# - Extend unit test:
+# ** Error: Unexpected output value for imm32
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_extend
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+
+quit -sim
+# Compile of extend.vhd was successful with warnings.
+vsim -voptargs=+acc work.tb_extend
+# vsim -voptargs=+acc work.tb_extend 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_extend(testbench)
+# Loading work.extend(synth)
+add wave sim:/tb_extend/*
+do test_Extend.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity extend
+# -- Compiling architecture synth of extend
+# ** Warning: [14] ../vhdl/extend.vhd(20): (vcom-1272) Length of expected is 32; length of actual is 31.
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Extend
+# -- Compiling architecture testbench of tb_Extend
+# ** Warning: ../testbench/tb_Extend.vhd(43): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Extend.vhd(45): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim tb_Extend 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_extend(testbench)
+# Loading work.extend(synth)
+# - Extend unit test:
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 32 (31 downto 0). Right is 31 (0 to 30).
+#    Time: 5 ns  Iteration: 2  Process: /tb_extend/extend_0/line__16 File: ../vhdl/extend.vhd
+# Fatal error in Process line__16 at ../vhdl/extend.vhd line 20
+# 
+# HDL call sequence:
+# Stopped at ../vhdl/extend.vhd 20 Process line__16
+# 
+quit sim
+# unknown switch: sim
+quit -sim
+# Compile of extend.vhd was successful.
+vsim -voptargs=+acc work.tb_extend
+# vsim -voptargs=+acc work.tb_extend 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_extend(testbench)
+# Loading work.extend(synth)
+add wave sim:/tb_extend/*
+do test_Extend.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity extend
+# -- Compiling architecture synth of extend
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_Extend
+# -- Compiling architecture testbench of tb_Extend
+# ** Warning: ../testbench/tb_Extend.vhd(43): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_Extend.vhd(45): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim tb_Extend 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_extend(testbench)
+# Loading work.extend(synth)
+# - Extend unit test:
+# ===================================================================
+# Simulation is successful
+# ===================================================================
+
+quit -sim
+vsim -voptargs=+acc work.tb_pc
+# vsim -voptargs=+acc work.tb_pc 
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.tb_pc because work.check_functions has changed.
+# 
+# ** Error: (vsim-13) Recompile work.tb_pc(testbench) because work.check_functions has changed.
+# 
+# Error loading design
+vcom -93 -O0 C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+vsim -voptargs=+acc work.tb_pc
+# vsim -voptargs=+acc work.tb_pc 
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.tb_pc because work.check_functions has changed.
+# 
+# ** Error: (vsim-13) Recompile work.tb_pc(testbench) because work.check_functions has changed.
+# 
+# Error loading design
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buttons.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of controller.vhd was successful with warnings.
+# Compile of CPU.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of FPGA4U.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# 27 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_pc
+# vsim -voptargs=+acc work.tb_pc 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_pc(testbench)
+# Loading work.pc(synth)
+add wave sim:/tb_pc/*
+do test_PC.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity PC
+# -- Compiling architecture synth of PC
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_PC
+# -- Compiling architecture testbench of tb_PC
+# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim tb_PC 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_pc(testbench)
+# Loading work.pc(synth)
+# - Program Counter test:
+# - reset_n test...
+# ** Error: Unexpected output value for addr
+#    Time: 17500 ps  Iteration: 1  Instance: /tb_pc
+# - sel_imm test...
+# ** Error: Unexpected output value for addr
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_pc
+# - sel_a test...
+# ** Error: Unexpected output value for addr
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_pc
+# - add_imm test...
+# ** Error: Unexpected output value for addr
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
+# - enable test...
+# ** Error: Unexpected output value for addr
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
+# - pc+4 test...
+# ** Error: Unexpected output value for addr
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+quit -sim
+vsim work.pc
+# vsim work.pc 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.pc(synth)
+# Compile of PC.vhd was successful.
+vsim -voptargs=+acc work.tb_pc
+# vsim -voptargs=+acc work.tb_pc 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_pc(testbench)
+# Loading work.pc(synth)
+add wave sim:/tb_pc/*
+do test_PC.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying C:/Users/romac/Documents/GitHub/ArchOrd-Labos/Lab_6-MulticycleNiosII/modelsim/multicycle_niosII.mpf
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity PC
+# -- Compiling architecture synth of PC
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package check_functions
+# -- Compiling package body check_functions
+# -- Loading package check_functions
+# ** Warning: ../testbench/check_functions.vhd(56): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(66): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(72): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(74): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(91): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(101): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(107): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(109): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(126): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(136): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(142): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(144): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(161): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/check_functions.vhd(171): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(177): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(179): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# ** Warning: ../testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package check_functions
+# -- Compiling entity tb_PC
+# -- Compiling architecture testbench of tb_PC
+# ** Warning: ../testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# ** Warning: ../testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# 
+# vsim tb_PC 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.check_functions(body)
+# Loading work.tb_pc(testbench)
+# Loading work.pc(synth)
+# - Program Counter test:
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_pc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 7500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 12500 ps  Iteration: 1  Instance: /tb_pc
+# - reset_n test...
+# ** Error: Unexpected output value for addr
+#    Time: 22500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 27500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 32500 ps  Iteration: 1  Instance: /tb_pc
+# - sel_imm test...
+# ** Error: Unexpected output value for addr
+#    Time: 37500 ps  Iteration: 1  Instance: /tb_pc
+# - sel_a test...
+# ** Error: Unexpected output value for addr
+#    Time: 42500 ps  Iteration: 1  Instance: /tb_pc
+# - add_imm test...
+# ** Error: Unexpected output value for addr
+#    Time: 47500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 52500 ps  Iteration: 1  Instance: /tb_pc
+# - enable test...
+# ** Error: Unexpected output value for addr
+#    Time: 57500 ps  Iteration: 1  Instance: /tb_pc
+# - pc+4 test...
+# ** Error: Unexpected output value for addr
+#    Time: 62500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 67500 ps  Iteration: 1  Instance: /tb_pc
+# ** Error: Unexpected output value for addr
+#    Time: 72500 ps  Iteration: 1  Instance: /tb_pc
+# ===================================================================
+# Errors encountered during simulation. Refer to the report.txt file.
+# ===================================================================
+

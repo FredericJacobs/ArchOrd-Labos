@@ -1,0 +1,125 @@
+Flow report for FPGA4U_DE0
+Tue Nov 19 14:55:36 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Tue Nov 19 14:55:36 2013           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; FPGA4U_DE0                                      ;
+; Top-level Entity Name              ; FPGA4U_DE0                                      ;
+; Family                             ; Cyclone IV E                                    ;
+; Device                             ; EP4CE22F17C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 1,341                                           ;
+;     Total combinational functions  ; 1,124                                           ;
+;     Dedicated logic registers      ; 404                                             ;
+; Total registers                    ; 404                                             ;
+; Total pins                         ; 47                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 71,424                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/19/2013 14:55:26 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; FPGA4U_DE0          ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                  ;
++--------------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                            ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                      ; 220713148477058.138486932603700       ; --            ; --          ; --             ;
+; EDA_INCLUDE_VHDL_CONFIGURATION_DECLARATION ; On                                    ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT                     ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                        ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; FMAX_REQUIREMENT                           ; 100 MHz                               ; --            ; --          ; --             ;
+; IOBANK_VCCIO                               ; 3.3V                                  ; --            ; --          ; 8              ;
+; MAX_CORE_JUNCTION_TEMP                     ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                     ; 0                                     ; --            ; --          ; --             ;
+; PARTITION_COLOR                            ; 2147039                               ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL        ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE                     ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL                  ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION              ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; SMART_RECOMPILE                            ; On                                    ; Off           ; --          ; --             ;
+; TCO_REQUIREMENT                            ; 42 ns                                 ; --            ; --          ; --             ;
+; TH_REQUIREMENT                             ; 42 ns                                 ; --            ; --          ; --             ;
+; TPD_REQUIREMENT                            ; 42 ns                                 ; --            ; --          ; --             ;
+; TSU_REQUIREMENT                            ; 42 ns                                 ; --            ; --          ; --             ;
+; USER_LIBRARIES                             ; C:\altera\70\quartus\eda\sim_lib/     ; --            ; --          ; --             ;
++--------------------------------------------+---------------------------------------+---------------+-------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 504 MB              ; 00:00:09                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; windaube         ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off FPGA4U_DE0 -c FPGA4U_DE0
+
+
+

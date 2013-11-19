@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="FPGA4U_DE0">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA4U_DE0|FPGA4U:inst|CPU:inst|register_file:register_file_0|altsyncram:reg_array_rtl_1" CBX_FILE_NAME="altsyncram_k9j1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA4U_DE0|FPGA4U:inst|RAM:RAM_0|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_vh41.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA4U_DE0|FPGA4U:inst|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_rna1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA4U_DE0|FPGA4U:inst|CPU:inst|register_file:register_file_0|altsyncram:reg_array_rtl_0" CBX_FILE_NAME="altsyncram_k9j1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA4U_DE0|rgb_led96:inst4|altsyncram:gamma_table_rtl_0" CBX_FILE_NAME="altsyncram_8871.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

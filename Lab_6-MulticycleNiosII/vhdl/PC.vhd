@@ -23,7 +23,7 @@ begin
     begin
         if(rising_edge(clk)) then
             if(reset_n = '0') then
-                reg_addr <= (others => '0');
+					 reg_addr <= (others => '0');
             elsif(en = '1') then
                reg_addr <= reg_addr + 4;
             end if;

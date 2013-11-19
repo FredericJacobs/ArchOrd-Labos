@@ -1,0 +1,58 @@
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buttons.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of controller.vhd was successful with warnings.
+# Compile of CPU.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of FPGA4U.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_FPGA4U.vhd was successful.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# 28 compiles, 0 failed with no errors. 
+# Compile of add_sub.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of buttons.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of controller.vhd was successful with warnings.
+# Compile of CPU.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of extend.vhd was successful.
+# Compile of FPGA4U.vhd was successful.
+# Compile of IR.vhd was successful.
+# Compile of LEDs.vhd was successful.
+# Compile of logic_unit.vhd was successful.
+# Compile of multiplexer.vhd was successful.
+# Compile of mux2x5.vhd was successful.
+# Compile of mux2x16.vhd was successful.
+# Compile of mux2x32.vhd was successful.
+# Compile of PC.vhd was successful.
+# Compile of RAM.vhd was successful.
+# Compile of register_file.vhd was successful.
+# Compile of ROM.vhd was successful.
+# Compile of ROM_Block.vhd was successful.
+# Compile of shift_unit.vhd was successful.
+# Compile of check_functions.vhd was successful with warnings.
+# Compile of tb_Controller.vhd was successful with warnings.
+# Compile of tb_Extend.vhd was successful with warnings.
+# Compile of tb_FPGA4U.vhd was successful.
+# Compile of tb_IR.vhd was successful with warnings.
+# Compile of tb_PC.vhd was successful with warnings.
+# 28 compiles, 0 failed with no errors. 

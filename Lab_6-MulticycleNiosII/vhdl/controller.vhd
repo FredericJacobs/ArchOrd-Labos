@@ -42,9 +42,11 @@ architecture synth of controller is
 	type State is (FETCH1, FETCH2, DECODE, R_OP, STORE, BREAK, LOAD1, LOAD2, I_OP);
 	signal currentState, nextState : State;
 begin
+  
+  
 	process(clk, reset_n)
 		begin
-			if(reset_n = '1') then
+			if(reset_n = '0') then
 				currentState <= FETCH1;
 			elsif(rising_edge(clk))then
 				currentState <= nextState;
@@ -53,7 +55,6 @@ begin
 
 	process(currentState, op, opx)
 	begin
-
 		branch_op   <= '0';
 		imm_signed  <= '0';
 		ir_en       <= '0';
@@ -70,8 +71,6 @@ begin
 		sel_rC      <= '0';
 		read        <= '0';
 		write       <= '0';
-		op_alu      <= (others => '0');
-		nextState   <= currentState;
 
 		case(currentState) is
 
@@ -154,9 +153,6 @@ begin
 				-- Use signed immediate value
 				imm_signed <= '1';
 
-				-- Tell the ALU to perform an addition
-				op_alu <= "000000";
-
 				-- Enable writes on the register file
 				-- to save the result of the ALU
 				rf_wren <= '1';
@@ -171,10 +167,7 @@ begin
 				-- Select registers A, B and C
 				sel_b <= '1';
 				sel_RC <= '1';
-
-				-- opx contains the actual ALU opcode.
-				op_alu <= opx;
-
+				
 				-- Enable writes on the register file
 				-- to save the result of the ALU
 				rf_wren <= '1';
@@ -187,16 +180,12 @@ begin
 			-- start a read process. The read value will be available during LOAD2.
 			when LOAD1 =>
 
-				-- Add the immediate value to the value of register A
-				op_alu <= "000000";
-
 				-- Select the memory address from either the PC address or the result of the ALU.
 				sel_addr <= '1';
 
-				-- Select the register B which will receive the loaded value
-				sel_b <= '1';
-
-				-- FIXME: Why isn't A selected too?
+				sel_b <= '0';
+				
+				imm_signed <= '1';	
 
 				-- Read from the memory at the previously computed address
 				read <= '1';
@@ -211,8 +200,7 @@ begin
 				-- Enable writes on the Register File
 				rf_wren <= '1';
 
-				-- FIXME: Not sure why sel_rC is enabled in the schema...
-				sel_rC <= '1';
+				sel_rC <= '0';
 
 				-- Select the data to write to the Register File from
 				-- either the result of the ALU or the rddata input.
@@ -226,14 +214,12 @@ begin
 			-- The data to write is held in register B.
 			when STORE =>
 
-				-- Add the immediate value to the value of register A.
-				op_alu <= "000000";
-
 				-- Select the memory address from either the PC address or the result of the ALU.
 				sel_addr <= '1';
 
-				-- Select the register B which will receive the loaded value.
-				sel_b <= '1';
+				sel_b <= '0';
+				
+				imm_signed <= '1';
 
 				-- Start a write process to the memory.
 				write <= '1';
@@ -246,6 +232,40 @@ begin
 				nextState <= BREAK;
 
 			when others =>
+		end case;
+	end process;
+	
+	process(op, opx)
+	begin
+		case("00" & op) is
+		
+			-- R_OP
+			when x"3A" =>
+				case("00" & opx) is
+				
+					-- and rC, rA, rB
+					-- rC <= rA & rB
+					when x"0E" =>
+						op_alu <= "100001";
+
+					-- srl rC, rA, rB
+					-- rC <= (unsigned)rA >> rB[4..0]
+					when x"1B" =>
+						op_alu <= "110011";
+						
+					when others =>
+						-- Default to addition
+						op_alu <= "000000";
+						
+				end case;
+			
+			-- I_OP
+			when x"04" =>
+				op_alu <= "000000";
+			
+			when others => 
+				-- Default to addition
+				op_alu <= "000000";
 		end case;
 	end process;
 end synth;
