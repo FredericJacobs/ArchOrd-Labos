@@ -1,12 +1,14 @@
 
+.equ MEMORY_TOP, 0x1FF0
+
 main:
-    addi sp, zero, 0x1FF0           ; set the stack pointer at the top of the memory
+    addi sp, zero, MEMORY_TOP       ; set the stack pointer at the top of the memory
 
     addi a1, zero, data             ; a1: First string address
     addi a2, a1, 4                  ; a2: Second string address
     addi a0, a2, 4                  ; a0: Concatenated string address
 
-    call concatenate                ; concatenate(a0, a1)
+    call concatenate                ; concatenate(a0, a1, a2)
     break                           ; end of the program
 
 ; Concatenate two strings together
@@ -26,15 +28,17 @@ concatenate:
 
     call strcopy ; v0 = strcopy(a2, a3)
     add a3, a3, v0
-    stw zero, 0(a3)
+    add t0, a3, zero  ; t0 = a3
+    xor t1, t1, t1    ; t1 = 0
+    call stb          ; mem[t0] = t1
     ret
 
 ; Copy a string from an address to another,
 ; without padding the result with a zero.
 ;
 ; Arguments
-; - a2: source address of the string to copy
-; - a3: destination address
+; - a0: destination address
+; - a1: source address of the string to copy
 ;
 ; Return registers
 ; - v0: Number of bytes copied (set it to 0 before calling it)
@@ -46,15 +50,16 @@ strcopy:
     stw fp, 0(sp)
 
     loop:
-        call ldb                ; t1 = mem[a2]
-        add t1, v0, zero        ;
+        call ldb                ; v0 = mem[a1]
 
-        beq t1, zero, return    ; while(t1 != 0) {
+        beq v0, zero, return    ; while(v0 != 0) {
 
-        call stb                ;   mem[s1] = t1
+        add t0, a0, zero        ;  t0 = a0
+        add t1, v0, zero        ;  t1 = v0
+        call stb                ;   mem[a0] = t1
 
-        addi a2, a2, 1          ;   s0 += 1
-        addi a3, a3, 1          ;   s1 += 1
+        addi a1, a1, 1          ;   s0 += 1
+        addi a0, a0, 1          ;   s1 += 1
         addi v0, v0, 1          ;   v0 += 1
         br loop                 ; }
 
@@ -64,7 +69,7 @@ strcopy:
 ; Load a byte at the specified address into v0
 ;
 ; Arguments
-; - a2: source address of the string to copy
+; - a1: source address of the string to copy
 ;
 ; Return registers
 ; - v0: Loaded byte
@@ -74,8 +79,8 @@ ldb:
     addi sp, sp, -4
     stw fp, 0(sp)
 
-    ldw v0, 0(a2)           ; word = mem[addr]
-    srli v0, v0, 6          ; word = word >> 6 (only keep the first byte)
+    ldw v0, 0(a1)           ; word = mem[a1]
+    srli v0, v0, 16         ; word = word >> 16 (only keep the first byte)
     ret
 
 ; Store the given byte at the specified address
