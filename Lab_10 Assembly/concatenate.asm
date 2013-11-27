@@ -44,8 +44,8 @@ concatenate:
 ; without padding the result with a zero.
 ;
 ; Arguments
-; - a0: destination address
-; - a1: source address of the string to copy
+; - a0: destination address (word aligned)
+; - a1: source address of the string to copy (word aligned)
 ;
 ; Return registers
 ; - v0: Number of bytes copied (set it to 0 before calling it)
@@ -82,6 +82,8 @@ strcopy:
 ;
 ; Arguments
 ; - a0: source address of the string to copy
+; - a1: byte offset relative to the rightmost byte of the source word
+;       will be modulo 4
 ;
 ; Return registers
 ; - v0: Loaded byte
@@ -89,17 +91,25 @@ ldb:
     addi sp, sp, -8     ; make an 8 byte frame
     stw ra, 4(sp)       ; store the return address
     stw fp, 0(sp)       ; store the frame pointer
+    
+    addi t1, zero, 8
+    mul t1, t1, a1      ; t1 = t1 * a1s
+
+    addi t0, zero, 0xFF ; Set the mask to 000000FF
+
+    sll t0, t0, t1      ; Shift the mask by a1 bytes (= a1 * t1 bits)
 
     ldw v0, 0(a0)       ; word = mem[a0]
-    srli v0, v0, 16     ; word = word >> 16 (only keep the first byte)
-    ret
+    and v0, v0, t0      ; word = word & mask (only keep the byte at the given offset)
+
+    ret                 ; return v0
 
 ; Store the given byte at the specified address
 ;
 ; Arguments
 ; - a0: destination word address
 ; - a1: byte to store
-; - a2: number of the byte to store to
+; - a2: offset (in bytes) relative to a0's right at which to store the given byte
 stb:
     addi sp, sp, -8         ; make an 8 byte frame
     stw ra, 4(sp)           ; store the return address
