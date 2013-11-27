@@ -61,7 +61,10 @@ strcopy:
 
     loop:
         add a0, s1, zero        ; a0 = s1
-        call ldb                ; v0 = mem[a0]
+
+    load:
+
+        call ldb                ; v0 = mem[a0 (word) + a1 (offset)]
 
         beq v0, zero, return    ; while(v0 != 0) {
 
@@ -69,8 +72,16 @@ strcopy:
         add a1, v0, zero        ;   a1 = v0
         call stb                ;   mem[a0] = a1
 
-        addi s1, s1, 1          ;   a1 += 1
-        addi s0, s0, 1          ;   a0 += 1
+        addi s0, s0, 1          ;   s0 += 1
+
+        add t0, zero, 4         ; t0 = 4
+        bne s1, t0, inc_s1        ; if(s1 != 4) goto inc_s1
+        xor s1, s1, s1          ; s1 = 0
+        br inc_s2               ; goto inc_s2
+
+    inc_s1:
+        addi s1, s1, 1          ;   s1 += 1
+    inc_s2:
         addi s2, s2, 1          ;   s2 += 1
         br loop                 ; }
 
@@ -83,7 +94,6 @@ strcopy:
 ; Arguments
 ; - a0: source address of the string to copy
 ; - a1: byte offset relative to the rightmost byte of the source word
-;       will be modulo 4
 ;
 ; Return registers
 ; - v0: Loaded byte
@@ -91,7 +101,7 @@ ldb:
     addi sp, sp, -8     ; make an 8 byte frame
     stw ra, 4(sp)       ; store the return address
     stw fp, 0(sp)       ; store the frame pointer
-    
+
     addi t1, zero, 8
     mul t1, t1, a1      ; t1 = t1 * a1s
 
