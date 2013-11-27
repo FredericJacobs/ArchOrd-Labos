@@ -58,12 +58,14 @@ strcopy:
     add s0, a0, zero ; s0 = a0
     add s1, a1, zero ; s1 = a1
     xor s2, s2, s2   ; s2 = 0
+    xor t0, t0, t0   ; t0 = 0
 
     loop:
         add a0, s1, zero        ; a0 = s1
 
     load:
 
+        add a1, t0, zero        ; a1 = t0
         call ldb                ; v0 = mem[a0 (word) + a1 (offset)]
 
         beq v0, zero, return    ; while(v0 != 0) {
@@ -75,13 +77,15 @@ strcopy:
         addi s0, s0, 1          ;   s0 += 1
 
         add t0, zero, 4         ; t0 = 4
-        bne s1, t0, inc_s1        ; if(s1 != 4) goto inc_s1
-        xor s1, s1, s1          ; s1 = 0
-        br inc_s2               ; goto inc_s2
+        bne a1, t0, inc_t0      ; if(a1 != 4) goto inc_t0
+        xor a1, a1, a1          ; a1 = 0
+        br next                 ; goto next
 
-    inc_s1:
+    inc_t0:
+        addi t0, t0, 1          ; t0 += 1
+
+    next:
         addi s1, s1, 1          ;   s1 += 1
-    inc_s2:
         addi s2, s2, 1          ;   s2 += 1
         br loop                 ; }
 
