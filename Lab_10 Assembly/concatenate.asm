@@ -1,4 +1,14 @@
 
+; Concatenate two string together
+;
+; Notes:
+; - This is not really working, the two strings are copied to distinct
+;   words and are padding with crap.
+; - This either very hard, or we're doing it the wrong way.
+;   We can't tell which one because this shitty nios2sim
+;   doesn't handle half the Nios II spec...
+;   -> http://www.altera.com/literature/hb/nios2/n2cpu_nii51017.pdf
+
     .equ MEMORY_TOP, 0x1FF0
 
     main:
@@ -137,6 +147,7 @@
     ; Return registers
     ; - v0: Loaded byte
     ldb:
+
         addi t1, zero, 8    ; t1 = 8
         mul t1, t1, a1      ; t1 = t1 * a1 (where the fuck is muli?!?)
 
@@ -157,6 +168,7 @@
     ; - a1: byte to store
     ; - a2: byte offset relative to the rightmost byte of the destination word
     stb:
+
         addi t1, zero, 8        ; t1 = 8
         mul t1, t1, a2          ; t1 = t1 * a2 (where the fuck is muli?!?)
 
@@ -177,4 +189,3 @@
         .word 0x47410000        ; "GA"
                                 ; "FPGA" = 0x4650474100
     .equ OUTPUT, 0x1000         ; Output address (RAM)
-
