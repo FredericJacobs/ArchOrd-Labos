@@ -3,11 +3,19 @@
 ;
 ; Notes:
 ; - This is not really working, the two strings are copied to distinct
-;   words and are padding with crap.
+;   words and are padded with crap.
+;
+; - There are two reasons for this:
+;   1. `strcopy` returns to istelf at line 114 instead of returning to `concatenate`,
+;       and we haven't found a way to fix it, with or without adding a function prologue
+;       to the functions. (see the function prologue commented at the end of the file).
+;   2. `strcopy` should take an additional argument specifying the offset (in bytes) relative to
+;      the destination word at which it should copy the source string, and then figure
+;      out the right word and word offset to supply to `stb`.
+;
 ; - This either very hard, or we're doing it the wrong way.
-;   We can't tell which one because this shitty nios2sim
-;   doesn't handle half the Nios II spec...
-;   -> http://www.altera.com/literature/hb/nios2/n2cpu_nii51017.pdf
+;   We can't tell which one because nios2sim doesn't seem to handle half the Nios II spec...
+;   (http://www.altera.com/literature/hb/nios2/n2cpu_nii51017.pdf)
 
     .equ MEMORY_TOP, 0x1FF0
 
@@ -120,7 +128,7 @@
             ldw t0, 0(sp)           ;   pop t0 from the stack
             addi sp, sp, 4
 
-            addi s3, s3, 1          ;   s4 += 1
+            addi s3, s3, 1          ;   s3 += 1
 
             bne t0, zero, sub_t0    ;   if(t0 != 0) goto sub_t0
             addi t0, zero, 3        ;   t0 = 3
@@ -189,3 +197,11 @@
         .word 0x47410000        ; "GA"
                                 ; "FPGA" = 0x4650474100
     .equ OUTPUT, 0x1000         ; Output address (RAM)
+
+; Nios II Function Prologue
+; nio2sim doesn't seem to care about this.
+;
+; addi sp, sp, -8     ; make an 8 byte frame
+; stw ra, 4(sp)       ; store the return address
+; stw fp, 0(sp)       ; store the frame pointer
+; addi fp, sp, 0      ; set the frame pointer
