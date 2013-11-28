@@ -19,9 +19,6 @@
     ; - a1: Address of the 1st string
     ; - a2: Address of the 2nd string
     concatenate:
-        ;addi sp, sp, -8     ; make an 8 byte frame
-        ;stw ra, 4(sp)       ; store the return address
-        ;stw fp, 0(sp)       ; store the frame pointer
 
         add s0, a0, zero    ; s0 = a0
         add s1, a1, zero    ; s1 = a1
@@ -78,10 +75,6 @@
     ; Return registers
     ; - v0: Number of bytes copied (set it to 0 before calling it)
     strcopy:
-
-        ;addi sp, sp, -8     ; make an 8 byte frame
-        ;stw ra, 4(sp)       ; store the return address
-        ;stw fp, 0(sp)       ; store the frame pointer
 
         add s3, a0, zero ; s3 = a0
         add s4, a1, zero ; s4 = a1
@@ -144,10 +137,6 @@
     ; Return registers
     ; - v0: Loaded byte
     ldb:
-        ;addi sp, sp, -8     ; make an 8 byte frame
-        ;stw ra, 4(sp)       ; store the return address
-        ;stw fp, 0(sp)       ; store the frame pointer
-
         addi t1, zero, 8    ; t1 = 8
         mul t1, t1, a1      ; t1 = t1 * a1 (where the fuck is muli?!?)
 
@@ -168,10 +157,6 @@
     ; - a1: byte to store
     ; - a2: byte offset relative to the rightmost byte of the destination word
     stb:
-        ;addi sp, sp, -8         ; make an 8 byte frame
-        ;stw ra, 4(sp)           ; store the return address
-        ;stw fp, 0(sp)           ; store the frame pointer
-
         addi t1, zero, 8        ; t1 = 8
         mul t1, t1, a2          ; t1 = t1 * a2 (where the fuck is muli?!?)
 
