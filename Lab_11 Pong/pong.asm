@@ -4,13 +4,21 @@
 .equ LEDS, 0x2000 ; LEDs address 
 .equ BUTTONS, 0x2030 ; Buttons address
 
-clear_leds: Goal is to initialize all LEDs to 0
-;The LED array has a size of 96 bits, or 3 words of 32 bits.
+clear_leds:
+;Goal is to initialize all LEDs to 0
+;The LED array has a size of 96 bits, or 3 words of 32 bits starting at 0x2000.
 stw zero, LEDS(zero)
 stw zero, LEDS+8 (zero)
 stw zero, LEDS+16 (zero)
 
-setPixel: The set_pixel procedure takes two coordinates as arguments and turns on the corresponding pixel on the display.
+setPixel: 
+;The set_pixel procedure takes two coordinates as arguments and turns on the corresponding pixel on the display.
+
+;a0 = x coordinate of the pixel
+;a1 = y coordinate of the pixel
+
+add t0, a0, zero;
+andi t1, a1, 
 
 font_data:
 .word 0x7E427E00 ; 0 
