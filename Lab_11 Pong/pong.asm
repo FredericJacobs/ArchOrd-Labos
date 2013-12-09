@@ -1,17 +1,17 @@
 
-; + -------+--------------------+
-; | 0x1000 | Ball position on x |
-; | 0x1004 | Ball position on y |
-; | 0x1008 | Ball velocity on x |
-; | 0x100C | Ball velocity on y |
-; | 0x1010 | Paddle 1 position  |
-; | 0x1014 | Paddle 2 position  |
-; | 0x1018 | Score of player 1  |
-; | 0x101C | Score of player 2  |
-; | 0x2000 | LED 1              |
-; | 0x2004 | LED 2              |
-; | 0x2008 | LED 3              |
-; + -------+--------------------+
+; + -------+---------------------+
+; | 0x1000 | Ball position on x  |
+; | 0x1004 | Ball position on y  |
+; | 0x1008 | Ball velocity on x  |
+; | 0x100C | Ball velocity on y  |
+; | 0x1010 | Paddle 1 y position |
+; | 0x1014 | Paddle 2 y position |
+; | 0x1018 | Score of player 1   |
+; | 0x101C | Score of player 2   |
+; | 0x2000 | LED 1               |
+; | 0x2004 | LED 2               |
+; | 0x2008 | LED 3               |
+; + -------+---------------------+
 
 .equ BALL,      0x1000 ; Ball state
 .equ PADDLES,   0x1010 ; Paddles positions
@@ -19,19 +19,35 @@
 .equ LEDS,      0x2000 ; LEDs address
 .equ BUTTONS,   0x2030 ; Buttons address
 
+.equ MEMORY_TOP, 0x1FF0 ; Top of the RAM
+
 main:
+    ; set the stack pointer at the top of RAM
+    addi sp, zero, MEMORY_TOP
+
+    ; place ball at (1,2)
     addi t0, zero, 1
     addi t1, zero, 2
     stw t0, BALL     (zero)
     stw t1, BALL + 4 (zero)
 
+    ; set velocity to (1, 1)
     addi t0, zero, 1
     addi t1, zero, 1
     stw t0, BALL + 8  (zero)
     stw t1, BALL + 12 (zero)
 
+    ; set paddle 1 to X = 3
+    addi t0, zero, 3
+    stw t0, PADDLES (zero)
+
+    ; set paddle 2 to X = 1
+    addi t0, zero, 1
+    stw t0, PADDLES + 4(zero)
+
     loop:
         call clear_leds  ; clear_leds()
+        call draw_paddles ; draw_paddles()
         call hit_test    ; hit_test()
         call move_ball   ; move_ball()
 
@@ -138,6 +154,52 @@ move_ball:
     stw t2, BALL + 4 (zero)
 
     ret
+
+; The draw_paddles procedure draws the paddles on the display.
+; Using the set_pixel procedure, it turns 3 pixels on for each paddle
+; depending on their position. As Figure 4 shows, the coordinates refer
+; to the top of the paddle.
+draw_paddles:
+    addi sp, sp, -4
+    stw ra, 0(sp)          ; save the return address
+
+    ; s0: paddle index (0 or 1)
+    ; s1: PADDLES offset (0 or 4)
+    ; s2: paddle Y position (0 or 7)
+
+    add s0, zero, zero
+    add s1, zero, zero
+    add s2, zero, zero
+
+    draw_paddle:
+        ; s3: pixel offset (0 to 2)
+        ; s4: paddle's X position
+
+        add s3, zero, zero                      ; s3 = 0
+        ldw s4, PADDLES + 0(s2)                 ; s4 = PADDLES[s2]
+
+        draw_paddle_pixel:
+            add a0, s4, s3                      ; a0 = s4 + s3
+            add a1, s2, zero                    ; a1 = s2
+            call set_pixel                      ; set_pixel(a0, a1)
+            addi s3, s3, 1                      ; s3 += 1
+
+            addi t0, zero, 3                    ; t0 = 3
+            bne s3, t0, draw_paddle_pixel       ; if(s3 != 3) goto draw_paddle_pixel
+
+            addi t0, zero, 1                    ; t0 = 1
+            beq s0, t0, draw_paddles_return     ; if(s0 == 1) goto draw_paddles_return
+
+            addi s0, s0, 1                      ; s0 += 1
+            addi s1, zero, 4                    ; s1 = 4
+            addi s2, zero, 7                    ; s2 = 7
+            br draw_paddle                      ; goto draw_paddle
+
+    draw_paddles_return:
+        ldw ra, 0(sp)
+        addi sp, sp, 4
+        ret
+
 
 font_data:
     .word 0x7E427E00 ; 0
