@@ -26,43 +26,43 @@ main:
     ; set the stack pointer at the top of RAM
     addi sp, zero, MEMORY_TOP
 
-new_round:
+    new_round:
 
-    ; place ball at (4,6)
-    addi t0, zero, 4
-    addi t1, zero, 6
-    stw t0, BALL     (zero)
-    stw t1, BALL + 4 (zero)
+        ; place ball at (4,6)
+        addi t0, zero, 4
+        addi t1, zero, 6
+        stw t0, BALL     (zero)
+        stw t1, BALL + 4 (zero)
 
-    ; set velocity to (1, 1)
-    addi t0, zero, 1
-    addi t1, zero, 1
-    stw t0, BALL + 8  (zero)
-    stw t1, BALL + 12 (zero)
+        ; set velocity to (1, 1)
+        addi t0, zero, 1
+        addi t1, zero, 1
+        stw t0, BALL + 8  (zero)
+        stw t1, BALL + 12 (zero)
 
-    ; set paddle 1 to X = 3
-    addi t0, zero, 3
-    stw t0, PADDLES (zero)
+        ; set paddle 1 to X = 3
+        addi t0, zero, 3
+        stw t0, PADDLES (zero)
 
-    ; set paddle 2 to X = 5
-    addi t0, zero, 5
-    stw t0, PADDLES + 4(zero)
+        ; set paddle 2 to X = 5
+        addi t0, zero, 5
+        stw t0, PADDLES + 4(zero)
 
-game_loop:
+    game_loop:
 
-    call clear_leds   ; clear_leds()
-    call draw_ball    ; draw_ball()
-    call draw_paddles ; draw_paddles()
-    call move_ball    ; move_ball()
-    call move_paddles ; move_paddles()
-    call hit_test     ; hit_test()
+        call clear_leds   ; clear_leds()
+        call draw_ball    ; draw_ball()
+        call draw_paddles ; draw_paddles()
+        call move_ball    ; move_ball()
+        call move_paddles ; move_paddles()
+        call hit_test     ; hit_test()
 
-    beq v0, zero, game_loop_next
-    call display_score
-    br new_round
+        beq v0, zero, game_loop_next
+        call display_score
+        br new_round
 
-game_loop_next:
-    br game_loop             ; goto game_loop
+    game_loop_next:
+        br game_loop             ; goto game_loop
 
 ; Draw the ball at its current location
 ;
