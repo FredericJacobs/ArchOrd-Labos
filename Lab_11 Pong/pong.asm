@@ -22,12 +22,15 @@
 .equ MEMORY_TOP, 0x1FF0 ; Top of the RAM
 
 main:
+
     ; set the stack pointer at the top of RAM
     addi sp, zero, MEMORY_TOP
 
-    ; place ball at (1,2)
-    addi t0, zero, 1
-    addi t1, zero, 2
+new_round:
+
+    ; place ball at (4,6)
+    addi t0, zero, 4
+    addi t1, zero, 6
     stw t0, BALL     (zero)
     stw t1, BALL + 4 (zero)
 
@@ -41,22 +44,44 @@ main:
     addi t0, zero, 3
     stw t0, PADDLES (zero)
 
-    ; set paddle 2 to X = 1
-    addi t0, zero, 1
+    ; set paddle 2 to X = 5
+    addi t0, zero, 5
     stw t0, PADDLES + 4(zero)
 
-    game_loop:
-        call clear_leds   ; clear_leds()
-        call move_paddles ; move_paddles()
-        call draw_paddles ; draw_paddles()
-        call hit_test     ; hit_test()
-        call move_ball    ; move_ball()
+game_loop:
 
-        ldw a0, BALL      (zero) ; a0 = ball's x position
-        ldw a1, BALL + 4  (zero) ; a1 = ball's y position
-        call set_pixel           ; set_pixel(a0, a1)
+    call clear_leds   ; clear_leds()
+    call draw_ball    ; draw_ball()
+    call draw_paddles ; draw_paddles()
+    call move_ball    ; move_ball()
+    call move_paddles ; move_paddles()
+    call hit_test     ; hit_test()
 
-        br game_loop             ; goto game_loop
+    beq v0, zero, game_loop_next
+    call display_score
+    br new_round
+
+game_loop_next:
+    br game_loop             ; goto game_loop
+
+; Draw the ball at its current location
+;
+; Arguments
+; - None
+;
+; Return values
+; - None
+draw_ball:
+    addi sp, sp, -4
+    stw ra, 0(sp)          ; save the return address
+
+    ldw a0, BALL      (zero) ; a0 = ball's x position
+    ldw a1, BALL + 4  (zero) ; a1 = ball's y position
+    call set_pixel           ; set_pixel(a0, a1)
+
+    ldw ra, 0(sp)
+    addi sp, sp, 4
+    ret
 
 ; Goal is to initialize all LEDs to 0
 ; The LED array has a size of 96 bits, or 3 words of 32 bits starting at 0x2000.
@@ -112,21 +137,41 @@ hit_test:
     ldw t3, BALL + 8  (zero)            ; velX = ball's x velocity
     ldw t4, BALL + 12 (zero)            ; velY = ball's y velocity
 
-    check_y_pos:                        ; if(ballY == 0 || ballY == 7) goto invert_y_velocity
-        beq t2, zero, invert_y_velocity
-        addi t0, zero, 7
-        blt t2, t0, check_x_pos
-
-    invert_y_velocity:
-        sub t4, zero, t3                ; velY = -velY
-
     check_x_pos:                        ; if(ballX == 0 || ballX == 11) goto invert_x_velocity
         beq t1, zero, invert_x_velocity
         addi t0, zero, 11
-        blt t1, t0, update_velocity
+        blt t1, t0, check_y_pos_1
 
     invert_x_velocity:
         sub t3, zero, t3                ; velX = -velX
+
+    check_y_pos_1:
+        bne t2, zero, check_y_pos_2     ; if(ballY != 0) goto check_y_pos_2
+        ldw t7, PADDLES (zero)          ; paddleY = paddle 1 position
+        blt t1, t7, winner_2            ; if(ballX < paddle1X) goto winner_2
+        addi t7, t7, 4
+        bge t1, t7, winner_2            ; if(ballX > paddle1X + 3) goto winner_2
+        br invert_y_velocity
+
+    check_y_pos_2:
+        addi t0, zero, 7
+        blt t2, t0, update_velocity     ; if(ballY != 7) goto update_velocity
+        ldw t7, PADDLES + 4 (zero)      ; paddle2X = paddle 2 position
+        blt t1, t7, winner_1            ; if(ballX < paddle2X) goto winner_1
+        addi t7, t7, 4
+        bge t1, t7, winner_1            ; if(ballX > paddle2X + 3) goto winner_1
+        br invert_y_velocity
+
+    invert_y_velocity:
+        sub t4, zero, t4                ; velY = -velY
+        br update_velocity
+
+    winner_1:
+        addi v0, zero, 1
+        br update_velocity
+
+    winner_2:
+        addi v0, zero, 2
 
     update_velocity:
         stw t3, BALL + 8  (zero)
