@@ -98,7 +98,28 @@ hit_test:
         stw t4, BALL + 12 (zero)
         ret
 
+; The move_ball procedure moves the ball depending on its velocity vector.
+; It computes the next posi- tion of the ball by adding the velocity vector
+; to the current position vector of the ball.
+;
+; Arguments:
+; - None
+;
+; Return values:
+; - None
+move_ball:
+    ldw t1, BALL      (zero) ; ballX = ball's x position
+    ldw t2, BALL + 4  (zero) ; ballY = ball's y position
+    ldw t3, BALL + 8  (zero) ; velX = ball's x velocity
+    ldw t4, BALL + 12 (zero) ; velY = ball's y velocity
 
+    add t1, t1, t3           ; ballX += velX
+    add t2, t2, t4           ; ballY += velY
+
+    stw t1, BALL     (zero)
+    stw t2, BALL + 4 (zero)
+
+    ret
 
 font_data:
     .word 0x7E427E00 ; 0
