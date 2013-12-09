@@ -45,17 +45,18 @@ main:
     addi t0, zero, 1
     stw t0, PADDLES + 4(zero)
 
-    loop:
-        call clear_leds  ; clear_leds()
+    game_loop:
+        call clear_leds   ; clear_leds()
+        call move_paddles ; move_paddles()
         call draw_paddles ; draw_paddles()
-        call hit_test    ; hit_test()
-        call move_ball   ; move_ball()
+        call hit_test     ; hit_test()
+        call move_ball    ; move_ball()
 
         ldw a0, BALL      (zero) ; a0 = ball's x position
         ldw a1, BALL + 4  (zero) ; a1 = ball's y position
         call set_pixel           ; set_pixel(a0, a1)
 
-        br loop                  ; goto loop
+        br game_loop             ; goto game_loop
 
 ; Goal is to initialize all LEDs to 0
 ; The LED array has a size of 96 bits, or 3 words of 32 bits starting at 0x2000.
@@ -100,11 +101,11 @@ set_pixel:
 ; then it must modify the velocity vector to make the ball
 ; bounce on the border.
 ;
-; Arguments:
+; Arguments
 ; - None
 ;
-; Return values:
-; - None
+; Return values
+; - v0: The winner’s ID, if there is any; otherwise 0
 hit_test:
     ldw t1, BALL      (zero)            ; ballX = ball's x position
     ldw t2, BALL + 4  (zero)            ; ballY = ball's y position
@@ -155,10 +156,70 @@ move_ball:
 
     ret
 
+; The move_paddles procedure reads the state of the push buttons
+; and moves the paddles correspondingly. The paddles move only along the y axis.
+; Their current y position is stored in memory.
+; Their x coordinates are constants: 0 for the first paddle and 11 for the second.
+;
+; Arguments:
+; - None
+;
+; Return values:
+; - None
+move_paddles:
+    ldw t0, BUTTONS     (zero) ; Buttons state (4 LSB)
+    ldw t1, PADDLES     (zero) ; Paddle 1's Y position
+    ldw t2, PADDLES + 4 (zero) ; Paddle 2's Y position
+
+    andi  t3,  t0,   1   ; if 1st LSB bit (button 4) is set
+    sub   t2,  t2,   t3  ; move paddle 2 up
+
+    srli  t0,  t0,   1
+    andi  t3,  t0,   1   ; if 2nd LSB bit (button 3) is set
+    add   t2,  t2,   t3  ; move paddle 2 down
+
+    srli  t0,  t0,   1
+    andi  t3,  t0,   1   ; if 3rd LSB bit (button 2) is set
+    add   t1,  t1,   t3  ; move paddle 1 down
+
+    srli  t0,  t0,   1
+    andi  t3,  t0,   1   ; if 4th LSB bit (button 1) is set
+    sub   t1,  t1,   t3  ; move paddle 1 up
+
+    addi  t5,  zero, 5   ; t5 = 5, set for upcoming comparisons
+
+    check_paddle_1_gt_5: ; if(paddle1_Y > 5) paddle1_Y = 5
+        bge  t5, t1, check_paddle_1_lt_0
+        addi t1, zero, 5
+
+    check_paddle_1_lt_0:  ; if(paddle1_Y < 0) paddle1_Y = 0
+        bge t1, zero, check_paddle_2_gt_5
+        add t1, zero, zero
+
+    check_paddle_2_gt_5: ; if(paddle2_Y > 5) paddle2_Y = 5
+        bge  t5, t2, check_paddle_2_lt_0
+        addi t2, zero, 5
+
+    check_paddle_2_lt_0:  ; if(paddle2_Y < 0) paddle2_Y = 0
+        bge t2, zero, move_paddles_return
+        add t2, zero, zero
+
+    move_paddles_return:
+        stw t1, PADDLES     (zero)
+        stw t2, PADDLES + 4 (zero)
+        ret
+
+
 ; The draw_paddles procedure draws the paddles on the display.
 ; Using the set_pixel procedure, it turns 3 pixels on for each paddle
 ; depending on their position. As Figure 4 shows, the coordinates refer
 ; to the top of the paddle.
+;
+; Arguments:
+; - None
+;
+; Return values:
+; - None
 draw_paddles:
     addi sp, sp, -4
     stw ra, 0(sp)          ; save the return address
@@ -200,6 +261,28 @@ draw_paddles:
         addi sp, sp, 4
         ret
 
+; The display_score procedure draws the current score on the display.
+;
+; Arguments:
+; - None
+;
+; Return values:
+; - None
+display_score:
+    ldw t1, SCORES     (zero) ; Player 1's score
+    ldw t2, SCORES + 4 (zero) ; Player 2's score
+
+                              ; Convert score to word offset
+    slli t1, t1, 2            ; t1 = t1 * 4
+    slli t2, t2, 2            ; t2 = t2 * 4
+
+    ldw t3, font_data + 0(t1) ; Player 1's score character
+    ldw t4, font_data + 0(t2) ; Player 2's score character
+
+    stw t3, LEDS     (zero)   ; Display player 1's score
+    stw t4, LEDS + 8 (zero)   ; Display player 2's score
+
+    ret
 
 font_data:
     .word 0x7E427E00 ; 0
