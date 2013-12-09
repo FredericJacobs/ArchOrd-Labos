@@ -31,6 +31,11 @@ main:
         call clear_leds
         call display_score
 
+        call wait
+        call wait
+        call wait
+        call wait
+
         ; place ball at (4,6)
         addi t0, zero, 4
         addi t1, zero, 6
@@ -54,6 +59,7 @@ main:
     game_loop:
 
         call display_game               ; display_game()
+        call wait
 
         call move_ball                  ; move_ball()
         call move_paddles               ; move_paddles()
@@ -71,6 +77,17 @@ main:
 
     game_loop_next:
         br game_loop                    ; goto game_loop
+
+; This procedure slows down the program's execution speed,
+; in order to make the game playabe on the FPGA.
+wait:
+    addi t0, zero, 0xFFFF
+
+    wait_loop:
+        addi t0, t0, -1
+        bne t0, zero, wait_loop
+
+    ret
 
 ; Display the game
 ;
