@@ -19,9 +19,27 @@
 .equ LEDS,      0x2000 ; LEDs address
 .equ BUTTONS,   0x2030 ; Buttons address
 
-start:
-    call clear_leds  ; clear_leds()
-    ret
+main:
+    addi t0, zero, 1
+    addi t1, zero, 2
+    stw t0, BALL     (zero)
+    stw t1, BALL + 4 (zero)
+
+    addi t0, zero, 1
+    addi t1, zero, 1
+    stw t0, BALL + 8  (zero)
+    stw t1, BALL + 12 (zero)
+
+    loop:
+        call clear_leds  ; clear_leds()
+        call hit_test    ; hit_test()
+        call move_ball   ; move_ball()
+
+        ldw a0, BALL      (zero) ; a0 = ball's x position
+        ldw a1, BALL + 4  (zero) ; a1 = ball's y position
+        call set_pixel           ; set_pixel(a0, a1)
+
+        br loop                  ; goto loop
 
 ; Goal is to initialize all LEDs to 0
 ; The LED array has a size of 96 bits, or 3 words of 32 bits starting at 0x2000.
