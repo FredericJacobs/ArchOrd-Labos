@@ -28,6 +28,9 @@ main:
 
     new_round:
 
+        call clear_leds
+        call display_score
+
         ; place ball at (4,6)
         addi t0, zero, 4
         addi t1, zero, 6
@@ -40,29 +43,54 @@ main:
         stw t0, BALL + 8  (zero)
         stw t1, BALL + 12 (zero)
 
-        ; set paddle 1 to X = 3
-        addi t0, zero, 3
+        ; set paddle 1 to X = 2
+        addi t0, zero, 2
         stw t0, PADDLES (zero)
 
-        ; set paddle 2 to X = 5
-        addi t0, zero, 5
+        ; set paddle 2 to X = 2
+        addi t0, zero, 2
         stw t0, PADDLES + 4(zero)
 
     game_loop:
 
-        call clear_leds   ; clear_leds()
-        call draw_ball    ; draw_ball()
-        call draw_paddles ; draw_paddles()
-        call move_ball    ; move_ball()
-        call move_paddles ; move_paddles()
-        call hit_test     ; hit_test()
+        call display_game               ; display_game()
 
-        beq v0, zero, game_loop_next
-        call display_score
-        br new_round
+        call move_ball                  ; move_ball()
+        call move_paddles               ; move_paddles()
+
+        call hit_test                   ; hit_test()
+
+        beq v0, zero, game_loop_next    ; if(v0 == 0) goto game_loop_next
+        addi t3, v0, -1                 ; t3 = v0 - 1
+        slli t3, t3, 2                  ; t3 = v0 * 4
+        ldw t4, SCORES + 0(t3)          ; t4 = SCORES[t3]
+        addi t4, t4, 1                  ; t4 += 1
+        stw t4, SCORES + 0(t3)          ; SCORES[t3] = t4
+
+        br new_round                    ; goto new_round()
 
     game_loop_next:
-        br game_loop             ; goto game_loop
+        br game_loop                    ; goto game_loop
+
+; Display the game
+;
+; Arguments
+; - None
+;
+; Return values
+; - None
+display_game:
+    addi sp, sp, -4
+    stw ra, 0(sp)
+
+    call clear_leds   ; clear_leds()
+    call draw_ball    ; draw_ball()
+    call draw_paddles ; draw_paddles()
+
+    ldw ra, 0(sp)
+    addi sp, sp, 4
+    ret
+
 
 ; Draw the ball at its current location
 ;
