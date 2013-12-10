@@ -13,16 +13,15 @@
 ; | 0x2008 | LED 3               |
 ; + -------+---------------------+
 
+.equ EXECSPEED,	0xFFFF ; Counter decremented to slow down execution speed
 .equ BALL,      0x1000 ; Ball state
 .equ PADDLES,   0x1010 ; Paddles positions
 .equ SCORES,    0x1018 ; Scores
 .equ LEDS,      0x2000 ; LEDs address
 .equ BUTTONS,   0x2030 ; Buttons address
-
 .equ MEMORY_TOP, 0x1FF0 ; Top of the RAM
 
 main:
-
     ; set the stack pointer at the top of RAM
     addi sp, zero, MEMORY_TOP
 
@@ -79,17 +78,16 @@ main:
         br game_loop                    ; goto game_loop
 
 ; This procedure slows down the program's execution speed,
-; in order to make the game playabe on the FPGA.
+; in order to make the game playable on the FPGA.
 wait:
-    addi t0, zero, 0xFFFF
+    addi t0, zero, EXECSPEED
 
     wait_loop:
         addi t0, t0, -1
         bne t0, zero, wait_loop
-
     ret
 
-; Display the game
+; Display the game - reinitialize leds.
 ;
 ; Arguments
 ; - None
@@ -107,7 +105,6 @@ display_game:
     ldw ra, 0(sp)
     addi sp, sp, 4
     ret
-
 
 ; Draw the ball at its current location
 ;
