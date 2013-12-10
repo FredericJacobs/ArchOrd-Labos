@@ -12,7 +12,7 @@
 ; | 0x2008 | LED 3               |
 ; + -------+---------------------+
 
-.equ EXECSPEED,	0xFFF  ; Counter decremented to slow down execution speed
+.equ EXECSPEED, 0xFFF  ; Counter decremented to slow down execution speed
 .equ BALL,      0x1000 ; Ball state
 .equ PADDLES,   0x1010 ; Paddles positions
 .equ SCORES,    0x1018 ; Scores
