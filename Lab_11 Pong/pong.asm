@@ -1,4 +1,3 @@
-
 ; + -------+---------------------+
 ; | 0x1000 | Ball position on x  |
 ; | 0x1004 | Ball position on y  |
@@ -13,7 +12,7 @@
 ; | 0x2008 | LED 3               |
 ; + -------+---------------------+
 
-.equ EXECSPEED,	0xFFFF ; Counter decremented to slow down execution speed
+.equ EXECSPEED,	0xFFF  ; Counter decremented to slow down execution speed
 .equ BALL,      0x1000 ; Ball state
 .equ PADDLES,   0x1010 ; Paddles positions
 .equ SCORES,    0x1018 ; Scores
