@@ -7,12 +7,11 @@
 ; | 0x1014 | Paddle 2 y position |
 ; | 0x1018 | Score of player 1   |
 ; | 0x101C | Score of player 2   |
-; | 0x2000 | LED 1               |
-; | 0x2004 | LED 2               |
-; | 0x2008 | LED 3               |
+; | 0x2000 | LED Row 1           |
+; | 0x2004 | LED Row 2 	         |
+; | 0x2008 | LED Row 3           |
 ; + -------+---------------------+
 
-.equ EXECSPEED, 0xFFF  ; Counter decremented to slow down execution speed
 .equ BALL,      0x1000 ; Ball state
 .equ PADDLES,   0x1010 ; Paddles positions
 .equ SCORES,    0x1018 ; Scores
@@ -32,37 +31,48 @@ main:
         call wait
         call wait
         call wait
-        call wait
 
-        ; place ball at (4,6)
-        addi t0, zero, 4
-        addi t1, zero, 6
+        addi t0, zero, 3
         stw t0, BALL     (zero)
-        stw t1, BALL + 4 (zero)
-
-        ; set velocity to (1, 1)
-        addi t0, zero, 1
-        addi t1, zero, 1
-        stw t0, BALL + 8  (zero)
-        stw t1, BALL + 12 (zero)
-
+		
+		addi t1, zero, 1
+		beq v0, t1, player2_engages
+		
+		player1_engages:
+			addi t0, zero, 1
+			addi t2, zero, 3
+			br set_velocity
+		
+		player2_engages:
+			addi t0, zero, -1
+			addi t2, zero, 4
+		
+		set_velocity:
+			addi t1, zero, 1
+        	stw t1, BALL + 8  (zero)
+        	stw t0, BALL + 12 (zero)
+			stw t2, BALL + 4 (zero)
+		
         ; set paddle 1 to X = 2
-        addi t0, zero, 2
+        addi t0, zero, 3
         stw t0, PADDLES (zero)
 
         ; set paddle 2 to X = 2
-        addi t0, zero, 2
+        addi t0, zero, 3
         stw t0, PADDLES + 4(zero)
+
+		call display_game               ; display_game()
+		call wait
 
     game_loop:
 
-        call display_game               ; display_game()
-        call wait
-
-        call move_ball                  ; move_ball()
+		call move_ball                  ; move_ball()
         call move_paddles               ; move_paddles()
 
+        call display_game               ; display_game()
         call hit_test                   ; hit_test()
+		
+		call wait
 
         beq v0, zero, game_loop_next    ; if(v0 == 0) goto game_loop_next
         addi t3, v0, -1                 ; t3 = v0 - 1
@@ -79,11 +89,18 @@ main:
 ; This procedure slows down the program's execution speed,
 ; in order to make the game playable on the FPGA.
 wait:
-    addi t0, zero, EXECSPEED
+	addi t0, zero, 0x4FF
 
-    wait_loop:
-        addi t0, t0, -1
-        bne t0, zero, wait_loop
+	wait_outer_loop:
+		addi t1, zero, 0xFFF
+
+	wait_loop:
+        addi t1, t1, -1
+        bne t1, zero, wait_loop
+		
+	addi t0, t0, -1
+    bne t0, zero, wait_outer_loop
+		
     ret
 
 ; Display the game - reinitialize leds.
@@ -153,8 +170,8 @@ set_pixel:
     add t2, zero, zero     ; bit = 0
     slli t2, t0, 3         ; bit = col * 8
     add t2, t2, t1         ; bit = bit + row
-    srli t3, a0, 2         ; offset = x >> 2
-    slli t3, t3, 2         ; offset = offset * 4
+    srli t3, a0, 2         ; offset = x >> 2 (choose which row to update in the LEDS array)
+    slli t3, t3, 2         ; offset = offset * 4 (compute the row offset)
     addi t4, zero, 1       ; mask = 1
     sll t4, t4, t2         ; mask = mask << bit
     ldw t5, LEDS + 0(t3)   ; led = LEDS[offset]
@@ -171,8 +188,10 @@ set_pixel:
 ; - None
 ;
 ; Return values
-; - v0: The winnerâ€™s ID, if there is any; otherwise 0
+; - v0: The winner’s ID, if there is any; otherwise 0
 hit_test:
+	add v0, zero, zero					; clear return value
+	
     ldw t1, BALL      (zero)            ; ballX = ball's x position
     ldw t2, BALL + 4  (zero)            ; ballY = ball's y position
     ldw t3, BALL + 8  (zero)            ; velX = ball's x velocity
@@ -190,7 +209,7 @@ hit_test:
         bne t2, zero, check_y_pos_2     ; if(ballY != 0) goto check_y_pos_2
         ldw t7, PADDLES (zero)          ; paddleY = paddle 1 position
         blt t1, t7, winner_2            ; if(ballX < paddle1X) goto winner_2
-        addi t7, t7, 4
+        addi t7, t7, 3
         bge t1, t7, winner_2            ; if(ballX > paddle1X + 3) goto winner_2
         br invert_y_velocity
 
@@ -199,7 +218,7 @@ hit_test:
         blt t2, t0, update_velocity     ; if(ballY != 7) goto update_velocity
         ldw t7, PADDLES + 4 (zero)      ; paddle2X = paddle 2 position
         blt t1, t7, winner_1            ; if(ballX < paddle2X) goto winner_1
-        addi t7, t7, 4
+        addi t7, t7, 3
         bge t1, t7, winner_1            ; if(ballX > paddle2X + 3) goto winner_1
         br invert_y_velocity
 
@@ -272,19 +291,19 @@ move_paddles:
     andi  t3,  t0,   1   ; if 4th LSB bit (button 1) is set
     sub   t1,  t1,   t3  ; move paddle 1 up
 
-    addi  t5,  zero, 5   ; t5 = 5, set for upcoming comparisons
+    addi  t5,  zero, 9   ; t5 = 9, set for upcoming comparisons
 
-    check_paddle_1_gt_5: ; if(paddle1_Y > 5) paddle1_Y = 5
+    check_paddle_1_gt_5: ; if(paddle1_Y > 9) paddle1_Y = 9
         bge  t5, t1, check_paddle_1_lt_0
-        addi t1, zero, 5
+        addi t1, zero, 9
 
     check_paddle_1_lt_0:  ; if(paddle1_Y < 0) paddle1_Y = 0
         bge t1, zero, check_paddle_2_gt_5
         add t1, zero, zero
 
-    check_paddle_2_gt_5: ; if(paddle2_Y > 5) paddle2_Y = 5
+    check_paddle_2_gt_5: ; if(paddle2_Y > 9) paddle2_Y = 9
         bge  t5, t2, check_paddle_2_lt_0
-        addi t2, zero, 5
+        addi t2, zero, 9
 
     check_paddle_2_lt_0:  ; if(paddle2_Y < 0) paddle2_Y = 0
         bge t2, zero, move_paddles_return
